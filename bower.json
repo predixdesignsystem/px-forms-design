@@ -1,0 +1,24 @@
+{
+  "name": "pdx-forms",
+  "version": "0.0.1",
+  "authors": [
+    "General Electric"
+  ],
+  "description": "Base form styles for Predix Design Extension",
+  "main": "_base.forms.scss",
+  "keywords": [
+    "pdx",
+    "sass",
+    "forms"
+  ],
+  "license": "Apache 2",
+  "homepage": "https://github.sw.ge.com/jrogerson/pdx-forms.git",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
