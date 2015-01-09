@@ -12,6 +12,21 @@ label {
   color: $gray-light;
 }
 
+.input-bare {
+  border: 0!important;
+  &[type=number] {
+    position: relative;
+    padding: 0 .25em 0 0;
+    text-align: right;
+  }
+}
+  
+.layout__item {
+  .text-input, select {
+    width: 100%;
+  }
+}
+
 input,
 button,
 a.button,
@@ -53,20 +68,20 @@ input[type=text],
 input[type=time],
 input[type=url],
 input[type=week] {
-  background-clip: padding-box;
-  border-radius: 0;
   -webkit-appearance: none;
-  background-color: white;
-  border: 1px solid $gray-light;
-  outline: 0;
-  padding: 2px 3px;
-  text-align: left;
-  color: $gray-dark;
   height: 2em;
+  border: 1px solid $gray-light;
+  border-radius: 0;
+  padding: calculateRem(2px) calculateRem(3px);
+  outline: 0;
+  text-align: left;
   line-height: 1;
   vertical-align: top;
+  background-color: $white;
+  background-clip: padding-box;
+  color: $gray-dark;
   &[disabled] {
-    background-color: #eee;
+    background-color: $gray-lightest;
   }
 }
 
@@ -75,11 +90,10 @@ input[disabled],
 select[disabled],
 select[disabled] option,
 select[disabled] optgroup,
-textarea[disabled],
-a.button_disabled {
+textarea[disabled] {
   box-shadow: none;
   user-select: none;
-  color: #888;
+  color: $gray;
   cursor: default;
 }
 
@@ -88,17 +102,12 @@ a.button_disabled {
 // Cannot stack with WebKit's.
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #888;
+  color: $gray;
 }
 
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-  color: #888;
-}
-
-input.placeholder_text,
-textarea.placeholder_text {
-  color: #888;
+  color: $gray;
 }
 
 select {
@@ -125,71 +134,31 @@ select[size="1"] {
   select[multiple],
   select[multiple][size] {
     background-image: none;
-    padding-right: 3px;
+    padding-right: calculateRem(3px);
   }
-
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAICAMAAADUf89RAAAAIVBMVEX///9XV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dvorLKAAAACnRSTlMANDU5QGSAkJHv2+SltgAAADxJREFUCNdtyTkCwCAMxEBxBPD+/8HE0CQYlSNolvCyNb4VaZ1sUvmdsY77gHCe1ztnXV70fW7u5+5Qg0y71gGIV/2q9QAAAABJRU5ErkJggg==);
-    background-repeat: no-repeat;
-    background-position: right center;
-    padding-right: 20px;
-  }
-
-  ::-webkit-validation-bubble-message {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666), color-stop(1, black));
-    border: 0;
-    color: white;
-    overflow: hidden;
-    padding: 15px 15px 17px;
-    text-shadow: black 0 0 1px;
-    min-height: 16px;
-  }
-
-  ::-webkit-validation-bubble-arrow,
-  ::-webkit-validation-bubble-top-outer-arrow,
-  ::-webkit-validation-bubble-top-inner-arrow {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background: #666;
-    border-color: #666;
+    padding-right: calculateRem(20px);
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAICAMAAADUf89RAAAAIVBMVEX///9XV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dvorLKAAAACnRSTlMANDU5QGSAkJHv2+SltgAAADxJREFUCNdtyTkCwCAMxEBxBPD+/8HE0CQYlSNolvCyNb4VaZ1sUvmdsY77gHCe1ztnXV70fW7u5+5Qg0y71gGIV/2q9QAAAABJRU5ErkJggg==) no-repeat right center, linear-gradient(0deg, $gray-lightest 0%, $off-white 100%);
   }
 }
 
 textarea {
-  min-height: 40px;
   overflow: auto;
-  resize: vertical;
   width: 100%;
+  min-height: calculateRem(40px);
+  resize: vertical;
 }
 
 optgroup {
-  color: black;
   font-style: normal;
   font-weight: normal;
-
+  color: black;
   // Kill phantom spacing and dotted
   // border that appears in Firefox.
   &::-moz-focus-inner {
     border: 0;
     padding: 0;
-  }
-}
-
-.input-bare {
-  border: 0!important;
-  &[type=number] {
-    position: relative;
-    padding: 0 .25em 0 0;
-    text-align: right;
-  }
-}
-  
-.layout__item {
-  .text-input, select {
-    width: 100%;
   }
 }
