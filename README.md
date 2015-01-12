@@ -1,4 +1,4 @@
-pdx-forms
+px-forms
 =========
 
-Base form styles for Predix Design Extension
+Base form styles for Predix Experience

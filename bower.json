@@ -1,10 +1,10 @@
 {
-  "name": "pdx-forms",
+  "name": "px-forms",
   "version": "0.0.1",
   "authors": [
     "General Electric"
   ],
-  "description": "Base form styles for Predix Design Extension",
+  "description": "Base form styles for Predix Experience",
   "main": "_base.forms.scss",
   "keywords": [
     "pdx",
@@ -12,7 +12,7 @@
     "forms"
   ],
   "license": "Apache 2",
-  "homepage": "git@github.sw.ge.com:jrogerson/pdx-forms.git",
+  "homepage": "git://github.sw.ge.com/jrogerson/px-forms.git",
   "private": true,
   "ignore": [
     "**/.*",
