@@ -1,3 +1,9 @@
+$px-form-field-border-color           : $gray-light !default;
+$px-form-field-radius                 : 0 !default;
+$px-form-field-inner-shadow           : inset 0 4px 6px 1px rgba($true-black, .13) !default;
+
+$px-enable-form-field-inner-shadow    : false !default;
+
 form {
   position: relative;
 }
@@ -10,21 +16,6 @@ label {
   display: inline-block;
   line-height: 2em;
   color: $gray-light;
-}
-
-.input-bare {
-  border: 0!important;
-  &[type=number] {
-    position: relative;
-    padding: 0 .25em 0 0;
-    text-align: right;
-  }
-}
-  
-.layout__item {
-  .text-input, select {
-    width: 100%;
-  }
 }
 
 input,
@@ -52,6 +43,10 @@ input[type=checkbox] {
   }
 }
 
+.ff-med {
+  width: calculateRem(200px);
+}
+
 .text-input,
 textarea,
 select,
@@ -70,9 +65,8 @@ input[type=url],
 input[type=week] {
   -webkit-appearance: none;
   height: 2em;
-  border: 1px solid $gray-light;
-  border-radius: 0;
-  padding: calculateRem(2px) calculateRem(3px);
+  border: 1px solid $px-form-field-border-color;
+  padding: 0 .5em;
   outline: 0;
   text-align: left;
   line-height: 1;
@@ -83,6 +77,23 @@ input[type=week] {
   &[disabled] {
     background-color: $gray-lightest;
   }
+  
+  @if($px-form-field-radius != 0) {
+    border-radius: $px-form-field-radius;
+  }
+}
+
+@if ($px-enable-form-field-inner-shadow == true) {
+
+  /**
+   * Inner shadow.
+   */
+
+  .text-input,
+  %text-input {
+    box-shadow: $px-form-field-inner-shadow;
+  }
+
 }
 
 button[disabled],
@@ -102,11 +113,13 @@ textarea[disabled] {
 // Cannot stack with WebKit's.
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
+  font-style: italic;
   color: $gray;
 }
 
 input:-moz-placeholder,
 textarea:-moz-placeholder {
+  font-style: italic;
   color: $gray;
 }
 
@@ -144,6 +157,10 @@ select[size="1"] {
   }
 }
 
+select[multiple] {
+  padding: quarter($inuit-base-spacing-unit);
+}
+
 textarea {
   overflow: auto;
   width: 100%;
@@ -160,5 +177,28 @@ optgroup {
   &::-moz-focus-inner {
     border: 0;
     padding: 0;
+  }
+}
+
+.input-bare {
+  border: 0!important;
+  &[type=number] {
+    position: relative;
+    padding: 0 .25em 0 0;
+    text-align: right;
+  }
+}
+
+.input-btn {
+  height: 2.3em;
+  border: solid rgba($gray, .55);
+  border-width: 1px 0 1px 1px;
+  border-radius: 0;
+  box-shadow: inset 0 4px 6px 1px rgba($true-black, .13);
+}
+  
+.layout__item {
+  .text-input, select {
+    width: 100%;
   }
 }
