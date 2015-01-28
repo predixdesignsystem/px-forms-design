@@ -1,3 +1,7 @@
+@import "lib/px-defaults/settngs.defaults";
+@import "lib/px-colors/settings.colors";
+@import "lib/px-functions/tools.functions";
+
 $px-form-field-border-color           : $gray-light !default;
 $px-form-field-radius                 : 0 !default;
 $px-form-field-inner-shadow           : inset 0 4px 6px 1px rgba($true-black, .13) !default;
