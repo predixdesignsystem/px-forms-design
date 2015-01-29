@@ -22,8 +22,8 @@
     "tests"
   ],
   "dependencies": {
-    "px-defaults": "git://github.sw.ge.com/jrogerson/px-defaults.git#master",
     "px-colors": "git://github.sw.ge.com/jrogerson/px-colors.git#master",
+    "px-defaults": "git://github.sw.ge.com/jrogerson/px-defaults.git#master",
     "px-functions": "git://github.sw.ge.com/jrogerson/px-functions.git#master"
   }
 }

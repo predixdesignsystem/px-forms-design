@@ -2,207 +2,212 @@
 @import "lib/px-colors/sass/settings.colors";
 @import "lib/px-functions/sass/tools.functions";
 
-$px-form-field-border-color           : $gray-light !default;
-$px-form-field-radius                 : 0 !default;
-$px-form-field-inner-shadow           : inset 0 4px 6px 1px rgba($true-black, .13) !default;
+$px-enable-form-field-inner-shadow  : true !default;
+$px-form-field-inner-shadow         : inset 0 4px 6px 1px rgba($true-black, .13) !default;
 
-$px-enable-form-field-inner-shadow    : false !default;
+$px-form-field-border-color         : rgba($gray, .55) !default;
 
-form {
-  position: relative;
-}
+$px-form-field-radius               : 3px !default;
 
-label {
-  display: block;
-}
+@if import-once('component') {
 
-.label-inline {
-  display: inline-block;
-  line-height: 2em;
-  color: $gray-light;
-}
-
-input,
-button,
-a.button,
-select,
-textarea {
-  // Suppress red glow that Firefox
-  // adds to form fields by default.
-  &:invalid {
-    box-shadow: none;
-  }
-  // Add blue glow.
-  &:focus {
-    box-shadow: #06f 0 0 5px 0;
-  }
-}
-
-input[type=file],
-input[type=radio],
-input[type=checkbox] {
-  &:focus,
-  &:active {
-    box-shadow: none;
-  }
-}
-
-.ff-med {
-  width: calculateRem(200px);
-}
-
-.text-input,
-textarea,
-select,
-input[type=date],
-input[type=datetime],
-input[type=datetime-local],
-input[type=email],
-input[type=month],
-input[type=number],
-input[type=password],
-input[type=search],
-input[type=tel],
-input[type=text],
-input[type=time],
-input[type=url],
-input[type=week] {
-  -webkit-appearance: none;
-  height: 2em;
-  border: 1px solid $px-form-field-border-color;
-  padding: 0 .5em;
-  outline: 0;
-  text-align: left;
-  line-height: 1;
-  vertical-align: top;
-  background-color: $white;
-  background-clip: padding-box;
-  color: $gray-dark;
-  &[disabled] {
-    background-color: $gray-lightest;
+  form {
+    position: relative;
   }
   
-  @if($px-form-field-radius != 0) {
-    border-radius: $px-form-field-radius;
+  label {
+    display: block;
   }
-}
-
-@if ($px-enable-form-field-inner-shadow == true) {
-
-  /**
-   * Inner shadow.
-   */
-
-  .text-input,
-  %text-input {
-    box-shadow: $px-form-field-inner-shadow;
+  
+  .label-inline {
+    display: inline-block;
+    line-height: 2em;
+    color: $gray-light;
   }
-
-}
-
-button[disabled],
-input[disabled],
-select[disabled],
-select[disabled] option,
-select[disabled] optgroup,
-textarea[disabled] {
-  box-shadow: none;
-  user-select: none;
-  color: $gray;
-  cursor: default;
-}
-
-// Separate rule for Firefox.
-// Separate rule for IE, too.
-// Cannot stack with WebKit's.
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  font-style: italic;
-  color: $gray;
-}
-
-input:-moz-placeholder,
-textarea:-moz-placeholder {
-  font-style: italic;
-  color: $gray;
-}
-
-select {
-  border-color: $gray-light;
-  border-radius: 2px;
-}
-
-textarea,
-select[size],
-select[multiple] {
-  height: auto;
-}
-
-// Set height back to normal,
-// for Opera, WebKit, and IE.
-select[size="0"],
-select[size="1"] {
-  height: 2em;
-}
-
-// Tweaks for Safari + Chrome.
-@media (-webkit-min-device-pixel-ratio: 0) {
-  select[size],
-  select[multiple],
-  select[multiple][size] {
-    background-image: none;
-    padding-right: calculateRem(3px);
-  }
+  
+  input,
+  button,
+  a.button,
   select,
+  textarea {
+    // Suppress red glow that Firefox
+    // adds to form fields by default.
+    &:invalid {
+      box-shadow: none;
+    }
+    // Add blue glow.
+    &:focus {
+      box-shadow: #06f 0 0 5px 0;
+    }
+  }
+  
+  input[type=file],
+  input[type=radio],
+  input[type=checkbox] {
+    &:focus,
+    &:active {
+      box-shadow: none;
+    }
+  }
+  
+  .ff-med {
+    width: calculateRem(200px);
+  }
+  
+  .text-input,
+  textarea,
+  select,
+  input[type=date],
+  input[type=datetime],
+  input[type=datetime-local],
+  input[type=email],
+  input[type=month],
+  input[type=number],
+  input[type=password],
+  input[type=search],
+  input[type=tel],
+  input[type=text],
+  input[type=time],
+  input[type=url],
+  input[type=week] {
+    -webkit-appearance: none;
+    height: 2em;
+    border: 1px solid $px-form-field-border-color;
+    padding: 0 .5em;
+    outline: 0;
+    text-align: left;
+    line-height: 1;
+    vertical-align: top;
+    background-color: $white;
+    background-clip: padding-box;
+    color: $gray-dark;
+    &[disabled] {
+      background-color: $gray-lightest;
+    }
+    
+    @if($px-form-field-radius != 0) {
+      border-radius: $px-form-field-radius;
+    }
+  }
+  
+  @if ($px-enable-form-field-inner-shadow == true) {
+  
+    /**
+     * Inner shadow.
+     */
+  
+    .text-input,
+    %text-input {
+      box-shadow: $px-form-field-inner-shadow;
+    }
+  
+  }
+  
+  button[disabled],
+  input[disabled],
+  select[disabled],
+  select[disabled] option,
+  select[disabled] optgroup,
+  textarea[disabled] {
+    box-shadow: none;
+    user-select: none;
+    color: $gray;
+    cursor: default;
+  }
+  
+  // Separate rule for Firefox.
+  // Separate rule for IE, too.
+  // Cannot stack with WebKit's.
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    font-style: italic;
+    color: $gray;
+  }
+  
+  input:-moz-placeholder,
+  textarea:-moz-placeholder {
+    font-style: italic;
+    color: $gray;
+  }
+  
+  select {
+    border-color: $gray-light;
+    border-radius: 2px;
+  }
+  
+  textarea,
+  select[size],
+  select[multiple] {
+    height: auto;
+  }
+  
+  // Set height back to normal,
+  // for Opera, WebKit, and IE.
   select[size="0"],
   select[size="1"] {
-    padding-right: calculateRem(20px);
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAICAMAAADUf89RAAAAIVBMVEX///9XV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dvorLKAAAACnRSTlMANDU5QGSAkJHv2+SltgAAADxJREFUCNdtyTkCwCAMxEBxBPD+/8HE0CQYlSNolvCyNb4VaZ1sUvmdsY77gHCe1ztnXV70fW7u5+5Qg0y71gGIV/2q9QAAAABJRU5ErkJggg==) no-repeat right center, linear-gradient(0deg, $gray-lightest 0%, $off-white 100%);
+    height: 2em;
   }
-}
-
-select[multiple] {
-  padding: quarter($inuit-base-spacing-unit);
-}
-
-textarea {
-  overflow: auto;
-  width: 100%;
-  min-height: calculateRem(40px);
-  resize: vertical;
-}
-
-optgroup {
-  font-style: normal;
-  font-weight: normal;
-  color: black;
-  // Kill phantom spacing and dotted
-  // border that appears in Firefox.
-  &::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-  }
-}
-
-.input-bare {
-  border: 0!important;
-  &[type=number] {
-    position: relative;
-    padding: 0 .25em 0 0;
-    text-align: right;
-  }
-}
-
-.input-btn {
-  height: 2.3em;
-  border: solid rgba($gray, .55);
-  border-width: 1px 0 1px 1px;
-  border-radius: 0;
-  box-shadow: inset 0 4px 6px 1px rgba($true-black, .13);
-}
   
-.layout__item {
-  .text-input, select {
-    width: 100%;
+  // Tweaks for Safari + Chrome.
+  @media (-webkit-min-device-pixel-ratio: 0) {
+    select[size],
+    select[multiple],
+    select[multiple][size] {
+      background-image: none;
+      padding-right: calculateRem(3px);
+    }
+    select,
+    select[size="0"],
+    select[size="1"] {
+      padding-right: calculateRem(20px);
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAICAMAAADUf89RAAAAIVBMVEX///9XV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dvorLKAAAACnRSTlMANDU5QGSAkJHv2+SltgAAADxJREFUCNdtyTkCwCAMxEBxBPD+/8HE0CQYlSNolvCyNb4VaZ1sUvmdsY77gHCe1ztnXV70fW7u5+5Qg0y71gGIV/2q9QAAAABJRU5ErkJggg==) no-repeat right center, linear-gradient(0deg, $gray-lightest 0%, $off-white 100%);
+    }
   }
+  
+  select[multiple] {
+    padding: quarter($inuit-base-spacing-unit);
+  }
+  
+  textarea {
+    overflow: auto;
+    width: 100%;
+    min-height: calculateRem(40px);
+    resize: vertical;
+  }
+  
+  optgroup {
+    font-style: normal;
+    font-weight: normal;
+    color: black;
+    // Kill phantom spacing and dotted
+    // border that appears in Firefox.
+    &::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
+  }
+  
+  .input-bare {
+    border: 0!important;
+    &[type=number] {
+      position: relative;
+      padding: 0 .25em 0 0;
+      text-align: right;
+    }
+  }
+  
+  .input-btn {
+    height: 2.3em;
+    border: solid rgba($gray, .55);
+    border-width: 1px 0 1px 1px;
+    border-radius: 0;
+    box-shadow: inset 0 4px 6px 1px rgba($true-black, .13);
+  }
+    
+  .layout__item {
+    .text-input, select {
+      width: 100%;
+    }
+  }
+
 }
