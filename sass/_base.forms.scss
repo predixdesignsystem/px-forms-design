@@ -4,9 +4,7 @@
 
 $px-enable-form-field-inner-shadow  : true !default;
 $px-form-field-inner-shadow         : inset 0 4px 6px 1px rgba($true-black, .13) !default;
-
 $px-form-field-border-color         : rgba($gray, .55) !default;
-
 $px-form-field-radius               : 3px !default;
 
 @if import-once('component') {
