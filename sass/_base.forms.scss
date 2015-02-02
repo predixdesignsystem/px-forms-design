@@ -1,13 +1,13 @@
-@import "lib/px-defaults/sass/settings.defaults";
+@import "lib/inuit-defaults/settings.defaults";
 @import "lib/px-colors/sass/settings.colors";
 @import "lib/px-functions/sass/tools.functions";
 
-$px-enable-form-field-inner-shadow  : true !default;
+$px-enable-form-field-inner-shadow  : false !default;
 $px-form-field-inner-shadow         : inset 0 4px 6px 1px rgba($true-black, .13) !default;
 $px-form-field-border-color         : rgba($gray, .55) !default;
 $px-form-field-radius               : 3px !default;
 
-@if import-once('component') {
+@if import-once('base.forms') {
 
   form {
     position: relative;
