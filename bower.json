@@ -7,7 +7,7 @@
   "description": "Base form styles for Predix Experience",
   "main": "_base.forms.scss",
   "keywords": [
-    "pdx",
+    "px",
     "sass",
     "forms"
   ],
@@ -22,7 +22,7 @@
     "tests"
   ],
   "dependencies": {
-    "inuit-defaults": "0.2.1",
+    "inuit-defaults": "~0.2.1",
     "px-colors": "git://github.sw.ge.com/jrogerson/px-colors.git#master",
     "px-functions": "git://github.sw.ge.com/jrogerson/px-functions.git#master"
   }
