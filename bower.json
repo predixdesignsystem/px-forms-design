@@ -1,5 +1,5 @@
 {
-  "name": "px-forms",
+  "name": "px-forms-design",
   "version": "0.0.1",
   "authors": [
     "General Electric"
@@ -12,7 +12,7 @@
     "forms"
   ],
   "license": "Apache 2",
-  "homepage": "git://github.sw.ge.com/jrogerson/px-forms.git",
+  "homepage": "git://github.sw.ge.com/pxc/px-forms-design.git",
   "private": true,
   "ignore": [
     "**/.*",
@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "inuit-defaults": "~0.2.1",
-    "px-colors": "git://github.sw.ge.com/jrogerson/px-colors.git#master",
-    "px-functions": "git://github.sw.ge.com/jrogerson/px-functions.git#master"
+    "px-colors-design": "git://github.sw.ge.com/pxc/px-colors-design.git#master",
+    "px-functions-design": "git://github.sw.ge.com/pxc/px-functions-design.git#master"
   }
 }
