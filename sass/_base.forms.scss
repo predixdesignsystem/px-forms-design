@@ -62,20 +62,7 @@ $px-form-field-radius               : 3px !default;
   
   .text-input,
   textarea,
-  select,
-  input[type=date],
-  input[type=datetime],
-  input[type=datetime-local],
-  input[type=email],
-  input[type=month],
-  input[type=number],
-  input[type=password],
-  input[type=search],
-  input[type=tel],
-  input[type=text],
-  input[type=time],
-  input[type=url],
-  input[type=week] {
+  select {
     -webkit-appearance: none;
     height: 2em;
     border: 1px solid $px-form-field-border-color;
