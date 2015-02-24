@@ -2,7 +2,8 @@
   "name": "px-forms-design",
   "version": "0.0.1",
   "authors": [
-    "General Electric"
+    "General Electric",
+    "Nathan Smith"
   ],
   "description": "Base form styles for Predix Experience",
   "main": "_base.forms.scss",
@@ -11,7 +12,7 @@
     "sass",
     "forms"
   ],
-  "license": "Apache 2",
+  "license": "MIT",
   "homepage": "git://github.sw.ge.com/pxc/px-forms-design.git",
   "private": true,
   "ignore": [
