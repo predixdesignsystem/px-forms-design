@@ -12,13 +12,19 @@ Px's Forms base depends on three other Px and inuitcss modules:
 
 ## Installation
 
-Install using bower
+Install this module and its dependencies using bower
 
     bower install --save https://github.sw.ge.com/pxc/px-forms-design.git
 
 Once installed, `@import` into your project's Sass file in its Base layer:
 
     @import "px-forms-design/sass/base.forms";
+
+## Import once
+
+All rulesets are wrapped in the following `@if` statement:
+
+    @if import-once('base.forms') { ... }
 
 ## Usage
 
