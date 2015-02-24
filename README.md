@@ -12,7 +12,7 @@ Px's Forms module depends on three other Px and inuitcss modules:
 
 ## Installation
 
-Install this module and its dependencies using bower
+Install this module and its dependencies using bower:
 
     bower install --save https://github.sw.ge.com/pxc/px-forms-design.git
 
