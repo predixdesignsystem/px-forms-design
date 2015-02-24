@@ -4,7 +4,7 @@ The Predix Experience Forms module defines styles for form elements such as `<in
 
 ## Dependencies
 
-Px's Forms base depends on three other Px and inuitcss modules:
+Px's Forms module depends on three other Px and inuitcss modules:
 
 * [settings.defaults](https://github.com/inuitcss/settings.defaults)
 * [px-colors-design](https://github.sw.ge.com/pxc/px-colors-design)
