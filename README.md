@@ -1,6 +1,6 @@
 # Forms
 
-The Predix Experience Forms module defines styles for form elements such as `<input>`, `<label>`, `<select>` and so on.
+The Predix Experience Forms module defines styles for form elements such as `<input>`, `<label>`, `<select>` and so on. It is based on Formalize (http://formalize.me) by Nathan Smith (http://sonspring.com/)
 
 ## Dependencies
 
