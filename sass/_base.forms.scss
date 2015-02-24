@@ -56,11 +56,28 @@ $px-form-field-radius               : 3px !default;
     }
   }
   
-  .ff-med {
+  .input--tiny {
+    width: calculateRem(50px);
+  }
+
+  .input--small {
+    width: calculateRem(100px);
+  }
+  
+  .input--regular {
+    width: calculateRem(150px);
+  }
+  
+  .input--large {
     width: calculateRem(200px);
   }
   
+  .input--huge {
+    width: calculateRem(250px);
+  }
+  
   .text-input,
+  %text-input,
   textarea,
   select {
     -webkit-appearance: none;
