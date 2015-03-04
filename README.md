@@ -20,7 +20,7 @@ Once installed, `@import` into your project's Sass file in its Base layer:
 
     @import "../px-forms-design/base.forms";
 
-See https://github.sw.ge.com/pxc/px-getting-started#a-note-about-relative-import-paths for an explanation of the `../`
+See [px-getting-started](https://github.sw.ge.com/pxc/px-getting-started#a-note-about-relative-import-paths) for an explanation of the `../`
 
 ## Import once
 
