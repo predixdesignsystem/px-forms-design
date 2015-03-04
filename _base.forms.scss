@@ -6,9 +6,9 @@
  * Base form styles for Predix Experience
  */
 
-@import "inuit-defaults/settings.defaults";
-@import "px-colors-design/sass/settings.colors";
-@import "px-functions-design/sass/tools.functions";
+@import "../inuit-defaults/settings.defaults";
+@import "../px-colors-design/settings.colors";
+@import "../px-functions-design/tools.functions";
 
 $px-enable-form-field-inner-shadow  : false !default;
 $px-form-field-inner-shadow         : inset 0 4px 6px 1px rgba($true-black, .13) !default;
