@@ -13,7 +13,7 @@
     "forms"
   ],
   "license": "MIT",
-  "homepage": "git://github.sw.ge.com/pxc/px-forms-design.git",
+  "homepage": "git://github.sw.ge.com/PXd/px-forms-design.git",
   "private": true,
   "ignore": [
     "**/.*",
@@ -24,7 +24,7 @@
   ],
   "dependencies": {
     "inuit-defaults": "~0.2.1",
-    "px-colors-design": "git://github.sw.ge.com/pxc/px-colors-design.git#master",
-    "px-functions-design": "git://github.sw.ge.com/pxc/px-functions-design.git#master"
+    "px-colors-design": "git://github.sw.ge.com/PXd/px-colors-design.git#master",
+    "px-functions-design": "git://github.sw.ge.com/PXd/px-functions-design.git#master"
   }
 }
