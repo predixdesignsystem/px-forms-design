@@ -23,8 +23,8 @@
     "tests"
   ],
   "dependencies": {
-    "inuit-defaults": "~0.2.1",
     "px-colors-design": "git://github.sw.ge.com/PXd/px-colors-design.git#master",
+    "px-defaults-design": "git://github.sw.ge.com/PXd/px-defaults-design.git#master",
     "px-functions-design": "git://github.sw.ge.com/PXd/px-functions-design.git#master"
   }
 }
