@@ -159,6 +159,9 @@ $inuit-enable-input--huge           : false !default;
     [type=checkbox], [type=radio] {
       margin-left: $inuit-base-spacing-unit--large;
     }
+    .label--inline {
+      margin-left: $inuit-base-spacing-unit--small;
+    }
   }
   
   input:not(.btn), .label--inline {
