@@ -1,148 +1,324 @@
-/*------------------------------------*\
-    #PX-FORMS-DESIGN
-\*------------------------------------*/
-
-/**
- * Base form styles for Predix Experience
- */
+////
+/// PX-FORMS-DESIGN
+/// Defines base form styles
+/// @group px-forms-design
+////
 
 @import "../px-defaults-design/settings.defaults";
 @import "../px-colors-design/settings.colors";
-@import "../px-functions-design/tools.functions";
 
-$px-enable-form-field-inner-shadow  : false !default;
-$px-form-field-inner-shadow         : inset 0 4px 6px 1px rgba($true-black, .13) !default;
-$px-form-field-border-color         : rgba($gray, .55) !default;
-$px-form-field-radius               : 3px !default;
+/// @type String [default] - Prepend value for all generated classes
+$inuit-forms-namespace              : $inuit-namespace !default;
+
+/// @type Color [default] - Font color
+$inuit-forms-color                  : $black !default;
+
+/// @type Color [default] - Placeholder font color
+$inuit-forms-color--placeholder     : $gray5 !default;
+
+/// @type Color [default] - Background color
+$inuit-forms-background             : $gray2 !default;
+
+/// @type Color | String [default] - Inner border string
+$inuit-forms-border--inner          : inset 0 0 0 1px $gray3 !default;
+
+/// @type Color | String [default] - Outer border string
+$inuit-forms-border--outer          : 1px solid $gray5 !default;
+
+/// @type Color | String [default] - Focused inner border string
+$inuit-forms-border--inner--focused : inset 0 0 0 1px $gray4 !default;
+
+/// @type Color [default] - Focused outer border color
+$inuit-forms-border--outer--focused : $primary-blue !default;
+
+/// @type Color [default] - Disabled font color
+$inuit-forms-color--disabled        : $gray5 !default;
+
+/// @type Color [default] - Disabled background color
+$inuit-forms-background--disabled   : $gray1 !default;
+
+/// @type Color | String [default] - Disabled border string
+$inuit-forms-border--disabled       : 1px solid $gray3 !default;
+
+/// @type Color [default] - Readonly font color
+$inuit-forms-color--readonly        : $gray5 !default;
+
+/// @type Color [default] - Readonly background color
+$inuit-forms-background--readonly   : $white !default;
+
+/// @type Color | String [default] - Readonly border string
+$inuit-forms-border--readonly       : 1px solid $gray3 !default;
+
+/// @type Color [default] - Help font color
+$inuit-forms-color--help            : $gray7 !default;
+
+/// @type Boolean [default] - Produce CSS for bare text-inputs?
+$inuit-enable-text-input--bare      : false !default;
+
+/// @type Boolean [default] - Produce CSS for tiny inputs?
+$inuit-enable-input--tiny           : false !default;
+
+/// @type Boolean [default] - Produce CSS for small inputs?
+$inuit-enable-input--small          : false !default;
+
+/// @type Boolean [default] - Produce CSS for regular inputs?
+$inuit-enable-input--regular        : false !default;
+
+/// @type Boolean [default] - Produce CSS for large inputs?
+$inuit-enable-input--large          : false !default;
+
+/// @type Boolean [default] - Produce CSS for huge inputs?
+$inuit-enable-input--huge           : false !default;
 
 @if import-once('base.forms') {
-
-  form {
-    position: relative;
+  
+  .form-field {
+    margin-bottom: $inuit-base-spacing-unit--large;
+    &:last-child {
+      margin-bottom: $inuit-base-spacing-unit--large * 2;
+    }
+  }
+  
+  fieldset {
+    margin: 0;
+    &, legend {
+      border: 0;
+      padding: 0;
+    }
+  }
+  
+  legend {
+    margin-bottom: $inuit-base-spacing-unit--large;
+    font-weight: bold;
   }
   
   label {
     display: block;
+    margin-bottom: $inuit-base-spacing-unit--small;
+    cursor: pointer;
   }
   
-  .label-inline {
+  .#{$inuit-forms-namespace}label--inline,
+  %#{$inuit-forms-namespace}label--inline {
     display: inline-block;
-    line-height: 2em;
-    color: $gray-light;
+    margin: 0;
+    + .input--inline {
+      margin-left: $inuit-base-spacing-unit--large;
+    }
   }
   
-  input,
-  button,
-  a.button,
-  select,
+  .#{$inuit-forms-namespace}text-input,
+  %#{$inuit-forms-namespace}text-input,
   textarea {
-    // Suppress red glow that Firefox
-    // adds to form fields by default.
+    &:focus {
+      border-color: $inuit-forms-border--outer--focused;
+      box-shadow: $inuit-forms-border--inner--focused;
+    }
+  }
+  
+  .#{$inuit-forms-namespace}text-input,
+  %#{$inuit-forms-namespace}text-input,
+  textarea,
+  select {
+    width: 100%;
+    margin: 0;
+    border: $inuit-forms-border--outer;
+    padding: 0 $inuit-base-spacing-unit--small;
+    box-shadow: $inuit-forms-border--inner;
+    outline: 0;
+    font: inherit;
+    text-align: left;
+    vertical-align: top;
+    background-color: $inuit-forms-background;
+    background-clip: padding-box;
+    color: $inuit-forms-color;
+    -webkit-appearance: none;
+    &[readonly], &[disabled] {
+      box-shadow: none;
+    }
+    &[readonly] {
+      border: $inuit-forms-border--readonly;
+      background-color: $inuit-forms-background--readonly;
+      color: $inuit-forms-color--readonly;
+    }
+    &:disabled {
+      border: $inuit-forms-border--disabled;
+      box-shadow: none;
+      cursor: not-allowed;
+      background-color: $inuit-forms-background--disabled;
+      color: $inuit-forms-color--disabled;
+    }
+    // Suppress red glow that Firefox adds to form fields by default.
     &:invalid {
       box-shadow: none;
     }
-    // Add blue glow.
-    &:focus {
-      box-shadow: #06f 0 0 5px 0;
+  }
+  
+  .input--inline {
+    display: inline-block;
+    + .input--inline {
+      margin-left: $inuit-base-spacing-unit--large;
     }
   }
   
-  input[type=file],
-  input[type=radio],
-  input[type=checkbox] {
-    &:focus,
-    &:active {
-      box-shadow: none;
+  .#{$inuit-forms-namespace}text-input,
+  %#{$inuit-forms-namespace}text-input {
+    height: 2em;
+    line-height: 1;
+  }
+  
+  [type=checkbox], [type=radio] {
+    margin: 0;
+    padding: 0;
+    font-size: 1.05em;
+    cursor: pointer;
+    &[disabled] {
+      cursor: not-allowed;
+      + {
+        .#{$inuit-forms-namespace}label--inline,
+        %#{$inuit-forms-namespace}label--inline {
+          cursor: not-allowed;
+        }
+      }
     }
   }
   
-  .input--tiny {
-    width: calculateRem(50px);
+  [type=checkbox] + {
+    .#{$inuit-forms-namespace}label--inline,
+    %#{$inuit-forms-namespace}label--inline {
+      padding-left: 5px;
+    }
+  }  
+  
+  [type=radio] + {
+    .#{$inuit-forms-namespace}label--inline,
+    %#{$inuit-forms-namespace}label--inline {
+      padding-left: 3px;
+    }
+  }
+  
+  /**
+   * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+   * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+   *    (include `-moz` to future-proof).
+   */
+  
+  input[type="search"] {
+    -webkit-appearance: none;
+    padding: 0;
   }
 
-  .input--small {
-    width: calculateRem(100px);
-  }
   
-  .input--regular {
-    width: calculateRem(150px);
-  }
+  /**
+   * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+   * `font-size` values of the `input`, it causes the cursor style of the
+   * decrement button to change from `default` to `text`.
+   */
+   
+   // Commenting out as per https://github.com/Polymer/polymer/issues/1432
   
-  .input--large {
-    width: calculateRem(200px);
-  }
-  
-  .input--huge {
-    width: calculateRem(250px);
-  }
-  
-  .text-input,
-  %text-input,
-  textarea,
-  select {
-    -webkit-appearance: none;
-    height: 2em;
-    border: 1px solid $px-form-field-border-color;
-    padding: 0 .5em;
-    outline: 0;
-    text-align: left;
-    line-height: 1;
-    vertical-align: top;
-    background-color: $white;
-    background-clip: padding-box;
-    color: $gray-dark;
-    &[disabled] {
-      background-color: $gray-lightest;
+  /*
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      height: auto;
     }
+  */
     
-    @if($px-form-field-radius != 0) {
-      border-radius: $px-form-field-radius;
+  /**
+   * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+   * Safari (but not Chrome) clips the cancel button when the search input has
+   * padding (and `textfield` appearance).
+   */
+  
+  // Commenting out as per https://github.com/Polymer/polymer/issues/1432
+  
+  /*
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-decoration {
+      -webkit-appearance: none;
     }
+  */
+  
+  @if ($inuit-enable-input--tiny == true) {
+  
+    .#{$inuit-forms-namespace}input--tiny,
+    %#{$inuit-forms-namespace}input--tiny {
+      max-width: calculateRem(106px);
+    }
+  
   }
   
-  @if ($px-enable-form-field-inner-shadow == true) {
-  
-    /**
-     * Inner shadow.
-     */
-  
-    .text-input,
-    %text-input {
-      box-shadow: $px-form-field-inner-shadow;
+  @if ($inuit-enable-input--small == true) {
+
+    .#{$inuit-forms-namespace}input--small,
+    %#{$inuit-forms-namespace}input--small {
+      max-width: calculateRem(212px);
     }
   
   }
   
-  button[disabled],
-  input[disabled],
+  @if ($inuit-enable-input--regular == true) {
+  
+    .#{$inuit-forms-namespace}input--regular,
+    %#{$inuit-forms-namespace}input--regular {
+      max-width: calculateRem(318px);
+    }
+  
+  }
+  
+  @if ($inuit-enable-input--large == true) {
+  
+    .#{$inuit-forms-namespace}input--large,
+    %#{$inuit-forms-namespace}input--large {
+      max-width: calculateRem(424px);
+    }
+  
+  }
+  
+  @if ($inuit-enable-input--huge == true) {
+  
+    .#{$inuit-forms-namespace}input--huge,
+    %#{$inuit-forms-namespace}input--huge {
+      max-width: calculateRem(530px);
+    }
+  
+  }
+  
+  .form-field__help {
+    display: inline-block;
+    margin-top: $inuit-base-spacing-unit--tiny;
+    font-size: 1rem;
+    line-height: inherit;
+    color: $inuit-forms-color--help;
+  }
+  
   select[disabled],
   select[disabled] option,
   select[disabled] optgroup,
   textarea[disabled] {
     box-shadow: none;
     user-select: none;
-    color: $gray;
-    cursor: default;
+    background-color: $inuit-forms-background--disabled;
+    color: $gray5;
+    cursor: $inuit-forms-color--disabled;
   }
   
-  // Separate rule for Firefox.
-  // Separate rule for IE, too.
-  // Cannot stack with WebKit's.
+  // Separate rule for Firefox. Separate rule for IE, too. Cannot stack with WebKit's.
   input::-webkit-input-placeholder,
   textarea::-webkit-input-placeholder {
-    font-style: italic;
-    color: $gray;
+    padding-top: 1px;
+    color: $inuit-forms-color--placeholder;
   }
   
   input:-moz-placeholder,
   textarea:-moz-placeholder {
-    font-style: italic;
-    color: $gray;
+    color: $inuit-forms-color--placeholder;
   }
   
   select {
-    border-color: $gray-light;
+    border-color: $gray1;
     border-radius: 2px;
+    text-transform: none;
   }
   
   textarea,
@@ -151,8 +327,7 @@ $px-form-field-radius               : 3px !default;
     height: auto;
   }
   
-  // Set height back to normal,
-  // for Opera, WebKit, and IE.
+  // Set height back to normal, for Opera, WebKit, and IE.
   select[size="0"],
   select[size="1"] {
     height: 2em;
@@ -170,7 +345,7 @@ $px-form-field-radius               : 3px !default;
     select[size="0"],
     select[size="1"] {
       padding-right: calculateRem(20px);
-      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAICAMAAADUf89RAAAAIVBMVEX///9XV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dvorLKAAAACnRSTlMANDU5QGSAkJHv2+SltgAAADxJREFUCNdtyTkCwCAMxEBxBPD+/8HE0CQYlSNolvCyNb4VaZ1sUvmdsY77gHCe1ztnXV70fW7u5+5Qg0y71gGIV/2q9QAAAABJRU5ErkJggg==) no-repeat right center, linear-gradient(0deg, $gray-lightest 0%, $off-white 100%);
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAICAMAAADUf89RAAAAIVBMVEX///9XV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dvorLKAAAACnRSTlMANDU5QGSAkJHv2+SltgAAADxJREFUCNdtyTkCwCAMxEBxBPD+/8HE0CQYlSNolvCyNb4VaZ1sUvmdsY77gHCe1ztnXV70fW7u5+5Qg0y71gGIV/2q9QAAAABJRU5ErkJggg==) no-repeat right center, linear-gradient(0deg, $gray1 0%, $white 100%);
     }
   }
   
@@ -186,38 +361,30 @@ $px-form-field-radius               : 3px !default;
   }
   
   optgroup {
-    font-style: normal;
-    font-weight: normal;
-    color: black;
-    // Kill phantom spacing and dotted
-    // border that appears in Firefox.
+    margin: 0;
+    font: inherit;
+    font-weight: bold;
+    color: $black;
+    // Kill phantom spacing and dotted border that appears in Firefox.
     &::-moz-focus-inner {
       border: 0;
       padding: 0;
     }
-  }
+  } 
   
-  .input-bare {
-    border: 0!important;
-    &[type=number] {
-      position: relative;
-      padding: 0 .25em 0 0;
-      text-align: right;
-    }
-  }
   
-  .input-btn {
-    height: 2.3em;
-    border: solid rgba($gray, .55);
-    border-width: 1px 0 1px 1px;
-    border-radius: 0;
-    box-shadow: inset 0 4px 6px 1px rgba($true-black, .13);
-  }
+  
+  @if ($inuit-enable-text-input--bare == true) {
     
-  .layout__item {
-    .text-input, select {
-      width: 100%;
+    /**
+     * Text inputs with no styles.
+     */
+  
+    .#{$inuit-btn-namespace}text-input--bare,
+    %#{$inuit-btn-namespace}text-input--bare {
+      border: 0!important;
     }
+  
   }
 
 }
