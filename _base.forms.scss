@@ -102,8 +102,9 @@ $inuit-enable-input--huge           : false !default;
   %#{$inuit-forms-namespace}label--inline {
     display: inline-block;
     margin: 0;
-    + .input--inline {
-      margin-left: $inuit-base-spacing-unit--large;
+    line-height: 2;
+    + .text-input {
+      margin-left: $inuit-base-spacing-unit--small;
     }
   }
   
@@ -154,9 +155,14 @@ $inuit-enable-input--huge           : false !default;
     }
   }
   
-  .input--inline {
-    display: inline-block;
-    + .input--inline {
+  .text-input + {
+    [type=checkbox], [type=radio] {
+      margin-left: $inuit-base-spacing-unit--large;
+    }
+  }
+  
+  input:not(.btn), .label--inline {
+    + .btn {
       margin-left: $inuit-base-spacing-unit--large;
     }
   }
