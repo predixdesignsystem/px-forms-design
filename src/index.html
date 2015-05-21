@@ -12,13 +12,16 @@
         <fieldset>
           <legend>Default, Readonly, Disabled</legend>
           <ol class=list-bare>
+            <li class=mb+>
+              <em>The default behavior of input fields is to stretch to 100% of their container.</em>
+            </li>
             <li class=form-field>
               <label for=input1>Default</label>
               <input id=input1 class=text-input type=text placeholder="Type something&hellip;">
             </li>
             <li class=form-field>
               <label for=input2>Readonly</label>
-              <input id=input2 class=text-input type=text placeholder="Hint text" readonly>
+              <input id=input2 class=text-input type=text value="Readonly value" readonly>
             </li>
             <li class=form-field>
               <label for=input3>Disabled</label>
@@ -70,14 +73,15 @@
         </fieldset>
       </form>
       <form>
-        <fieldset>
+        <fieldset class=form-field>
           <legend>Inline Form</legend>
-          <div class=form-field>
-            <input class="text-input input--inline input--regular" type=text placeholder="Enter Firstname">
-            <input id=inline-checkbox1 class=input--inline type=checkbox>
-            <label class=label--inline for=inline-checkbox1>No Lastname</label>
-            <input class="btn btn--primary input--inline" type=submit value=Submit>
-          </div>
+          <label class=label--inline for=inline1>From</label>
+          <input id=inline1 class="text-input input--small" type=text>
+          <label class=label--inline for=inline2>to</label>
+          <input id=inline2 class="text-input input--small" type=text>
+          <input id=inline3 type=checkbox>
+          <label class=label--inline for=inline3>Inline checkbox</label>
+          <input class="btn btn--primary" type=submit value=Submit>
         </fieldset>
       </form>
       <form>
@@ -86,23 +90,23 @@
           <ol class=list-bare>
             <li class=form-field>
               <label for=input4>Tiny Field</label>
-              <input id=input4 class="text-input input--tiny" type=text>
+              <input id=input4 class="text-input input--tiny" type=text placeholder="Up to 106 px">
             </li>
             <li class=form-field>
               <label for=input5>Small Field</label>
-              <input id=input5 class="text-input input--small" type=text>
+              <input id=input5 class="text-input input--small" type=text placeholder="Up to 212 px">
             </li>
             <li class=form-field>
               <label for=input6>Regular Field</label>
-              <input id=input6 class="text-input input--regular" type=text>
+              <input id=input6 class="text-input input--regular" type=text placeholder="Up to 318 px">
             </li>
             <li class=form-field>
               <label for=input7>Large Field</label>
-              <input id=input7 class="text-input input--large" type=text>
+              <input id=input7 class="text-input input--large" type=text placeholder="Up to 424 px">
             </li>
             <li class=form-field>
               <label for=input8>Huge Field</label>
-              <input id=input8 class="text-input input--huge" type=text>
+              <input id=input8 class="text-input input--huge" type=text placeholder="Up to 530 px">
             </li>
           </ol>
         </fieldset>
@@ -110,34 +114,93 @@
           <legend>Different input types</legend>
           <ol class=list-bare>
             <li class=form-field>
-              <label for=input4>Email</label>
-              <input id=input4 class="text-input" type=email placeholder=name@example.com>
+              <label for=email1>Email</label>
+              <input id=email1 class="text-input" type=email placeholder=name@example.com>
             </li>
             <li class=form-field>
-              <label for=input5>Telelphone</label>
-              <input id=input5 class="text-input" type=tel placeholder="(xxx) xxx-xxxx">
+              <label for=tel1>Telelphone</label>
+              <input id=tel1 class="text-input" type=tel placeholder="(xxx) xxx-xxxx">
             </li>
             <li class=form-field>
-              <label for=input6>Search</label>
-              <input id=input6 class="text-input" type=search placeholder="Enter search term&hellip;">
+              <label for=search1>Search</label>
+              <input id=search1 class="text-input" type=search placeholder="Enter search term&hellip;">
             </li>
             <li class=form-field>
-              <label for=input7>Number</label>
-              <input id=input7 class="text-input" type=number>
+              <label for=number1>Number</label>
+              <input id=number1 class="text-input" type=number>
             </li>
             <li class=form-field>
-              <label for=input8>Date</label>
-              <input id=input8 class="text-input" type=date placeholder=YYYY/MM/DD>
+              <label for=date1>Date</label>
+              <input id=date1 class="text-input" type=date placeholder=YYYY/MM/DD>
             </li>
             <li class=form-field>
-              <label for=input8>Month</label>
-              <input id=input8 class="text-input" type=month placeholder="Jan, Feb, &hellip;">
+              <label for=month1>Month</label>
+              <input id=month1 class="text-input" type=month placeholder="Jan, Feb, &hellip;">
             </li>
             <li class=form-field>
-              <label for=input8>Password</label>
-              <input id=input8 class="text-input" type=password>
+              <label for=password1>Password</label>
+              <input id=password1 class="text-input" type=password>
             </li>
           </ol>
+        </fieldset>
+        <fieldset>
+          <legend>Text Area</legend>
+          <div class=form-field>
+            <textarea placeholder="Type something&hellip;"></textarea>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Dropdown</legend>
+          <ol class=list-bare>
+            <li class=form-field>
+              <select>
+                <option>Selection 1</option>
+                <option>Selection 2</option>
+                <option>Selection 3</option>
+                <option>Selection 4</option>
+              </select>
+            </li>
+            <li class=form-field>
+              <select disabled>
+                <option>Disabled Selection 1</option>
+                <option>Disabled Selection 2</option>
+                <option>Disabled Selection 3</option>
+                <option>Disabled Selection 4</option>
+              </select>
+            </li>
+            <li class=form-field>
+              <select>
+                <option disabled>Select Groups</option>
+                <optgroup label="Group 1">
+                  <option>Selection 1</option>
+                  <option>Selection 2</option>
+                  <option>Selection 3</option>
+                  <option>Selection 4</option>
+                </optgroup>
+                <optgroup label="Group 2">
+                  <option>Selection 1</option>
+                  <option>Selection 2</option>
+                  <option>Selection 3</option>
+                  <option>Selection 4</option>
+                </optgroup>
+              </select>
+            </li>
+          </ol>
+        </fieldset>
+        <fieldset>
+          <legend>Multiple Select</legend>
+          <div class=form-field>
+            <select multiple>
+              <option>Selection 1</option>
+              <option>Selection 2</option>
+              <option>Selection 3</option>
+              <option>Selection 4</option>
+              <option>Selection 5</option>
+              <option>Selection 6</option>
+              <option>Selection 7</option>
+              <option>Selection 8</option>
+            </select>
+          </div>
         </fieldset>
       </form>
     </section>
