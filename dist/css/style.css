@@ -1028,11 +1028,6 @@ small {
 /**
      * Dark
      */
-.form-field {
-  margin-bottom: 1.3333333333rem; }
-  .form-field:last-child {
-    margin-bottom: 2.6666666667rem; }
-
 fieldset {
   margin: 0; }
   fieldset, fieldset legend {
@@ -1043,58 +1038,112 @@ legend {
   margin-bottom: 1.3333333333rem;
   font-weight: bold; }
 
+.form-field {
+  margin-bottom: 1.3333333333rem; }
+  .form-field:last-child {
+    margin-bottom: 2.6666666667rem; }
+
 label {
   display: block;
-  margin-bottom: 0.6666666667rem;
+  margin-bottom: 0.3333333333rem;
   cursor: pointer; }
 
 .label--inline {
   display: inline-block;
-  margin: 0; }
-  .label--inline + .input--inline {
-    margin-left: 1.3333333333rem; }
-
-.text-input:focus, textarea:focus {
-  border-color: #3e87e8;
-  box-shadow: inset 0 0 0 1px #d1d0d8; }
+  margin-bottom: 0;
+  line-height: 1; }
+  .label--inline + .text-input {
+    margin-left: 0.6666666667rem; }
 
 .text-input, textarea, select {
-  width: 100%;
   margin: 0;
   border: 1px solid #b1b1bc;
+  font: inherit;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+  .text-input:disabled, textarea:disabled, select:disabled {
+    cursor: not-allowed; }
+
+.text-input, textarea {
+  width: 100%;
   padding: 0 0.6666666667rem;
   box-shadow: inset 0 0 0 1px #e4e4ea;
-  outline: 0;
-  font: inherit;
-  text-align: left;
-  vertical-align: top;
   background-color: #efeff4;
-  background-clip: padding-box;
-  color: black;
-  -webkit-appearance: none; }
-  .text-input[readonly], .text-input[disabled], textarea[readonly], textarea[disabled], select[readonly], select[disabled] {
+  color: black; }
+  .text-input[readonly], .text-input[disabled], textarea[readonly], textarea[disabled] {
     box-shadow: none; }
-  .text-input[readonly], textarea[readonly], select[readonly] {
+  .text-input[readonly], textarea[readonly] {
     border: 1px solid #e4e4ea;
     background-color: white;
     color: #b1b1bc; }
-  .text-input:disabled, textarea:disabled, select:disabled {
+  .text-input:disabled, textarea:disabled {
     border: 1px solid #e4e4ea;
     box-shadow: none;
-    cursor: not-allowed;
     background-color: #f7f7fc;
     color: #b1b1bc; }
-  .text-input:invalid, textarea:invalid, select:invalid {
-    box-shadow: none; }
+  .text-input:focus, textarea:focus {
+    border-color: #3e87e8;
+    box-shadow: inset 0 0 0 1px #d1d0d8; }
+  .text-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #b1b1bc; }
+  .text-input:-moz-placeholder, textarea:-moz-placeholder {
+    color: #b1b1bc; }
 
-.input--inline {
-  display: inline-block; }
-  .input--inline + .input--inline {
-    margin-left: 1.3333333333rem; }
+select {
+  border-radius: 3px;
+  padding: 0 3em 0 1em;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  line-height: calc(2em - 2px);
+  cursor: pointer;
+  background-color: #e4e4ea;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="9.3" viewBox="-28.5 391.9 16 9.3"><path fill="#3b3b3f" d="M-12.7 392.8l-.8-.8c-.1-.1-.2-.2-.4-.2-.1 0-.3.1-.4.2l-6.3 6.3-6.3-6.3c-.1-.1-.2-.2-.4-.2-.1 0-.3.1-.4.2l-.8.8c-.1.1-.2.2-.2.4 0 .1.1.3.2.4l7.5 7.5c.1.1.2.2.4.2s.3-.1.4-.2l7.5-7.5c.1-.1.2-.2.2-.4 0-.1-.1-.3-.2-.4z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 1em) 50%;
+  color: #3b3b3f; }
+  select:hover, select:focus {
+    border: 1px solid #9999a3;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    background-color: #b1b1bc; }
+  select:active {
+    border: 1px solid #7c7c84;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    background-color: #9999a3; }
+  select:disabled {
+    border: 1px solid #d1d0d8;
+    box-shadow: none;
+    background-color: white;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="9.3" viewBox="-28.5 391.9 16 9.3"><path fill="#d1d0d8" d="M-12.7 392.8l-.8-.8c-.1-.1-.2-.2-.4-.2-.1 0-.3.1-.4.2l-6.3 6.3-6.3-6.3c-.1-.1-.2-.2-.4-.2-.1 0-.3.1-.4.2l-.8.8c-.1.1-.2.2-.2.4 0 .1.1.3.2.4l7.5 7.5c.1.1.2.2.4.2s.3-.1.4-.2l7.5-7.5c.1-.1.2-.2.2-.4 0-.1-.1-.3-.2-.4z"/></svg>');
+    color: #d1d0d8; }
+  select[multiple] {
+    border: 1px solid #b1b1bc;
+    padding: 0.3333333333rem;
+    cursor: pointer;
+    background: #f7f7fc; }
 
 .text-input {
   height: 2em;
   line-height: 1; }
+  .text-input + [type=checkbox], .text-input + [type=radio] {
+    margin-left: 1.3333333333rem; }
+  .text-input + .label--inline {
+    margin-left: 0.6666666667rem; }
+  .text-input[type=search] {
+    -webkit-appearance: none;
+    padding: 0; }
+  .text-input::-webkit-input-placeholder {
+    padding-top: 1px; }
+  .text-input:-moz-placeholder {
+    padding-top: 1px; }
+
+.text-input + [type=submit], .text-input [type=cancel], .label--inline + [type=submit], .label--inline [type=cancel] {
+  margin-left: 1.3333333333rem; }
+
+textarea {
+  overflow: auto;
+  min-height: calc(120px + 0.6666666667rem);
+  padding: 0.3333333333rem 0.6666666667rem;
+  resize: vertical; }
 
 [type=checkbox], [type=radio] {
   margin: 0;
@@ -1112,37 +1161,13 @@ label {
 [type=radio] + .label--inline {
   padding-left: 3px; }
 
-/**
-   * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
-   * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
-   *    (include `-moz` to future-proof).
-   */
-input[type="search"] {
-  -webkit-appearance: none;
-  padding: 0; }
+.form-field__help {
+  display: inline-block;
+  margin-top: 0.3333333333rem;
+  font-size: 1rem;
+  line-height: inherit;
+  color: #7c7c84; }
 
-/**
-   * Fix the cursor style for Chrome's increment/decrement buttons. For certain
-   * `font-size` values of the `input`, it causes the cursor style of the
-   * decrement button to change from `default` to `text`.
-   */
-/*
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
-      height: auto;
-    }
-  */
-/**
-   * Remove inner padding and search cancel button in Safari and Chrome on OS X.
-   * Safari (but not Chrome) clips the cancel button when the search input has
-   * padding (and `textfield` appearance).
-   */
-/*
-    input[type="search"]::-webkit-search-cancel-button,
-    input[type="search"]::-webkit-search-decoration {
-      -webkit-appearance: none;
-    }
-  */
 .input--tiny {
   max-width: 7.0666666667rem; }
 
@@ -1157,69 +1182,6 @@ input[type="search"] {
 
 .input--huge {
   max-width: 35.3333333333rem; }
-
-.form-field__help {
-  display: inline-block;
-  margin-top: 0.3333333333rem;
-  font-size: 1rem;
-  line-height: inherit;
-  color: #7c7c84; }
-
-select[disabled], select[disabled] option, select[disabled] optgroup, textarea[disabled] {
-  box-shadow: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  background-color: #f7f7fc;
-  color: #b1b1bc;
-  cursor: #b1b1bc; }
-
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  padding-top: 1px;
-  color: #b1b1bc; }
-
-input:-moz-placeholder, textarea:-moz-placeholder {
-  color: #b1b1bc; }
-
-select {
-  border-color: #f7f7fc;
-  border-radius: 2px;
-  text-transform: none; }
-
-textarea, select[size], select[multiple] {
-  height: auto; }
-
-select[size="0"], select[size="1"] {
-  height: 2em; }
-
-@media (-webkit-min-device-pixel-ratio: 0) {
-  select[size], select[multiple], select[multiple][size] {
-    background-image: none;
-    padding-right: 0.2rem; }
-
-  select, select[size="0"], select[size="1"] {
-    padding-right: 1.3333333333rem;
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAICAMAAADUf89RAAAAIVBMVEX///9XV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dvorLKAAAACnRSTlMANDU5QGSAkJHv2+SltgAAADxJREFUCNdtyTkCwCAMxEBxBPD+/8HE0CQYlSNolvCyNb4VaZ1sUvmdsY77gHCe1ztnXV70fW7u5+5Qg0y71gGIV/2q9QAAAABJRU5ErkJggg==) no-repeat right center, linear-gradient(0deg, #f7f7fc 0%, #ffffff 100%); }
- }
-
-select[multiple] {
-  padding: 0.3333333333rem; }
-
-textarea {
-  overflow: auto;
-  width: 100%;
-  min-height: 2.6666666667rem;
-  resize: vertical; }
-
-optgroup {
-  margin: 0;
-  font: inherit;
-  font-weight: bold;
-  color: black; }
-  optgroup::-moz-focus-inner {
-    border: 0;
-    padding: 0; }
 
 /*------------------------------------*\
     #PX-CLEARFIX-DESIGN
@@ -1292,6 +1254,32 @@ optgroup {
 /**
  * Sass functions for Predix Experience
  */
+/**
+       * Add large margins.
+       */
+.m\00002b {
+  margin: 1.3333333333rem !important; }
+
+.mt\00002b {
+  margin-top: 1.3333333333rem !important; }
+
+.mr\00002b {
+  margin-right: 1.3333333333rem !important; }
+
+.mb\00002b {
+  margin-bottom: 1.3333333333rem !important; }
+
+.ml\00002b {
+  margin-left: 1.3333333333rem !important; }
+
+.mh\00002b {
+  margin-right: 1.3333333333rem !important;
+  margin-left: 1.3333333333rem !important; }
+
+.mv\00002b {
+  margin-top: 1.3333333333rem !important;
+  margin-bottom: 1.3333333333rem !important; }
+
 /**
        * Add huge margins.
        */
