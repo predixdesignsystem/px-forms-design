@@ -11,10 +11,25 @@
       <form>
         <fieldset>
           <legend>Default, Readonly, Disabled</legend>
+          <p>
+            (<em>The default behavior of input fields is to stretch to 100% of their container.</em>)
+          </p>
+          <figure class="code mh0 mb+">
+            <code>
+              &lt;label for=&hellip;&gt;&hellip;&lt;/label&gt;
+              <br>
+              &lt;input id=&hellip; class=text-input type=text placeholder="&hellip;"&gt;
+              <br>
+              &lt;label for=&hellip;&gt;&hellip;&lt;/label&gt;
+              <br>
+              &lt;input id=&hellip; class=text-input type=text value="&hellip;"&gt;
+              <br>
+              &lt;label for=&hellip;&gt;&hellip;&lt;/label&gt;
+              <br>
+              &lt;input id=&hellip; class=text-input type=text placeholder="&hellip;"&gt;
+            </code>
+          </figure>
           <ol class=list-bare>
-            <li class=mb+>
-              <em>The default behavior of input fields is to stretch to 100% of their container.</em>
-            </li>
             <li class=form-field>
               <label for=input1>Default</label>
               <input id=input1 class=text-input type=text placeholder="Type something&hellip;">
@@ -33,6 +48,45 @@
       <form>
         <fieldset class=form-field>
           <legend>Basic form</legend>
+          <figure class="code mh0 mb+">
+            <code>
+              &lt;form&gt;
+              <br>
+              &nbsp;&nbsp;&lt;fieldset&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;&hellip;&lt;/legend&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;ol class=list-bare&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class=form-field&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for=&hellip;&gt;&hellip;&lt;/label&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input id=&hellip; class=text-input type=text placeholder="&hellip;"&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;small class=form-field__help&gt;&hellip;&lt;/small&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class=form-field&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input id=&hellip; type=checkbox&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class=label--inline for=&hellip;&gt;&hellip;&lt;/label&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ol&gt;
+              <br>
+              &nbsp;&nbsp;&lt;/fieldset&gt;
+              <br>
+              &nbsp;&nbsp;&lt;input class="btn btn--primary" type=submit value=&hellip;&gt;
+              <br>
+              &nbsp;&nbsp;&lt;input class=btn type=reset value=&hellip;&gt;
+              <br>
+              &lt;/form&gt;
+            </code>
+          </figure>
           <ol class=list-bare>
             <li class=form-field>
               <label for=basic-form-name>Name</label>
@@ -45,12 +99,27 @@
             </li>
           </ol>
           <input class="btn btn--primary" type=submit value=Submit>
-          <input class="btn" type=reset value=Cancel>
+          <input class=btn type=reset value=Cancel>
         </fieldset>
       </form>
       <form>
         <fieldset>
           <legend>Checkbox</legend>
+          <figure class="code mh0 mb+">
+            <code>
+              &lt;input id=&hellip; type=checkbox disabled&gt;
+              <br>
+              &lt;label class=label--inline for=&hellip;&gt;&hellip;&lt;/label&gt;
+              <br>
+              &lt;input id=&hellip; class=ml++ type=checkbox&gt;
+              <br>
+              &lt;label class=label--inline for=&hellip;&gt;&hellip;&lt;/label&gt;
+              <br>
+              &lt;input id=&hellip; class=ml++ type=checkbox checked&gt;
+              <br>
+              &lt;label class=label--inline for=&hellip;&gt;&hellip;&lt;/label&gt;
+            </code>
+          </figure>
           <div class=form-field>
             <input id=checkbox1 type=checkbox disabled>
             <label class=label--inline for=checkbox1>Disabled</label>
@@ -62,6 +131,21 @@
         </fieldset>
         <fieldset>
           <legend>Radio Button</legend>
+          <figure class="code mh0 mb+">
+            <code>
+              &lt;input id=&hellip; name=&hellip; type=radio disabled&gt;
+              <br>
+              &lt;label class=label--inline for=&hellip;&gt;&hellip;&lt;/label&gt;
+              <br>
+              &lt;input id=&hellip; class=ml++ name=&hellip; type=radio&gt;
+              <br>
+              &lt;label class=label--inline for=&hellip;&gt;&hellip;&lt;/label&gt;
+              <br>
+              &lt;input id=&hellip; class=ml++ name=&hellip; type=radio checked&gt;
+              <br>
+              &lt;label class=label--inline for=&hellip;&gt;&hellip;&lt;/label&gt;
+            </code>
+          </figure>
           <div class=form-field>
             <input id=radio1 name=radio type=radio disabled>
             <label class=label--inline for=radio1>Disabled</label>
@@ -75,6 +159,23 @@
       <form>
         <fieldset class=form-field>
           <legend>Inline Form</legend>
+          <figure class="code mh0 mb+">
+            <code>
+              &lt;label class=label--inline for=&hellip;&gt;&hellip;&lt;/label&gt;
+              <br>
+              &lt;input id=&hellip; class="text-input input--&hellip;" type=text&gt;
+              <br>
+              &lt;label class=label--inline for=&hellip;&gt;&hellip;&lt;/label&gt;
+              <br>
+              &lt;input id=&hellip; class="text-input input--&hellip;" type=text&gt;
+              <br>
+              &lt;input id=&hellip; type=checkbox&gt;
+              <br>
+              &lt;label class=label--inline for=&hellip;&gt;&hellip;&lt;/label&gt;
+              <br>
+              &lt;input class="btn btn--primary" type=submit value=&hellip;&gt;
+            </code>
+          </figure>
           <label class=label--inline for=inline1>From</label>
           <input id=inline1 class="text-input input--small" type=text>
           <label class=label--inline for=inline2>to</label>
@@ -87,6 +188,19 @@
       <form>
         <fieldset>
           <legend>Different input field widths</legend>
+          <figure class="code mh0 mb+">
+            <code>
+              &lt;input class="text-input input--tiny" type=text&gt;
+              <br>
+              &lt;input class="text-input input--small" type=text&gt;
+              <br>
+              &lt;input class="text-input input--regular" type=text&gt;
+              <br>
+              &lt;input class="text-input input--large" type=text&gt;
+              <br>
+              &lt;input class="text-input input--huge" type=text&gt;
+            </code>
+          </figure>
           <ol class=list-bare>
             <li class=form-field>
               <label for=input4>Tiny Field</label>
@@ -112,6 +226,23 @@
         </fieldset>
         <fieldset>
           <legend>Different input types</legend>
+          <figure class="code mh0 mb+">
+            <code>
+              &lt;input class=text-input type=email&gt;
+              <br>
+              &lt;input class=text-input type=tel&gt;
+              <br>
+              &lt;input class=text-input type=search&gt;
+              <br>
+              &lt;input class=text-input type=number&gt;
+              <br>
+              &lt;input class=text-input type=date&gt;
+              <br>
+              &lt;input class=text-input type=month&gt;
+              <br>
+              &lt;input class=text-input type=password&gt;
+            </code>
+          </figure>
           <ol class=list-bare>
             <li class=form-field>
               <label for=email1>Email</label>
@@ -145,12 +276,72 @@
         </fieldset>
         <fieldset>
           <legend>Text Area</legend>
+          <figure class="code mh0 mb+">
+            <code>
+              &lt;textarea placeholder="&hellip;"&gt;&lt;/textarea&gt;
+            </code>
+          </figure>
           <div class=form-field>
             <textarea placeholder="Type something&hellip;"></textarea>
           </div>
         </fieldset>
         <fieldset>
           <legend>Dropdown</legend>
+          <figure class="code mh0 mb+">
+            <code>
+              &lt;select&gt;
+              <br>
+              &nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &lt;/select&gt;
+              <br>
+              &lt;select disabled&gt;
+              <br>
+              &nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &lt;/select&gt;
+              <br>
+              &lt;select&gt;
+              <br>
+              &nbsp;&nbsp;&lt;optgroup label="&hellip;"&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&lt;/optgroup&gt;
+              <br>
+              &nbsp;&nbsp;&lt;optgroup label="&hellip;"&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&lt;/optgroup&gt;
+              <br>
+              &lt;/select&gt;
+            </code>
+          </figure>
           <ol class=list-bare>
             <li class=form-field>
               <select>
@@ -170,7 +361,6 @@
             </li>
             <li class=form-field>
               <select>
-                <option disabled>Select Groups</option>
                 <optgroup label="Group 1">
                   <option>Selection 1</option>
                   <option>Selection 2</option>
@@ -189,6 +379,29 @@
         </fieldset>
         <fieldset>
           <legend>Multiple Select</legend>
+          <figure class="code mh0 mb+">
+            <code>
+              &lt;select multiple&gt;
+              <br>
+              &nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &nbsp;&nbsp;&lt;option&gt;&hellip;&lt;/option&gt;
+              <br>
+              &lt;/select&gt;
+            </code>
+          </figure>
           <div class=form-field>
             <select multiple>
               <option>Selection 1</option>
