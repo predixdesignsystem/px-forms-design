@@ -85,11 +85,23 @@ $inuit-forms-select-border--pressed         : $gray7 !default;
 /// @type Color [default] - Multiple select background color
 $inuit-forms-select-multiple-background     : $gray1 !default;
 
-/// @type Boolean [default] - Produce CSS for bare text-inputs?
+/// @type Color [default] - Validation warning color
+$inuit-forms-validation-warning             : $alert-orange !default;
+
+/// @type Color [default] - Validation error color
+$inuit-forms-validation-error               : $alert-red !default;
+
+/// @type Color [default] - Validation success color
+$inuit-forms-validation-success             : $green !default;
+
+/// @type Boolean [default] - Produce CSS for one line form fields?
 $inuit-enable-inline-fields                 : false !default;
 
 /// @type Boolean [default] - Produce CSS for bare text-inputs?
 $inuit-enable-text-input--bare              : false !default;
+
+/// @type Boolean [default] - Produce CSS for field validation?
+$inuit-enable-validation-states             : false !default;
 
 /// @type Boolean [default] - Produce CSS for tiny inputs?
 $inuit-enable-input--tiny                   : false !default;
@@ -368,6 +380,10 @@ $inuit-enable-input--huge                   : false !default;
   
   
   @if ($inuit-enable-inline-fields == true) {
+    
+    /**
+     * Styles for one line forms.
+     */
   
     .#{$inuit-forms-namespace}form-field--inline,
     %#{$inuit-forms-namespace}form-field--inline {
@@ -392,6 +408,55 @@ $inuit-enable-input--huge                   : false !default;
     .#{$inuit-btn-namespace}text-input--bare,
     %#{$inuit-btn-namespace}text-input--bare {
       border: 0!important;
+    }
+  
+  }
+  
+  
+  
+  @if ($inuit-enable-validation-states == true) {
+    
+    /**
+     * Styles for validation states
+     */
+  
+    .#{$inuit-btn-namespace}validation-warning,
+    %#{$inuit-btn-namespace}validation-warning {
+      color: $inuit-forms-validation-warning;
+    }
+    
+    .#{$inuit-btn-namespace}validation-error,
+    %#{$inuit-btn-namespace}validation-error {
+      color: $inuit-forms-validation-error;
+    }
+    
+    .#{$inuit-btn-namespace}validation-success,
+    %#{$inuit-btn-namespace}validation-success {
+      color: $inuit-forms-validation-success;
+    }
+    
+    .#{$inuit-btn-namespace}text-input,
+    %#{$inuit-btn-namespace}text-input {
+      &.validation-warning {
+        border-color: $inuit-forms-validation-warning;
+        color: inherit;
+      }      
+    }
+    
+    .#{$inuit-btn-namespace}text-input,
+    %#{$inuit-btn-namespace}text-input {
+      &.validation-error {
+        border-color: $inuit-forms-validation-error;
+        color: inherit;
+      }      
+    }
+    
+    .#{$inuit-btn-namespace}text-input,
+    %#{$inuit-btn-namespace}text-input {
+      &.validation-success {
+        border-color: $inuit-forms-validation-success;
+        color: inherit;
+      }      
     }
   
   }

@@ -286,6 +286,63 @@
           </div>
         </fieldset>
         <fieldset>
+          <legend>Validation States</legend>
+          <figure class="code mh0 mb+">
+            <code>
+              &lt;ol class=list-bare&gt;
+              <br>
+              &nbsp;&lt;li class=form-field&gt;
+              <br>
+              &nbsp;&nbsp;&lt;label for=&hellip; class=validation-warning&gt;&hellip;&lt;/label&gt;
+              <br>
+              &nbsp;&nbsp;&lt;input id=&hellip; class="text-input validation-warning" type=text&gt;
+              <br>
+              &nbsp;&nbsp;&lt;small class="form-field__help validation-warning"&gt;&hellip;&lt;/small&gt;
+              <br>
+              &nbsp;&lt;/li&gt;
+              <br>
+              &nbsp;&lt;li class=form-field&gt;
+              <br>
+              &nbsp;&nbsp;&lt;label for=&hellip; class=validation-error&gt;&hellip;&lt;/label&gt;
+              <br>
+              &nbsp;&nbsp;&lt;input id=&hellip; class="text-input validation-error" type=text&gt;
+              <br>
+              &nbsp;&nbsp;&lt;small class="form-field__help validation-error"&gt;&hellip;&lt;/small&gt;
+              <br>
+              &nbsp;&lt;/li&gt;
+              <br>
+              &nbsp;&lt;li class=form-field&gt;
+              <br>
+              &nbsp;&nbsp;&lt;label for=&hellip; class=validation-success&gt;&hellip;&lt;/label&gt;
+              <br>
+              &nbsp;&nbsp;&lt;input id=&hellip; class="text-input validation-success" type=text&gt;
+              <br>
+              &nbsp;&nbsp;&lt;small class="form-field__help validation-success"&gt;&hellip;&lt;/small&gt;
+              <br>
+              &nbsp;&lt;/li&gt;
+              <br>
+              &lt;/ol&gt;
+            </code>
+          </figure>
+          <ol class=list-bare>
+            <li class=form-field>
+              <label for=validation1 class=validation-warning>Warning</label>
+              <input id=validation1 class="text-input validation-warning" type=text value="Wrong entry">
+              <small class="form-field__help validation-warning">Help Text</small>
+            </li>
+            <li class=form-field>
+              <label for=validation2 class=validation-error>Error</label>
+              <input id=validation2 class="text-input validation-error" type=text value="Absolutely wrong entry">
+              <small class="form-field__help validation-error">Help Text</small>
+            </li>
+            <li class=form-field>
+              <label for=validation3 class=validation-success>Success</label>
+              <input id=validation3 class="text-input validation-success" type=text value="Right entry">
+              <small class="form-field__help validation-success">Help Text</small>
+            </li>
+          </ol>
+        </fieldset>
+        <fieldset>
           <legend>Dropdown</legend>
           <figure class="code mh0 mb+">
             <code>
