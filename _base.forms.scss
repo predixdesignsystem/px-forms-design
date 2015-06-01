@@ -86,6 +86,9 @@ $inuit-forms-select-border--pressed         : $gray7 !default;
 $inuit-forms-select-multiple-background     : $gray1 !default;
 
 /// @type Boolean [default] - Produce CSS for bare text-inputs?
+$inuit-enable-inline-fields                 : false !default;
+
+/// @type Boolean [default] - Produce CSS for bare text-inputs?
 $inuit-enable-text-input--bare              : false !default;
 
 /// @type Boolean [default] - Produce CSS for tiny inputs?
@@ -360,7 +363,23 @@ $inuit-enable-input--huge                   : false !default;
       max-width: calculateRem(530px);
     }
   
-  }  
+  }
+  
+  
+  
+  @if ($inuit-enable-inline-fields == true) {
+  
+    .#{$inuit-forms-namespace}form-field--inline,
+    %#{$inuit-forms-namespace}form-field--inline {
+      &:last-child {
+        margin-bottom: $inuit-base-spacing-unit--large;
+      }
+      .text-input {
+        margin-bottom: $inuit-base-spacing-unit--large;
+      }
+    }
+  
+  }
   
   
   
