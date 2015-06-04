@@ -29,7 +29,7 @@ $inuit-forms-border--outer                  : 1px solid $gray5 !default;
 $inuit-forms-border--inner--focused         : inset 0 0 0 1px $gray4 !default;
 
 /// @type Color [default] - Focused outer border color
-$inuit-forms-border--outer--focused         : $primary-blue !default;
+$inuit-forms-border--outer--focused         : $select-blue-default !default;
 
 /// @type Color [default] - Disabled font color
 $inuit-forms-color--disabled                : $gray5 !default;
