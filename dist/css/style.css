@@ -1,16 +1,4 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-/*------------------------------------*\
-    #PX-FUNCTIONS-DESIGN
-\*------------------------------------*/
-/**
- * Sass functions for Predix Experience
- */
-/*------------------------------------*\
-    #PX-FUNCTIONS-DESIGN
-\*------------------------------------*/
-/**
- * Sass functions for Predix Experience
- */
 /**
    *
    * 1. Set the default `font-size` and `line-height` for the entire project,
@@ -109,19 +97,235 @@ li > ul, li > ol {
 ul, ol, dd {
   margin-left: 2rem; }
 
+/* Embedded content
+     ========================================================================== */
+/**
+   * Remove border when inside `a` element in IE 8/9/10.
+   */
+img {
+  border: 0; }
+
+/**
+   * Correct overflow not hidden in IE 9/10/11.
+   */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+     ========================================================================== */
+/**
+   * Zero margins for figure.
+   */
+figure {
+  margin: 0; }
+
+/**
+   * Address differences between Firefox and other browsers.
+   */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+   * Contain overflow in all browsers.
+   */
+pre {
+  overflow: auto; }
+
+/**
+ * Set the global `box-sizing` state to `border-box`.
+ *
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ * paulirish.com/2012/box-sizing-border-box-ftw
+ */
+html {
+  box-sizing: border-box; }
+
+:host {
+  /*! Comment to prevent cssmin munging this rule with html above and borking Safari */
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.viewport {
+  width: 98%;
+  max-width: 80rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1%;
+  padding-left: 1%; }
+  @media screen and (min-width: 80rem) {
+    .viewport {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0; } }
+
+.viewport--full-height {
+  min-height: 100vh; }
+
+/*------------------------------------*\
+    #PX-COLORS-DESIGN
+\*------------------------------------*/
+/**
+ * Brand Colors
+ */
+/**
+     * Primary
+     */
+/**
+     * Light
+     */
+/**
+     * Dark
+     */
+/**
+ * Monochromatic (gray10 is darkest, gray1 is lightest)
+ */
+/**
+ * Buttons
+ */
+/**
+ * Selection
+ */
+/**
+ * Alerts
+ */
+/**
+ * Data Visualization
+ */
+/**
+     * Basic
+     */
+/**
+     * Light
+     */
+/**
+     * Dark
+     */
+@font-face {
+  font-family: 'GE Inspira';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../px-typography-design/type/GEInspMd.eot');
+  src: url('../px-typography-design/type/GEInspMd.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspMd.woff') format('woff'), url('../px-typography-design/type/GEInspMd.ttf') format('truetype'), url('../px-typography-design/type/GEInspMd.svg#GE Inspira') format('svg'); }
+
+@font-face {
+  font-family: 'GE Inspira';
+  font-weight: normal;
+  font-style: italic;
+  src: url('../px-typography-design/type/GEInspMdIt.eot');
+  src: url('../px-typography-design/type/GEInspMdIt.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspMdIt.woff') format('woff'), url('../px-typography-design/type/GEInspMdIt.ttf') format('truetype'), url('../px-typography-design/type/GEInspMdIt.svg#GE Inspira') format('svg'); }
+
+@font-face {
+  font-family: 'GE Inspira';
+  font-weight: bold;
+  font-style: normal;
+  src: url('../px-typography-design/type/GEInspBd.eot');
+  src: url('../px-typography-design/type/GEInspBd.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspBd.woff') format('woff'), url('../px-typography-design/type/GEInspBd.ttf') format('truetype'), url('../px-typography-design/type/GEInspBd.svg#GE Inspira') format('svg'); }
+
+@font-face {
+  font-family: 'GE Inspira';
+  font-weight: bold;
+  font-style: italic;
+  src: url('../px-typography-design/type/GEInspBI.eot');
+  src: url('../px-typography-design/type/GEInspBI.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspBI.woff') format('woff'), url('../px-typography-design/type/GEInspBI.ttf') format('truetype'), url('../px-typography-design/type/GEInspBI.svg#GE Inspira') format('svg'); }
+
+@font-face {
+  font-family: 'GE Inspira Sans';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../px-typography-design/type/GEInspiraSans-Regular-v01.eot');
+  src: url('../px-typography-design/type/GEInspiraSans-Regular-v01.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspiraSans-Regular-v01.woff') format('woff'), url('../px-typography-design/type/GEInspiraSans-Regular-v01.ttf') format('truetype'), url('../px-typography-design/type/GEInspiraSans-Regular-v01.svg#GE Inspira Sans') format('svg'); }
+
+@font-face {
+  font-family: 'GE Inspira Sans';
+  font-weight: normal;
+  font-style: italic;
+  src: url('../px-typography-design/type/GEInspiraSans-Italic-v01.eot');
+  src: url('../px-typography-design/type/GEInspiraSans-Italic-v01.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspiraSans-Italic-v01.woff') format('woff'), url('../px-typography-design/type/GEInspiraSans-Italic-v01.ttf') format('truetype'), url('../px-typography-design/type/GEInspiraSans-Italic-v01.svg#GE Inspira Sans') format('svg'); }
+
+@font-face {
+  font-family: 'GE Inspira Sans';
+  font-weight: bold;
+  font-style: normal;
+  src: url('../px-typography-design/type/GEInspiraSans-Bold-v01.eot');
+  src: url('../px-typography-design/type/GEInspiraSans-Bold-v01.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspiraSans-Bold-v01.woff') format('woff'), url('../px-typography-design/type/GEInspiraSans-Bold-v01.ttf') format('truetype'), url('../px-typography-design/type/GEInspiraSans-Bold-v01.svg#GE Inspira Sans') format('svg'); }
+
+@font-face {
+  font-family: 'GE Inspira Sans';
+  font-weight: bold;
+  font-style: italic;
+  src: url('../px-typography-design/type/GEInspiraSans-BoldItalic-v01.eot');
+  src: url('../px-typography-design/type/GEInspiraSans-BoldItalic-v01.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspiraSans-BoldItalic-v01.woff') format('woff'), url('../px-typography-design/type/GEInspiraSans-BoldItalic-v01.ttf') format('truetype'), url('../px-typography-design/type/GEInspiraSans-BoldItalic-v01.svg#GE Inspira Sans') format('svg'); }
+
+@font-face {
+  font-family: 'GE Inspira Serif';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../px-typography-design/type/GEInspiraSerif-Regular-v01.eot');
+  src: url('../px-typography-design/type/GEInspiraSerif-Regular-v01.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspiraSerif-Regular-v01.woff') format('woff'), url('../px-typography-design/type/GEInspiraSerif-Regular-v01.ttf') format('truetype'), url('../px-typography-design/type/GEInspiraSerif-Regular-v01.svg#GE Inspira Serif') format('svg'); }
+
+@font-face {
+  font-family: 'GE Inspira Serif';
+  font-weight: normal;
+  font-style: italic;
+  src: url('../px-typography-design/type/GEInspiraSerif-Italic-v01.eot');
+  src: url('../px-typography-design/type/GEInspiraSerif-Italic-v01.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspiraSerif-Italic-v01.woff') format('woff'), url('../px-typography-design/type/GEInspiraSerif-Italic-v01.ttf') format('truetype'), url('../px-typography-design/type/GEInspiraSerif-Italic-v01.svg#GE Inspira Serif') format('svg'); }
+
+@font-face {
+  font-family: 'GE Inspira Serif';
+  font-weight: bold;
+  font-style: normal;
+  src: url('../px-typography-design/type/GEInspiraSerif-Bold-v01.eot');
+  src: url('../px-typography-design/type/GEInspiraSerif-Bold-v01.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspiraSerif-Bold-v01.woff') format('woff'), url('../px-typography-design/type/GEInspiraSerif-Bold-v01.ttf') format('truetype'), url('../px-typography-design/type/GEInspiraSerif-Bold-v01.svg#GE Inspira Serif') format('svg'); }
+
+@font-face {
+  font-family: 'GE Inspira Serif';
+  font-weight: bold;
+  font-style: italic;
+  src: url('../px-typography-design/type/GEInspiraSerif-BoldItalic-v01.eot');
+  src: url('../px-typography-design/type/GEInspiraSerif-BoldItalic-v01.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspiraSerif-BoldItalic-v01.woff') format('woff'), url('../px-typography-design/type/GEInspiraSerif-BoldItalic-v01.ttf') format('truetype'), url('../px-typography-design/type/GEInspiraSerif-BoldItalic-v01.svg#GE Inspira Serif') format('svg'); }
+
+html {
+  font-family: "GE Inspira Sans", sans-serif; }
+
+:host {
+  font-family: "GE Inspira Sans", sans-serif; }
+
+/**
+   * Font weights
+   */
+.weight--light {
+  font-weight: 300 !important; }
+
+.weight--normal {
+  font-weight: 400 !important; }
+
+.weight--semibold {
+  font-weight: 600 !important; }
+
 /* Links
      ========================================================================== */
 /**
    * Remove the gray background color from active links in IE 10.
    */
 a {
-  background-color: transparent; }
-
-/**
-   * Improve readability when focused and also mouse hovered in all browsers.
+  background-color: transparent;
+  /**
+   * Default link colors
    */
-a:active, a:hover {
-  outline: 0; }
+  /**
+   * Improve readability when focused and also mouse hovered in all browsers.
+   */ }
+  a:link, a:visited {
+    color: #3e87e8; }
+  a:hover {
+    color: #3573c5; }
+  a:active {
+    color: #2b5ea2; }
+  a:active, a:hover {
+    outline: 0; }
 
 /* Text-level semantics
      ========================================================================== */
@@ -171,258 +375,6 @@ sup {
 sub {
   bottom: -0.25em; }
 
-/* Embedded content
-     ========================================================================== */
-/**
-   * Remove border when inside `a` element in IE 8/9/10.
-   */
-img {
-  border: 0; }
-
-/**
-   * Correct overflow not hidden in IE 9/10/11.
-   */
-svg:not(:root) {
-  overflow: hidden; }
-
-/* Grouping content
-     ========================================================================== */
-/**
-   * Zero margins for figure.
-   */
-figure {
-  margin: 0; }
-
-/**
-   * Address differences between Firefox and other browsers.
-   */
-hr {
-  box-sizing: content-box;
-  height: 0; }
-
-/**
-   * Contain overflow in all browsers.
-   */
-pre {
-  overflow: auto; }
-
-/**
-   * Address odd `em`-unit font size rendering in all browsers.
-   */
-code, kbd, pre, samp {
-  font-family: monospace, monospace;
-  font-size: 1em; }
-
-/* Tables
-     ========================================================================== */
-/**
-   * Remove most spacing between table cells.
-   */
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-td, th {
-  padding: 0; }
-
-/*------------------------------------*\
-    #PX-FUNCTIONS-DESIGN
-\*------------------------------------*/
-/**
- * Sass functions for Predix Experience
- */
-/**
- * Set the global `box-sizing` state to `border-box`.
- *
- * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
- * paulirish.com/2012/box-sizing-border-box-ftw
- */
-html {
-  box-sizing: border-box; }
-
-:host {
-  /*! Comment to prevent cssmin munging this rule with html above and borking Safari */
-  box-sizing: border-box; }
-
-*, *:before, *:after {
-  box-sizing: inherit; }
-
-/*------------------------------------*\
-    #PX-VIEWPORT-DESIGN
-\*------------------------------------*/
-/**
-* Define a default max viewport
-*/
-/*------------------------------------*\
-    #PX-FUNCTIONS-DESIGN
-\*------------------------------------*/
-/**
- * Sass functions for Predix Experience
- */
-/*------------------------------------*\
-    #PX-FUNCTIONS-DESIGN
-\*------------------------------------*/
-/**
- * Sass functions for Predix Experience
- */
-.viewport {
-  width: 98%;
-  max-width: 80rem;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 1%;
-  padding-left: 1%; }
-  @media screen and (min-width: 80rem) {
-    .viewport {
-      width: 100%;
-      padding-right: 0;
-      padding-left: 0; } }
-
-.viewport--full-height {
-  min-height: 100vh; }
-
-/*------------------------------------*\
-    $PX-TYPOGRAPHY-DESIGN
-\*------------------------------------*/
-/**
- * Base typographic styles for Predix Experience
- */
-/*------------------------------------*\
-    #PX-FUNCTIONS-DESIGN
-\*------------------------------------*/
-/**
- * Sass functions for Predix Experience
- */
-/*------------------------------------*\
-    #PX-FUNCTIONS-DESIGN
-\*------------------------------------*/
-/**
- * Sass functions for Predix Experience
- */
-/*------------------------------------*\
-    #PX-MIXINS-DESIGN
-\*------------------------------------*/
-/**
- * Sass mixins for Predix Experience
- */
-/*------------------------------------*\
-    #PX-FUNCTIONS-DESIGN
-\*------------------------------------*/
-/**
- * Sass functions for Predix Experience
- */
-@font-face {
-  font-family: 'GE Inspira';
-  font-weight: normal;
-  font-style: normal;
-  src: url('../type/GEInspMd.eot');
-  src: url('../type/GEInspMd.eot?#iefix') format('embedded-opentype'), url('../type/GEInspMd.woff') format('woff'), url('../type/GEInspMd.ttf') format('truetype'), url('../type/GEInspMd.svg#GE Inspira') format('svg'); }
-
-@font-face {
-  font-family: 'GE Inspira';
-  font-weight: normal;
-  font-style: italic;
-  src: url('../type/GEInspMdIt.eot');
-  src: url('../type/GEInspMdIt.eot?#iefix') format('embedded-opentype'), url('../type/GEInspMdIt.woff') format('woff'), url('../type/GEInspMdIt.ttf') format('truetype'), url('../type/GEInspMdIt.svg#GE Inspira') format('svg'); }
-
-@font-face {
-  font-family: 'GE Inspira';
-  font-weight: bold;
-  font-style: normal;
-  src: url('../type/GEInspBd.eot');
-  src: url('../type/GEInspBd.eot?#iefix') format('embedded-opentype'), url('../type/GEInspBd.woff') format('woff'), url('../type/GEInspBd.ttf') format('truetype'), url('../type/GEInspBd.svg#GE Inspira') format('svg'); }
-
-@font-face {
-  font-family: 'GE Inspira';
-  font-weight: bold;
-  font-style: italic;
-  src: url('../type/GEInspBI.eot');
-  src: url('../type/GEInspBI.eot?#iefix') format('embedded-opentype'), url('../type/GEInspBI.woff') format('woff'), url('../type/GEInspBI.ttf') format('truetype'), url('../type/GEInspBI.svg#GE Inspira') format('svg'); }
-
-@font-face {
-  font-family: 'GE Inspira Sans';
-  font-weight: normal;
-  font-style: normal;
-  src: url('../type/GEInspiraSans-Regular-v01.eot');
-  src: url('../type/GEInspiraSans-Regular-v01.eot?#iefix') format('embedded-opentype'), url('../type/GEInspiraSans-Regular-v01.woff') format('woff'), url('../type/GEInspiraSans-Regular-v01.ttf') format('truetype'), url('../type/GEInspiraSans-Regular-v01.svg#GE Inspira Sans') format('svg'); }
-
-@font-face {
-  font-family: 'GE Inspira Sans';
-  font-weight: normal;
-  font-style: italic;
-  src: url('../type/GEInspiraSans-Italic-v01.eot');
-  src: url('../type/GEInspiraSans-Italic-v01.eot?#iefix') format('embedded-opentype'), url('../type/GEInspiraSans-Italic-v01.woff') format('woff'), url('../type/GEInspiraSans-Italic-v01.ttf') format('truetype'), url('../type/GEInspiraSans-Italic-v01.svg#GE Inspira Sans') format('svg'); }
-
-@font-face {
-  font-family: 'GE Inspira Sans';
-  font-weight: bold;
-  font-style: normal;
-  src: url('../type/GEInspiraSans-Bold-v01.eot');
-  src: url('../type/GEInspiraSans-Bold-v01.eot?#iefix') format('embedded-opentype'), url('../type/GEInspiraSans-Bold-v01.woff') format('woff'), url('../type/GEInspiraSans-Bold-v01.ttf') format('truetype'), url('../type/GEInspiraSans-Bold-v01.svg#GE Inspira Sans') format('svg'); }
-
-@font-face {
-  font-family: 'GE Inspira Sans';
-  font-weight: bold;
-  font-style: italic;
-  src: url('../type/GEInspiraSans-BoldItalic-v01.eot');
-  src: url('../type/GEInspiraSans-BoldItalic-v01.eot?#iefix') format('embedded-opentype'), url('../type/GEInspiraSans-BoldItalic-v01.woff') format('woff'), url('../type/GEInspiraSans-BoldItalic-v01.ttf') format('truetype'), url('../type/GEInspiraSans-BoldItalic-v01.svg#GE Inspira Sans') format('svg'); }
-
-@font-face {
-  font-family: 'GE Inspira Serif';
-  font-weight: normal;
-  font-style: normal;
-  src: url('../type/GEInspiraSerif-Regular-v01.eot');
-  src: url('../type/GEInspiraSerif-Regular-v01.eot?#iefix') format('embedded-opentype'), url('../type/GEInspiraSerif-Regular-v01.woff') format('woff'), url('../type/GEInspiraSerif-Regular-v01.ttf') format('truetype'), url('../type/GEInspiraSerif-Regular-v01.svg#GE Inspira Serif') format('svg'); }
-
-@font-face {
-  font-family: 'GE Inspira Serif';
-  font-weight: normal;
-  font-style: italic;
-  src: url('../type/GEInspiraSerif-Italic-v01.eot');
-  src: url('../type/GEInspiraSerif-Italic-v01.eot?#iefix') format('embedded-opentype'), url('../type/GEInspiraSerif-Italic-v01.woff') format('woff'), url('../type/GEInspiraSerif-Italic-v01.ttf') format('truetype'), url('../type/GEInspiraSerif-Italic-v01.svg#GE Inspira Serif') format('svg'); }
-
-@font-face {
-  font-family: 'GE Inspira Serif';
-  font-weight: bold;
-  font-style: normal;
-  src: url('../type/GEInspiraSerif-Bold-v01.eot');
-  src: url('../type/GEInspiraSerif-Bold-v01.eot?#iefix') format('embedded-opentype'), url('../type/GEInspiraSerif-Bold-v01.woff') format('woff'), url('../type/GEInspiraSerif-Bold-v01.ttf') format('truetype'), url('../type/GEInspiraSerif-Bold-v01.svg#GE Inspira Serif') format('svg'); }
-
-@font-face {
-  font-family: 'GE Inspira Serif';
-  font-weight: bold;
-  font-style: italic;
-  src: url('../type/GEInspiraSerif-BoldItalic-v01.eot');
-  src: url('../type/GEInspiraSerif-BoldItalic-v01.eot?#iefix') format('embedded-opentype'), url('../type/GEInspiraSerif-BoldItalic-v01.woff') format('woff'), url('../type/GEInspiraSerif-BoldItalic-v01.ttf') format('truetype'), url('../type/GEInspiraSerif-BoldItalic-v01.svg#GE Inspira Serif') format('svg'); }
-
-html {
-  font-family: "GE Inspira Sans", sans-serif; }
-
-:host {
-  font-family: "GE Inspira Sans", sans-serif; }
-
-/**
-   * Font weights
-   */
-.weight--light {
-  font-weight: 300 !important; }
-
-.weight--normal {
-  font-weight: 400 !important; }
-
-.weight--semibold {
-  font-weight: 600 !important; }
-
-small {
-  font-size: 0.8rem;
-  line-height: 1.6666666667; }
-
-/*------------------------------------*\
-    #PX-FUNCTIONS-DESIGN
-\*------------------------------------*/
-/**
- * Sass functions for Predix Experience
- */
 /*------------------------------------*\
     #PX-COLORS-DESIGN
 \*------------------------------------*/
@@ -462,6 +414,10 @@ small {
 /**
      * Dark
      */
+code {
+  font-size: 1rem;
+  font-family: monospace, monospace; }
+
 .code {
   border: 1px solid #e4e4ea;
   padding: 1rem;
@@ -469,35 +425,11 @@ small {
   background-color: #f7f7fc;
   color: #2b5ea2; }
 
-/*------------------------------------*\
-    #PX-LIST-BARE-DESIGN
-\*------------------------------------*/
-/**
- * The list-bare object simply removes any indents and bullet points from lists.
- */
-/*------------------------------------*\
-    #PX-FUNCTIONS-DESIGN
-\*------------------------------------*/
-/**
- * Sass functions for Predix Experience
- */
-/*------------------------------------*\
-    #PX-FUNCTIONS-DESIGN
-\*------------------------------------*/
-/**
- * Sass functions for Predix Experience
- */
 .list-bare {
   margin: 0;
   padding: 0;
   list-style: none; }
 
-/*------------------------------------*\
-    #PX-FUNCTIONS-DESIGN
-\*------------------------------------*/
-/**
- * Sass functions for Predix Experience
- */
 /*------------------------------------*\
     #PX-COLORS-DESIGN
 \*------------------------------------*/
@@ -587,12 +519,6 @@ small {
     border-color: transparent;
     background-color: #2b5ea2; }
 
-/*------------------------------------*\
-    #PX-FUNCTIONS-DESIGN
-\*------------------------------------*/
-/**
- * Sass functions for Predix Experience
- */
 /*------------------------------------*\
     #PX-COLORS-DESIGN
 \*------------------------------------*/
@@ -819,96 +745,66 @@ textarea {
   border-color: #46ad00;
   color: inherit; }
 
-/*------------------------------------*\
-    #PX-SPACING-RESPONSIVE-DESIGN
-\*------------------------------------*/
+/**
+ * Margin and padding helper classes with breakpoint prefixes. Use these to tweak layout on a micro
+ * level based on viewport widths.
+ *
+ * `.u-[breakpoint]-(m|p)(t|r|b|l|h|v)(-|+|0) {}` = utility - breakpoint - margin/padding top/right/bottom/left/horizontal/vertical less/more/none
+ */
 /**
  * Margin and padding helper classes. Use these to tweak layout on a micro
  * level.
  *
- * `.(m|p)(t|r|b|l|h|v)(-|+|0) {}` = margin/padding top/right/bottom/left/horizontal/vertical less/more/none
- */
-/*------------------------------------*\
-    #PX-FUNCTIONS-DESIGN
-\*------------------------------------*/
-/**
- * Sass functions for Predix Experience
- */
-/*------------------------------------*\
-    #PX-FUNCTIONS-DESIGN
-\*------------------------------------*/
-/**
- * Sass functions for Predix Experience
- */
-/*------------------------------------*\
-    #PX-SPACING-DESIGN
-\*------------------------------------*/
-/**
- * Margin and padding helper classes. Use these to tweak layout on a micro
- * level.
- *
- * `.(m|p)(t|r|b|l|h|v)(-|+|0) {}` = margin/padding top/right/bottom/left/horizontal/vertical less/more/none
- */
-/*------------------------------------*\
-    #PX-FUNCTIONS-DESIGN
-\*------------------------------------*/
-/**
- * Sass functions for Predix Experience
- */
-/*------------------------------------*\
-    #PX-FUNCTIONS-DESIGN
-\*------------------------------------*/
-/**
- * Sass functions for Predix Experience
+ * `.u-(m|p)(t|r|b|l|h|v)(-|+|0) {}` = utility - margin/padding top/right/bottom/left/horizontal/vertical less/more/none
  */
 /**
        * Add large margins.
        */
-.m\00002b {
+.u-m\00002b {
   margin: 1.3333333333rem !important; }
 
-.mt\00002b {
+.u-mt\00002b {
   margin-top: 1.3333333333rem !important; }
 
-.mr\00002b {
+.u-mr\00002b {
   margin-right: 1.3333333333rem !important; }
 
-.mb\00002b {
+.u-mb\00002b {
   margin-bottom: 1.3333333333rem !important; }
 
-.ml\00002b {
+.u-ml\00002b {
   margin-left: 1.3333333333rem !important; }
 
-.mh\00002b {
+.u-mh\00002b {
   margin-right: 1.3333333333rem !important;
   margin-left: 1.3333333333rem !important; }
 
-.mv\00002b {
+.u-mv\00002b {
   margin-top: 1.3333333333rem !important;
   margin-bottom: 1.3333333333rem !important; }
 
 /**
        * Add huge margins.
        */
-.m\00002b\00002b {
+.u-m\00002b\00002b {
   margin: 2rem !important; }
 
-.mt\00002b\00002b {
+.u-mt\00002b\00002b {
   margin-top: 2rem !important; }
 
-.mr\00002b\00002b {
+.u-mr\00002b\00002b {
   margin-right: 2rem !important; }
 
-.mb\00002b\00002b {
+.u-mb\00002b\00002b {
   margin-bottom: 2rem !important; }
 
-.ml\00002b\00002b {
+.u-ml\00002b\00002b {
   margin-left: 2rem !important; }
 
-.mh\00002b\00002b {
+.u-mh\00002b\00002b {
   margin-right: 2rem !important;
   margin-left: 2rem !important; }
 
-.mv\00002b\00002b {
+.u-mv\00002b\00002b {
   margin-top: 2rem !important;
   margin-bottom: 2rem !important; }
