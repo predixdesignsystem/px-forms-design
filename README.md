@@ -12,11 +12,10 @@ You can review Sass Documentation here: https://github.build.ge.com/pages/PXd/px
 
 ## Dependencies
 
-Px's Forms module depends on three other Px modules:
+Px's Forms module depends on two other Px modules:
 
 * [px-colors-design](https://github.build.ge.com/PXd/px-colors-design)
 * [px-defaults-design](https://github.build.ge.com/PXd/px-defaults-design)
-* [px-mixins-design](https://github.build.ge.com/PXd/px-mixins-design)
 
 ## Installation
 
@@ -93,4 +92,5 @@ Basic usage of forms.base requires `<input>` fields with the following `type` at
 ## Options
 
 * `.text-input--bare`: display form fields without margin, padding, or borders.
+* `.form-field--inline`: display form fields alongside each other, not stacked.
 * `.input--[tiny|small|regular|large|huge]`: define fixed widths for form fields.
