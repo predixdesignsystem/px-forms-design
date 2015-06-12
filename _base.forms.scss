@@ -405,8 +405,8 @@ $inuit-enable-input--huge                   : false !default;
      * Text inputs with no styles.
      */
   
-    .#{$inuit-btn-namespace}text-input--bare,
-    %#{$inuit-btn-namespace}text-input--bare {
+    .#{$inuit-forms-namespace}text-input--bare,
+    %#{$inuit-forms-namespace}text-input--bare {
       border: 0!important;
     }
   
@@ -420,39 +420,39 @@ $inuit-enable-input--huge                   : false !default;
      * Styles for validation states
      */
   
-    .#{$inuit-btn-namespace}validation-warning,
-    %#{$inuit-btn-namespace}validation-warning {
+    .#{$inuit-forms-namespace}validation-warning,
+    %#{$inuit-forms-namespace}validation-warning {
       color: $inuit-forms-validation-warning;
     }
     
-    .#{$inuit-btn-namespace}validation-error,
-    %#{$inuit-btn-namespace}validation-error {
+    .#{$inuit-forms-namespace}validation-error,
+    %#{$inuit-forms-namespace}validation-error {
       color: $inuit-forms-validation-error;
     }
     
-    .#{$inuit-btn-namespace}validation-success,
-    %#{$inuit-btn-namespace}validation-success {
+    .#{$inuit-forms-namespace}validation-success,
+    %#{$inuit-forms-namespace}validation-success {
       color: $inuit-forms-validation-success;
     }
     
-    .#{$inuit-btn-namespace}text-input,
-    %#{$inuit-btn-namespace}text-input {
+    .#{$inuit-forms-namespace}text-input,
+    %#{$inuit-forms-namespace}text-input {
       &.validation-warning {
         border-color: $inuit-forms-validation-warning;
         color: inherit;
       }      
     }
     
-    .#{$inuit-btn-namespace}text-input,
-    %#{$inuit-btn-namespace}text-input {
+    .#{$inuit-forms-namespace}text-input,
+    %#{$inuit-forms-namespace}text-input {
       &.validation-error {
         border-color: $inuit-forms-validation-error;
         color: inherit;
       }      
     }
     
-    .#{$inuit-btn-namespace}text-input,
-    %#{$inuit-btn-namespace}text-input {
+    .#{$inuit-forms-namespace}text-input,
+    %#{$inuit-forms-namespace}text-input {
       &.validation-success {
         border-color: $inuit-forms-validation-success;
         color: inherit;
