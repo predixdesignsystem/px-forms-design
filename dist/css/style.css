@@ -1,17 +1,18 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
-   *
-   * 1. Set the default `font-size` and `line-height` for the entire project,
-   *    sourced from our default variables. The `font-size` is calculated to exist
-   *    in ems, the `line-height` is calculated to exist unitlessly.
-   * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
-   *    navigating between pages that do/do not have enough content to produce
-   *    scrollbars naturally.
-   * 3. Ensure the page always fills at least the entire height of the viewport.
-   * 4. Prevent certain mobile browsers from automatically zooming fonts.
-   * 5. Fonts on OSX will look more consistent with other systems that do not
-   *    render text using sub-pixel anti-aliasing.
-   */
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly.
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ * 4. Prevent certain mobile browsers from automatically zooming fonts.
+ * 5. Fonts on OSX will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing.
+ */
 html {
   font-size: 0.9375em;
   /* [1] */
@@ -33,102 +34,125 @@ html {
   /* [5] */ }
 
 /**
-   * Remove default margin.
-   */
+ * Remove default margin.
+ */
 body {
   margin: 0; }
 
 /* HTML5 display definitions
-     ========================================================================== */
+   ========================================================================== */
 /**
-   * Correct `block` display not defined for any HTML5 element in IE 8/9.
-   * Correct `block` display not defined for `details` or `summary` in IE 10/11
-   * and Firefox.
-   * Correct `block` display not defined for `main` in IE 11.
-   */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
   display: block; }
 
 /**
-   * 1. Correct `inline-block` display not defined in IE 8/9.
-   * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
-   */
-audio, canvas, progress, video {
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
   display: inline-block;
   /* 1 */
   vertical-align: baseline;
   /* 2 */ }
 
 /**
-   * Prevent modern browsers from displaying `audio` without controls.
-   * Remove excess height in iOS 5 devices.
-   */
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
 audio:not([controls]) {
   display: none;
   height: 0; }
 
 /**
-   * Address `[hidden]` styling not present in IE 8/9/10.
-   * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
-   */
-[hidden], template {
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
   display: none; }
 
 /* Margins
-     ========================================================================== */
+   ========================================================================== */
 /**
-   * Where `margin-bottom` is concerned,this value will be the same as the
-   * base line-height. This allows us to keep a consistent vertical rhythm.
-   * As per: csswizardry.com/2012/06/single-direction-margin-declarations
-   */
-h1, h2, h3, h4, h5, h6, ul, ol, dl, blockquote, p, address, hr, table, fieldset, figure, pre {
+ * Where `margin-bottom` is concerned,this value will be the same as the
+ * base line-height. This allows us to keep a consistent vertical rhythm.
+ * As per: csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+blockquote, p, address,
+hr,
+table,
+fieldset, figure,
+pre {
   margin-bottom: 1rem; }
 
 /**
-   * Remove extra vertical spacing when nesting lists.
-   */
-li > ul, li > ol {
+ * Remove extra vertical spacing when nesting lists.
+ */
+li > ul,
+li > ol {
   margin-bottom: 0; }
 
 /**
-   * Where `margin-left` is concerned we want to try and indent certain elements
-   * by a consistent amount. Define that amount once,here.
-   */
+ * Where `margin-left` is concerned we want to try and indent certain elements
+ * by a consistent amount. Define that amount once,here.
+ */
 ul, ol, dd {
   margin-left: 2rem; }
 
 /* Embedded content
-     ========================================================================== */
+   ========================================================================== */
 /**
-   * Remove border when inside `a` element in IE 8/9/10.
-   */
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
 img {
   border: 0; }
 
 /**
-   * Correct overflow not hidden in IE 9/10/11.
-   */
+ * Correct overflow not hidden in IE 9/10/11.
+ */
 svg:not(:root) {
   overflow: hidden; }
 
 /* Grouping content
-     ========================================================================== */
+   ========================================================================== */
 /**
-   * Zero margins for figure.
-   */
+ * Zero margins for figure.
+ */
 figure {
   margin: 0; }
 
 /**
-   * Address differences between Firefox and other browsers.
-   */
+ * Address differences between Firefox and other browsers.
+ */
 hr {
   box-sizing: content-box;
   height: 0; }
 
 /**
-   * Contain overflow in all browsers.
-   */
+ * Contain overflow in all browsers.
+ */
 pre {
   overflow: auto; }
 
@@ -145,7 +169,9 @@ html {
   /*! Comment to prevent cssmin munging this rule with html above and borking Safari */
   box-sizing: border-box; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit; }
 
 .viewport {
@@ -164,8 +190,7 @@ html {
 .viewport--full-height {
   min-height: 100vh; }
 
-/*------------------------------------*\
-    #PX-COLORS-DESIGN
+/*------------------------------------*    #PX-COLORS-DESIGN
 \*------------------------------------*/
 /**
  * Brand Colors
@@ -204,88 +229,88 @@ html {
      * Dark
      */
 @font-face {
-  font-family: 'GE Inspira';
+  font-family: "GE Inspira";
   font-weight: normal;
   font-style: normal;
-  src: url('../px-typography-design/type/GEInspMd.eot');
-  src: url('../px-typography-design/type/GEInspMd.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspMd.woff') format('woff'), url('../px-typography-design/type/GEInspMd.ttf') format('truetype'), url('../px-typography-design/type/GEInspMd.svg#GE Inspira') format('svg'); }
+  src: url("../type/GEInspMd.eot");
+  src: url("../type/GEInspMd.eot?#iefix") format("embedded-opentype"), url("../type/GEInspMd.woff") format("woff"), url("../type/GEInspMd.ttf") format("truetype"), url("../type/GEInspMd.svg#GE Inspira") format("svg"); }
 
 @font-face {
-  font-family: 'GE Inspira';
+  font-family: "GE Inspira";
   font-weight: normal;
   font-style: italic;
-  src: url('../px-typography-design/type/GEInspMdIt.eot');
-  src: url('../px-typography-design/type/GEInspMdIt.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspMdIt.woff') format('woff'), url('../px-typography-design/type/GEInspMdIt.ttf') format('truetype'), url('../px-typography-design/type/GEInspMdIt.svg#GE Inspira') format('svg'); }
+  src: url("../type/GEInspMdIt.eot");
+  src: url("../type/GEInspMdIt.eot?#iefix") format("embedded-opentype"), url("../type/GEInspMdIt.woff") format("woff"), url("../type/GEInspMdIt.ttf") format("truetype"), url("../type/GEInspMdIt.svg#GE Inspira") format("svg"); }
 
 @font-face {
-  font-family: 'GE Inspira';
+  font-family: "GE Inspira";
   font-weight: bold;
   font-style: normal;
-  src: url('../px-typography-design/type/GEInspBd.eot');
-  src: url('../px-typography-design/type/GEInspBd.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspBd.woff') format('woff'), url('../px-typography-design/type/GEInspBd.ttf') format('truetype'), url('../px-typography-design/type/GEInspBd.svg#GE Inspira') format('svg'); }
+  src: url("../type/GEInspBd.eot");
+  src: url("../type/GEInspBd.eot?#iefix") format("embedded-opentype"), url("../type/GEInspBd.woff") format("woff"), url("../type/GEInspBd.ttf") format("truetype"), url("../type/GEInspBd.svg#GE Inspira") format("svg"); }
 
 @font-face {
-  font-family: 'GE Inspira';
+  font-family: "GE Inspira";
   font-weight: bold;
   font-style: italic;
-  src: url('../px-typography-design/type/GEInspBI.eot');
-  src: url('../px-typography-design/type/GEInspBI.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspBI.woff') format('woff'), url('../px-typography-design/type/GEInspBI.ttf') format('truetype'), url('../px-typography-design/type/GEInspBI.svg#GE Inspira') format('svg'); }
+  src: url("../type/GEInspBI.eot");
+  src: url("../type/GEInspBI.eot?#iefix") format("embedded-opentype"), url("../type/GEInspBI.woff") format("woff"), url("../type/GEInspBI.ttf") format("truetype"), url("../type/GEInspBI.svg#GE Inspira") format("svg"); }
 
 @font-face {
-  font-family: 'GE Inspira Sans';
+  font-family: "GE Inspira Sans";
   font-weight: normal;
   font-style: normal;
-  src: url('../px-typography-design/type/GEInspiraSans-Regular-v01.eot');
-  src: url('../px-typography-design/type/GEInspiraSans-Regular-v01.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspiraSans-Regular-v01.woff') format('woff'), url('../px-typography-design/type/GEInspiraSans-Regular-v01.ttf') format('truetype'), url('../px-typography-design/type/GEInspiraSans-Regular-v01.svg#GE Inspira Sans') format('svg'); }
+  src: url("../type/GEInspiraSans-Regular-v01.eot");
+  src: url("../type/GEInspiraSans-Regular-v01.eot?#iefix") format("embedded-opentype"), url("../type/GEInspiraSans-Regular-v01.woff") format("woff"), url("../type/GEInspiraSans-Regular-v01.ttf") format("truetype"), url("../type/GEInspiraSans-Regular-v01.svg#GE Inspira Sans") format("svg"); }
 
 @font-face {
-  font-family: 'GE Inspira Sans';
+  font-family: "GE Inspira Sans";
   font-weight: normal;
   font-style: italic;
-  src: url('../px-typography-design/type/GEInspiraSans-Italic-v01.eot');
-  src: url('../px-typography-design/type/GEInspiraSans-Italic-v01.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspiraSans-Italic-v01.woff') format('woff'), url('../px-typography-design/type/GEInspiraSans-Italic-v01.ttf') format('truetype'), url('../px-typography-design/type/GEInspiraSans-Italic-v01.svg#GE Inspira Sans') format('svg'); }
+  src: url("../type/GEInspiraSans-Italic-v01.eot");
+  src: url("../type/GEInspiraSans-Italic-v01.eot?#iefix") format("embedded-opentype"), url("../type/GEInspiraSans-Italic-v01.woff") format("woff"), url("../type/GEInspiraSans-Italic-v01.ttf") format("truetype"), url("../type/GEInspiraSans-Italic-v01.svg#GE Inspira Sans") format("svg"); }
 
 @font-face {
-  font-family: 'GE Inspira Sans';
+  font-family: "GE Inspira Sans";
   font-weight: bold;
   font-style: normal;
-  src: url('../px-typography-design/type/GEInspiraSans-Bold-v01.eot');
-  src: url('../px-typography-design/type/GEInspiraSans-Bold-v01.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspiraSans-Bold-v01.woff') format('woff'), url('../px-typography-design/type/GEInspiraSans-Bold-v01.ttf') format('truetype'), url('../px-typography-design/type/GEInspiraSans-Bold-v01.svg#GE Inspira Sans') format('svg'); }
+  src: url("../type/GEInspiraSans-Bold-v01.eot");
+  src: url("../type/GEInspiraSans-Bold-v01.eot?#iefix") format("embedded-opentype"), url("../type/GEInspiraSans-Bold-v01.woff") format("woff"), url("../type/GEInspiraSans-Bold-v01.ttf") format("truetype"), url("../type/GEInspiraSans-Bold-v01.svg#GE Inspira Sans") format("svg"); }
 
 @font-face {
-  font-family: 'GE Inspira Sans';
+  font-family: "GE Inspira Sans";
   font-weight: bold;
   font-style: italic;
-  src: url('../px-typography-design/type/GEInspiraSans-BoldItalic-v01.eot');
-  src: url('../px-typography-design/type/GEInspiraSans-BoldItalic-v01.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspiraSans-BoldItalic-v01.woff') format('woff'), url('../px-typography-design/type/GEInspiraSans-BoldItalic-v01.ttf') format('truetype'), url('../px-typography-design/type/GEInspiraSans-BoldItalic-v01.svg#GE Inspira Sans') format('svg'); }
+  src: url("../type/GEInspiraSans-BoldItalic-v01.eot");
+  src: url("../type/GEInspiraSans-BoldItalic-v01.eot?#iefix") format("embedded-opentype"), url("../type/GEInspiraSans-BoldItalic-v01.woff") format("woff"), url("../type/GEInspiraSans-BoldItalic-v01.ttf") format("truetype"), url("../type/GEInspiraSans-BoldItalic-v01.svg#GE Inspira Sans") format("svg"); }
 
 @font-face {
-  font-family: 'GE Inspira Serif';
+  font-family: "GE Inspira Serif";
   font-weight: normal;
   font-style: normal;
-  src: url('../px-typography-design/type/GEInspiraSerif-Regular-v01.eot');
-  src: url('../px-typography-design/type/GEInspiraSerif-Regular-v01.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspiraSerif-Regular-v01.woff') format('woff'), url('../px-typography-design/type/GEInspiraSerif-Regular-v01.ttf') format('truetype'), url('../px-typography-design/type/GEInspiraSerif-Regular-v01.svg#GE Inspira Serif') format('svg'); }
+  src: url("../type/GEInspiraSerif-Regular-v01.eot");
+  src: url("../type/GEInspiraSerif-Regular-v01.eot?#iefix") format("embedded-opentype"), url("../type/GEInspiraSerif-Regular-v01.woff") format("woff"), url("../type/GEInspiraSerif-Regular-v01.ttf") format("truetype"), url("../type/GEInspiraSerif-Regular-v01.svg#GE Inspira Serif") format("svg"); }
 
 @font-face {
-  font-family: 'GE Inspira Serif';
+  font-family: "GE Inspira Serif";
   font-weight: normal;
   font-style: italic;
-  src: url('../px-typography-design/type/GEInspiraSerif-Italic-v01.eot');
-  src: url('../px-typography-design/type/GEInspiraSerif-Italic-v01.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspiraSerif-Italic-v01.woff') format('woff'), url('../px-typography-design/type/GEInspiraSerif-Italic-v01.ttf') format('truetype'), url('../px-typography-design/type/GEInspiraSerif-Italic-v01.svg#GE Inspira Serif') format('svg'); }
+  src: url("../type/GEInspiraSerif-Italic-v01.eot");
+  src: url("../type/GEInspiraSerif-Italic-v01.eot?#iefix") format("embedded-opentype"), url("../type/GEInspiraSerif-Italic-v01.woff") format("woff"), url("../type/GEInspiraSerif-Italic-v01.ttf") format("truetype"), url("../type/GEInspiraSerif-Italic-v01.svg#GE Inspira Serif") format("svg"); }
 
 @font-face {
-  font-family: 'GE Inspira Serif';
+  font-family: "GE Inspira Serif";
   font-weight: bold;
   font-style: normal;
-  src: url('../px-typography-design/type/GEInspiraSerif-Bold-v01.eot');
-  src: url('../px-typography-design/type/GEInspiraSerif-Bold-v01.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspiraSerif-Bold-v01.woff') format('woff'), url('../px-typography-design/type/GEInspiraSerif-Bold-v01.ttf') format('truetype'), url('../px-typography-design/type/GEInspiraSerif-Bold-v01.svg#GE Inspira Serif') format('svg'); }
+  src: url("../type/GEInspiraSerif-Bold-v01.eot");
+  src: url("../type/GEInspiraSerif-Bold-v01.eot?#iefix") format("embedded-opentype"), url("../type/GEInspiraSerif-Bold-v01.woff") format("woff"), url("../type/GEInspiraSerif-Bold-v01.ttf") format("truetype"), url("../type/GEInspiraSerif-Bold-v01.svg#GE Inspira Serif") format("svg"); }
 
 @font-face {
-  font-family: 'GE Inspira Serif';
+  font-family: "GE Inspira Serif";
   font-weight: bold;
   font-style: italic;
-  src: url('../px-typography-design/type/GEInspiraSerif-BoldItalic-v01.eot');
-  src: url('../px-typography-design/type/GEInspiraSerif-BoldItalic-v01.eot?#iefix') format('embedded-opentype'), url('../px-typography-design/type/GEInspiraSerif-BoldItalic-v01.woff') format('woff'), url('../px-typography-design/type/GEInspiraSerif-BoldItalic-v01.ttf') format('truetype'), url('../px-typography-design/type/GEInspiraSerif-BoldItalic-v01.svg#GE Inspira Serif') format('svg'); }
+  src: url("../type/GEInspiraSerif-BoldItalic-v01.eot");
+  src: url("../type/GEInspiraSerif-BoldItalic-v01.eot?#iefix") format("embedded-opentype"), url("../type/GEInspiraSerif-BoldItalic-v01.woff") format("woff"), url("../type/GEInspiraSerif-BoldItalic-v01.ttf") format("truetype"), url("../type/GEInspiraSerif-BoldItalic-v01.svg#GE Inspira Serif") format("svg"); }
 
 html {
   font-family: "GE Inspira Sans", sans-serif; }
@@ -294,8 +319,8 @@ html {
   font-family: "GE Inspira Sans", sans-serif; }
 
 /**
-   * Font weights
-   */
+ * Font weights
+ */
 .weight--light {
   font-weight: 300 !important; }
 
@@ -306,64 +331,68 @@ html {
   font-weight: 600 !important; }
 
 /* Links
-     ========================================================================== */
+   ========================================================================== */
 /**
-   * Remove the gray background color from active links in IE 10.
-   */
+ * Remove the gray background color from active links in IE 10.
+ */
 a {
   background-color: transparent;
   /**
-   * Default link colors
-   */
+ * Default link colors
+ */
   /**
-   * Improve readability when focused and also mouse hovered in all browsers.
-   */ }
-  a:link, a:visited {
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */ }
+  a:link,
+  a:visited {
     color: #3e87e8; }
   a:hover {
     color: #3573c5; }
   a:active {
     color: #2b5ea2; }
-  a:active, a:hover {
+  a:active,
+  a:hover {
     outline: 0; }
 
 /* Text-level semantics
-     ========================================================================== */
+   ========================================================================== */
 /**
-   * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
-   */
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
 abbr[title] {
   border-bottom: 1px dotted; }
 
 /**
-   * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
-   */
-b, strong {
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
   font-weight: bold; }
 
 /**
-   * Address styling not present in Safari and Chrome.
-   */
+ * Address styling not present in Safari and Chrome.
+ */
 dfn {
   font-style: italic; }
 
 /**
-   * Address styling not present in IE 8/9.
-   */
+ * Address styling not present in IE 8/9.
+ */
 mark {
   background: #ff0;
   color: #000; }
 
 /**
-   * Address inconsistent and variable font size in all browsers.
-   */
+ * Address inconsistent and variable font size in all browsers.
+ */
 small {
   font-size: 80%; }
 
 /**
-   * Prevent `sub` and `sup` affecting `line-height` in all browsers.
-   */
-sub, sup {
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -375,45 +404,6 @@ sup {
 sub {
   bottom: -0.25em; }
 
-/*------------------------------------*\
-    #PX-COLORS-DESIGN
-\*------------------------------------*/
-/**
- * Brand Colors
- */
-/**
-     * Primary
-     */
-/**
-     * Light
-     */
-/**
-     * Dark
-     */
-/**
- * Monochromatic (gray10 is darkest, gray1 is lightest)
- */
-/**
- * Buttons
- */
-/**
- * Selection
- */
-/**
- * Alerts
- */
-/**
- * Data Visualization
- */
-/**
-     * Basic
-     */
-/**
-     * Light
-     */
-/**
-     * Dark
-     */
 code {
   font-size: 1rem;
   font-family: monospace, monospace; }
@@ -425,139 +415,6 @@ code {
   background-color: #f7f7fc;
   color: #2b5ea2; }
 
-.list-bare {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-/*------------------------------------*\
-    #PX-COLORS-DESIGN
-\*------------------------------------*/
-/**
- * Brand Colors
- */
-/**
-     * Primary
-     */
-/**
-     * Light
-     */
-/**
-     * Dark
-     */
-/**
- * Monochromatic (gray10 is darkest, gray1 is lightest)
- */
-/**
- * Buttons
- */
-/**
- * Selection
- */
-/**
- * Alerts
- */
-/**
- * Data Visualization
- */
-/**
-     * Basic
-     */
-/**
-     * Light
-     */
-/**
-     * Dark
-     */
-.btn {
-  display: inline-block;
-  overflow: visible;
-  margin: 0;
-  border: 1px solid #b1b1bc;
-  border-radius: 3px;
-  padding: 0 1em;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-  font: inherit;
-  line-height: calc(2em - 2px);
-  -webkit-font-smoothing: antialiased;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  text-transform: none;
-  background-color: #e4e4ea;
-  -webkit-appearance: button; }
-  .btn, .btn:visited, .btn:hover, .btn:focus, .btn:active {
-    color: #3b3b3f; }
-  .btn:hover, .btn:focus {
-    border-color: #9999a3;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
-    background-color: #b1b1bc; }
-  .btn:active {
-    border-color: #7c7c84;
-    box-shadow: none;
-    background-color: #9999a3; }
-
-/**
-  * Establish default space between adjacent buttons
-  */
-.btn + .btn {
-  margin-left: 0.6666666667rem; }
-
-/**
-     * Change button colors for primary buttons
-     */
-.btn--primary {
-  border-color: #2b5ea2;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
-  background-color: #3e87e8; }
-  .btn--primary, .btn--primary:visited, .btn--primary:hover, .btn--primary:focus, .btn--primary:active {
-    color: white; }
-  .btn--primary:hover, .btn--primary:focus {
-    border-color: transparent;
-    background-color: #3573c5; }
-  .btn--primary:active {
-    border-color: transparent;
-    background-color: #2b5ea2; }
-
-/*------------------------------------*\
-    #PX-COLORS-DESIGN
-\*------------------------------------*/
-/**
- * Brand Colors
- */
-/**
-     * Primary
-     */
-/**
-     * Light
-     */
-/**
-     * Dark
-     */
-/**
- * Monochromatic (gray10 is darkest, gray1 is lightest)
- */
-/**
- * Buttons
- */
-/**
- * Selection
- */
-/**
- * Alerts
- */
-/**
- * Data Visualization
- */
-/**
-     * Basic
-     */
-/**
-     * Light
-     */
-/**
-     * Dark
-     */
 fieldset {
   margin: 0; }
   fieldset, fieldset legend {
@@ -585,39 +442,49 @@ label {
   .label--inline + .text-input {
     margin-left: 0.6666666667rem; }
 
-.text-input, textarea, select {
+.text-input,
+textarea, select {
   margin: 0;
   border: 1px solid #b1b1bc;
   font: inherit;
   outline: 0;
   -webkit-appearance: none;
   -moz-appearance: none; }
-  .text-input:disabled, textarea:disabled, select:disabled {
+  .text-input:disabled,
+  textarea:disabled, select:disabled {
     cursor: not-allowed; }
 
-.text-input, textarea {
+.text-input,
+textarea {
   width: 100%;
   padding: 0 0.6666666667rem;
   box-shadow: inset 0 0 0 1px #e4e4ea;
   background-color: #efeff4;
   color: black; }
-  .text-input[readonly], .text-input[disabled], textarea[readonly], textarea[disabled] {
+  .text-input[readonly],
+  .text-input[disabled],
+  textarea[readonly], textarea[disabled] {
     box-shadow: none; }
-  .text-input[readonly], textarea[readonly] {
+  .text-input[readonly],
+  textarea[readonly] {
     border: 1px solid #e4e4ea;
     background-color: white;
     color: #b1b1bc; }
-  .text-input:disabled, textarea:disabled {
+  .text-input:disabled,
+  textarea:disabled {
     border: 1px solid #e4e4ea;
     box-shadow: none;
     background-color: #f7f7fc;
     color: #b1b1bc; }
-  .text-input:focus, textarea:focus {
+  .text-input:focus,
+  textarea:focus {
     border-color: #0a9ec1;
     box-shadow: inset 0 0 0 1px #d1d0d8; }
-  .text-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  .text-input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
     color: #b1b1bc; }
-  .text-input:-moz-placeholder, textarea:-moz-placeholder {
+  .text-input:-moz-placeholder,
+  textarea:-moz-placeholder {
     color: #b1b1bc; }
 
 select {
@@ -654,7 +521,8 @@ select {
 .text-input {
   height: 2em;
   line-height: 1; }
-  .text-input + [type=checkbox], .text-input + [type=radio] {
+  .text-input + [type=checkbox],
+  .text-input + [type=radio] {
     margin-left: 1.3333333333rem; }
   .text-input + .label--inline {
     margin-left: 0.6666666667rem; }
@@ -666,7 +534,10 @@ select {
   .text-input:-moz-placeholder {
     padding-top: 1px; }
 
-.text-input + [type=submit], .text-input [type=cancel], .label--inline + [type=submit], .label--inline [type=cancel] {
+.text-input + [type=submit],
+.text-input [type=cancel],
+.label--inline + [type=submit],
+.label--inline [type=cancel] {
   margin-left: 1.3333333333rem; }
 
 textarea {
@@ -682,7 +553,8 @@ textarea {
   cursor: pointer; }
   [type=checkbox][disabled], [type=radio][disabled] {
     cursor: not-allowed; }
-    [type=checkbox][disabled] + .label--inline, [type=radio][disabled] + .label--inline {
+    [type=checkbox][disabled] + .label--inline,
+    [type=radio][disabled] + .label--inline {
       cursor: not-allowed; }
 
 [type=checkbox] + .label--inline {
@@ -714,16 +586,17 @@ textarea {
   max-width: 35.3333333333rem; }
 
 /**
-     * Styles for one line forms.
-     */
+   * Styles for one line forms.
+   */
 .form-field--inline:last-child {
   margin-bottom: 1.3333333333rem; }
+
 .form-field--inline .text-input {
   margin-bottom: 1.3333333333rem; }
 
 /**
-     * Styles for validation states
-     */
+   * Styles for validation states
+   */
 .validation-warning {
   color: #dd6b1f; }
 
@@ -745,6 +618,76 @@ textarea {
   border-color: #46ad00;
   color: inherit; }
 
+.list-bare {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.btn {
+  display: inline-block;
+  overflow: visible;
+  margin: 0;
+  border: 1px solid #b1b1bc;
+  border-radius: 3px;
+  padding: 0 1em;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  font: inherit;
+  line-height: calc(2em - 2px);
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  white-space: nowrap;
+  background-color: #e4e4ea; }
+  .btn,
+  .btn:link,
+  .btn:visited,
+  .btn:hover,
+  .btn:focus,
+  .btn:active {
+    color: #3b3b3f; }
+  .btn:hover,
+  .btn:focus {
+    border-color: #9999a3;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+    background-color: #b1b1bc; }
+  .btn:active {
+    border-color: #7c7c84;
+    box-shadow: none;
+    background-color: #9999a3; }
+
+button.btn {
+  -webkit-appearance: button; }
+
+/**
+* Establish default space between adjacent buttons
+*/
+.btn + .btn {
+  margin-left: 0.6666666667rem; }
+
+/**
+   * Change button colors for primary buttons
+   */
+.btn--primary {
+  border-color: #2b5ea2;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  background-color: #3e87e8; }
+  .btn--primary,
+  .btn--primary:link,
+  .btn--primary:visited,
+  .btn--primary:hover,
+  .btn--primary:focus,
+  .btn--primary:active {
+    color: white; }
+  .btn--primary:hover,
+  .btn--primary:focus {
+    border-color: transparent;
+    background-color: #3573c5; }
+  .btn--primary:active {
+    border-color: transparent;
+    background-color: #2b5ea2; }
+
 /**
  * Margin and padding helper classes with breakpoint prefixes. Use these to tweak layout on a micro
  * level based on viewport widths.
@@ -758,8 +701,8 @@ textarea {
  * `.u-(m|p)(t|r|b|l|h|v)(-|+|0) {}` = utility - margin/padding top/right/bottom/left/horizontal/vertical less/more/none
  */
 /**
-       * Add large margins.
-       */
+     * Add large margins.
+     */
 .u-m\00002b {
   margin: 1.3333333333rem !important; }
 
@@ -784,8 +727,8 @@ textarea {
   margin-bottom: 1.3333333333rem !important; }
 
 /**
-       * Add huge margins.
-       */
+     * Add huge margins.
+     */
 .u-m\00002b\00002b {
   margin: 2rem !important; }
 

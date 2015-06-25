@@ -4,6 +4,9 @@
 
 // Base
 @import "px-viewport-design/_base.viewport.scss";
+
+$inuit-webfont-path             : '../type';
+
 @import "px-typography-design/_base.typography.scss";
 @import "px-code-design/_base.code.scss";
 
