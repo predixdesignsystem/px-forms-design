@@ -1,6 +1,6 @@
 {
   "name": "px-forms-design",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Base form styles for Predix Experience",
   "private": true,
   "scripts": {
