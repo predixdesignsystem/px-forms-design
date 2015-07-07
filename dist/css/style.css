@@ -561,6 +561,14 @@ code {
   background-color: #f7f7fc;
   color: #2b5ea2; }
 
+/**
+   * Slight tweaks for code inline.
+   */
+.code--inline {
+  border-radius: 0;
+  padding: 0 0.3333333333rem;
+  font-size: inherit; }
+
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
