@@ -14,12 +14,30 @@
         <p>
           To use this module, follow the instructions in the
           <a href=https://github.build.ge.com/PXd/px-forms-design>README</a>.
+          <!-- build:remove -->
+          (For background on PXd, read the
+          <a href=https://github.build.ge.com/PXd/px-getting-started>Getting Started</a>
+          documentation.)
+          <!-- /build -->
         </p>
-        <a class=btn href=https://github.build.ge.com/PXd/px-forms-design>
+        <a class="btn btn--primary" href=https://github.build.ge.com/PXd/px-forms-design>
           <i class="fa fa-github u-mr--"></i>
           px-forms-design
         </a>
       </div>
+      <h2>How to Use</h2>
+      <p>Install via command line:</p>
+      <figure class="code u-mb+">
+        <code>
+          bower install --save https://github.build.ge.com/PXd/px-forms-design.git
+        </code>
+      </figure>
+      <p>Add to component Sass file:</p>
+      <figure class="code u-mb++">
+        <code>
+          @import "px-forms-design/_base.forms.scss";
+        </code>
+      </figure>
       <form>
         <fieldset>
           <legend>Default, Readonly, Disabled</legend>
@@ -34,11 +52,11 @@
               <br>
               &lt;label for=&hellip;&gt;&hellip;&lt;/label&gt;
               <br>
-              &lt;input id=&hellip; class=text-input type=text value="&hellip;"&gt;
+              &lt;input id=&hellip; class=text-input type=text value="&hellip;" readonly&gt;
               <br>
               &lt;label for=&hellip;&gt;&hellip;&lt;/label&gt;
               <br>
-              &lt;input id=&hellip; class=text-input type=text placeholder="&hellip;"&gt;
+              &lt;input id=&hellip; class=text-input type=text placeholder="&hellip;" disabled&gt;
             </code>
           </figure>
           <ol class=list-bare>
@@ -171,21 +189,37 @@
       <form>
         <fieldset class="form-field form-field--inline">
           <legend>One Line Form</legend>
+          <h4>Sass Flag</h4>
+          <figure class=code>
+            <code>
+              $inuit-enable-inline-fields : true;
+            </code>
+          </figure>
+          <small>
+            Flag must be set before
+            <code class="code code--inline">@import</code>
+            in component Sass file.
+          </small>
+          <h4>HTML</h4>
           <figure class="code u-mb+">
             <code>
-              &lt;label class=label--inline for=&hellip;&gt;&hellip;&lt;/label&gt;
+              &lt;&hellip; class="form-field form-field--inline"&gt;
               <br>
-              &lt;input id=&hellip; class="text-input input--&hellip;" type=text&gt;
+              &nbsp;&nbsp;&lt;label class=label--inline for=&hellip;&gt;&hellip;&lt;/label&gt;
               <br>
-              &lt;label class=label--inline for=&hellip;&gt;&hellip;&lt;/label&gt;
+              &nbsp;&nbsp;&lt;input id=&hellip; class="text-input input--&hellip;" type=text&gt;
               <br>
-              &lt;input id=&hellip; class="text-input input--&hellip;" type=text&gt;
+              &nbsp;&nbsp;&lt;label class=label--inline for=&hellip;&gt;&hellip;&lt;/label&gt;
               <br>
-              &lt;input id=&hellip; type=checkbox&gt;
+              &nbsp;&nbsp;&lt;input id=&hellip; class="text-input input--&hellip;" type=text&gt;
               <br>
-              &lt;label class=label--inline for=&hellip;&gt;&hellip;&lt;/label&gt;
+              &nbsp;&nbsp;&lt;input id=&hellip; type=checkbox&gt;
               <br>
-              &lt;input class="btn btn--primary" type=submit value=&hellip;&gt;
+              &nbsp;&nbsp;&lt;label class=label--inline for=&hellip;&gt;&hellip;&lt;/label&gt;
+              <br>
+              &nbsp;&nbsp;&lt;input class="btn btn--primary" type=submit value=&hellip;&gt;
+              <br>
+              &lt;/&hellip;&gt;
             </code>
           </figure>
           <label class=label--inline for=inline1>From</label>
@@ -200,39 +234,111 @@
       <form>
         <fieldset>
           <legend>Different input field widths</legend>
-          <figure class="code u-mb+">
-            <code>
-              &lt;input class="text-input input--tiny" type=text&gt;
-              <br>
-              &lt;input class="text-input input--small" type=text&gt;
-              <br>
-              &lt;input class="text-input input--regular" type=text&gt;
-              <br>
-              &lt;input class="text-input input--large" type=text&gt;
-              <br>
-              &lt;input class="text-input input--huge" type=text&gt;
-            </code>
-          </figure>
           <ol class=list-bare>
             <li class=form-field>
-              <label for=input4>Tiny Field</label>
-              <input id=input4 class="text-input input--tiny" type=text placeholder="Up to 106 px">
+              <h4>Sass Flag</h4>
+              <figure class=code>
+                <code>
+                  $inuit-enable-input--tiny : true;
+                </code>
+              </figure>
+              <small>
+                Flag must be set before
+                <code class="code code--inline">@import</code>
+                in component Sass file.
+              </small>
+              <h4>HTML</h4>
+              <figure class="code u-mb+">
+                <code>
+                  &lt;input class="text-input input--tiny" type=text&gt;
+                </code>
+              </figure>
+              <label class=u-mt+ for=input4>Tiny Field</label>
+              <input id=input4 class="text-input input--tiny" type=text value="Up to 106 px" readonly>
             </li>
             <li class=form-field>
-              <label for=input5>Small Field</label>
-              <input id=input5 class="text-input input--small" type=text placeholder="Up to 212 px">
+              <h4>Sass Flag</h4>
+              <figure class=code>
+                <code>
+                  $inuit-enable-input--small : true;
+                </code>
+              </figure>
+              <small>
+                Flag must be set before
+                <code class="code code--inline">@import</code>
+                in component Sass file.
+              </small>
+              <h4>HTML</h4>
+              <figure class="code u-mb+">
+                <code>
+                  &lt;input class="text-input input--small" type=text&gt;
+                </code>
+              </figure>
+              <label class=u-mt+ for=input5>Small Field</label>
+              <input id=input5 class="text-input input--small" type=text value="Up to 212 px" readonly>
             </li>
             <li class=form-field>
-              <label for=input6>Regular Field</label>
-              <input id=input6 class="text-input input--regular" type=text placeholder="Up to 318 px">
+              <h4>Sass Flag</h4>
+              <figure class=code>
+                <code>
+                  $inuit-enable-input--regular : true;
+                </code>
+              </figure>
+              <small>
+                Flag must be set before
+                <code class="code code--inline">@import</code>
+                in component Sass file.
+              </small>
+              <h4>HTML</h4>
+              <figure class="code u-mb+">
+                <code>
+                  &lt;input class="text-input input--regular" type=text&gt;
+                </code>
+              </figure>
+              <label class=u-mt+ for=input6>Regular Field</label>
+              <input id=input6 class="text-input input--regular" type=text value="Up to 318 px" readonly>
             </li>
             <li class=form-field>
-              <label for=input7>Large Field</label>
-              <input id=input7 class="text-input input--large" type=text placeholder="Up to 424 px">
+              <h4>Sass Flag</h4>
+              <figure class=code>
+                <code>
+                  $inuit-enable-input--large : true;
+                </code>
+              </figure>
+              <small>
+                Flag must be set before
+                <code class="code code--inline">@import</code>
+                in component Sass file.
+              </small>
+              <h4>HTML</h4>
+              <figure class="code u-mb+">
+                <code>
+                  &lt;input class="text-input input--large" type=text&gt;
+                </code>
+              </figure>
+              <label class=u-mt+ for=input7>Large Field</label>
+              <input id=input7 class="text-input input--large" type=text value="Up to 424 px" readonly>
             </li>
             <li class=form-field>
-              <label for=input8>Huge Field</label>
-              <input id=input8 class="text-input input--huge" type=text placeholder="Up to 530 px">
+              <h4>Sass Flag</h4>
+              <figure class=code>
+                <code>
+                  $inuit-enable-input--huge : true;
+                </code>
+              </figure>
+              <small>
+                Flag must be set before
+                <code class="code code--inline">@import</code>
+                in component Sass file.
+              </small>
+              <h4>HTML</h4>
+              <figure class="code u-mb+">
+                <code>
+                  &lt;input class="text-input input--huge" type=text&gt;
+                </code>
+              </figure>
+              <label class=u-mt+ for=input8>Huge Field</label>
+              <input id=input8 class="text-input input--huge" type=text value="Up to 530 px" readonly>
             </li>
           </ol>
         </fieldset>
@@ -287,6 +393,18 @@
         </fieldset>
         <fieldset>
           <legend>Validation States</legend>
+          <h4>Sass Flag</h4>
+          <figure class=code>
+            <code>
+              $inuit-enable-validation-states : true;
+            </code>
+          </figure>
+          <small>
+            Flag must be set before
+            <code class="code code--inline">@import</code>
+            in component Sass file.
+          </small>
+          <h4>HTML</h4>
           <figure class="code u-mb+">
             <code>
               &lt;ol class=list-bare&gt;
