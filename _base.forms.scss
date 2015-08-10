@@ -213,7 +213,7 @@ select {
   line-height: calc(2em - 2px);
   cursor: pointer;
   background-color: $inuit-forms-select-background;
-  background-image: url('data:image/svg+xml;utf8,%3csvg xmlns="http://www.w3.org/2000/svg" width="16" height="9.3" viewBox="-28.5 391.9 16 9.3"%3e%3cpath fill="#{$inuit-forms-select-color}" d="M-12.7 392.8l-.8-.8c-.1-.1-.2-.2-.4-.2-.1 0-.3.1-.4.2l-6.3 6.3-6.3-6.3c-.1-.1-.2-.2-.4-.2-.1 0-.3.1-.4.2l-.8.8c-.1.1-.2.2-.2.4 0 .1.1.3.2.4l7.5 7.5c.1.1.2.2.4.2s.3-.1.4-.2l7.5-7.5c.1-.1.2-.2.2-.4 0-.1-.1-.3-.2-.4z"/%3e%3c/svg%3e');
+  background-image: url('data:image/svg+xml;utf8,%3csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%229.3%22 viewBox=%22-28.5 391.9 16 9.3%22%3e%3cpath fill=%22#{$inuit-forms-select-color}%22 d=%22M-12.7 392.8l-.8-.8c-.1-.1-.2-.2-.4-.2-.1 0-.3.1-.4.2l-6.3 6.3-6.3-6.3c-.1-.1-.2-.2-.4-.2-.1 0-.3.1-.4.2l-.8.8c-.1.1-.2.2-.2.4 0 .1.1.3.2.4l7.5 7.5c.1.1.2.2.4.2s.3-.1.4-.2l7.5-7.5c.1-.1.2-.2.2-.4 0-.1-.1-.3-.2-.4z%22/%3e%3c/svg%3e');
   background-repeat: no-repeat;
   background-position: calc(100% - 1em) 50%;
   color: $inuit-forms-select-color;
@@ -231,7 +231,7 @@ select {
     border: 1px solid $inuit-forms-select-color--disabled;
     box-shadow: none;
     background-color: $inuit-forms-select-background--disabled;
-    background-image: url('data:image/svg+xml;utf8,%3csvg xmlns="http://www.w3.org/2000/svg" width="16" height="9.3" viewBox="-28.5 391.9 16 9.3"%3e%3cpath fill="#{$inuit-forms-select-color--disabled}" d="M-12.7 392.8l-.8-.8c-.1-.1-.2-.2-.4-.2-.1 0-.3.1-.4.2l-6.3 6.3-6.3-6.3c-.1-.1-.2-.2-.4-.2-.1 0-.3.1-.4.2l-.8.8c-.1.1-.2.2-.2.4 0 .1.1.3.2.4l7.5 7.5c.1.1.2.2.4.2s.3-.1.4-.2l7.5-7.5c.1-.1.2-.2.2-.4 0-.1-.1-.3-.2-.4z"/%3e%3c/svg%3e');
+    background-image: url('data:image/svg+xml;utf8,%3csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%229.3%22 viewBox=%22-28.5 391.9 16 9.3%22%3e%3cpath fill=%22#{$inuit-forms-select-color--disabled}%22 d=%22M-12.7 392.8l-.8-.8c-.1-.1-.2-.2-.4-.2-.1 0-.3.1-.4.2l-6.3 6.3-6.3-6.3c-.1-.1-.2-.2-.4-.2-.1 0-.3.1-.4.2l-.8.8c-.1.1-.2.2-.2.4 0 .1.1.3.2.4l7.5 7.5c.1.1.2.2.4.2s.3-.1.4-.2l7.5-7.5c.1-.1.2-.2.2-.4 0-.1-.1-.3-.2-.4z%22/%3e%3c/svg%3e');
     color: $inuit-forms-select-color--disabled;
   }
   &[multiple] {
