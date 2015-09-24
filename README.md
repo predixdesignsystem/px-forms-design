@@ -2,13 +2,10 @@
 
 The Predix Experience Forms module defines styles for form elements such as `<input>`, `<label>`, `<select>` and so on. It is based on Formalize (http://formalize.me) by Nathan Smith (http://sonspring.com/)
 
-## Demo
 
-You can review button styles and recommended markup and required here: https://github.com/pages/PredixDev/px-forms-design
 
-## Sass Documentation
 
-You can review Sass Documentation here: https://github.com/pages/PredixDev/px-forms-design/sassdoc
+
 
 ## Dependencies
 
