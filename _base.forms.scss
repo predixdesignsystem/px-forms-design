@@ -117,7 +117,7 @@ $inuit-enable-input--large                  : false !default;
 
 /// @type Boolean [default] - Produce CSS for huge inputs?
 $inuit-enable-input--huge                   : false !default;
- 
+
 fieldset {
   margin: 0;
   &, legend {
@@ -212,7 +212,7 @@ select {
   box-shadow: $inuit-forms-select-shadow--light;
   line-height: calc(2em - 2px);
   cursor: pointer;
-  background-color: $inuit-forms-select-background; 
+  background-color: $inuit-forms-select-background;
   background-image: url('data:image/svg+xml;utf8,%3csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 viewBox=%220 0 658 1024%22%3e%3cpath fill=%22#{$inuit-forms-select-color}%22 d=%22M614.286 420.571q0 7.429-5.714 13.143l-266.286 266.286q-5.714 5.714-13.143 5.714t-13.143-5.714l-266.286-266.286q-5.714-5.714-5.714-13.143t5.714-13.143l28.571-28.571q5.714-5.714 13.143-5.714t13.143 5.714l224.571 224.571 224.571-224.571q5.714-5.714 13.143-5.714t13.143 5.714l28.571 28.571q5.714 5.714 5.714 13.143z%22/%3e%3c/svg%3e');
   background-repeat: no-repeat;
   background-position: calc(100% - #{$inuit-base-spacing-unit--small}) 37.5%;
@@ -240,6 +240,10 @@ select {
     cursor: pointer;
     background: $inuit-forms-select-multiple-background;
   }
+}
+
+select::-ms-expand {
+    display: none;
 }
 
 .#{$inuit-forms-namespace}text-input,
@@ -303,7 +307,7 @@ textarea {
   %#{$inuit-forms-namespace}label--inline {
     padding-left: 5px;
   }
-}  
+}
 
 [type=radio] + {
   .#{$inuit-forms-namespace}label--inline,
@@ -378,7 +382,7 @@ textarea {
 
 
 @if ($inuit-enable-inline-fields == true) {
-  
+
   /**
    * Styles for one line forms.
    */
@@ -398,7 +402,7 @@ textarea {
 
 
 @if ($inuit-enable-text-input--bare == true) {
-  
+
   /**
    * Text inputs with no styles.
    */
@@ -413,7 +417,7 @@ textarea {
 
 
 @if ($inuit-enable-validation-states == true) {
-  
+
   /**
    * Styles for validation states
    */
@@ -422,39 +426,39 @@ textarea {
   %#{$inuit-forms-namespace}validation-warning {
     color: $inuit-forms-validation-warning;
   }
-  
+
   .#{$inuit-forms-namespace}validation-error,
   %#{$inuit-forms-namespace}validation-error {
     color: $inuit-forms-validation-error;
   }
-  
+
   .#{$inuit-forms-namespace}validation-success,
   %#{$inuit-forms-namespace}validation-success {
     color: $inuit-forms-validation-success;
   }
-  
+
   .#{$inuit-forms-namespace}text-input,
   %#{$inuit-forms-namespace}text-input {
     &.validation-warning {
       border-color: $inuit-forms-validation-warning;
       color: inherit;
-    }      
+    }
   }
-  
+
   .#{$inuit-forms-namespace}text-input,
   %#{$inuit-forms-namespace}text-input {
     &.validation-error {
       border-color: $inuit-forms-validation-error;
       color: inherit;
-    }      
+    }
   }
-  
+
   .#{$inuit-forms-namespace}text-input,
   %#{$inuit-forms-namespace}text-input {
     &.validation-success {
       border-color: $inuit-forms-validation-success;
       color: inherit;
-    }      
+    }
   }
 
 }
