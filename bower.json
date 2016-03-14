@@ -1,6 +1,6 @@
 {
   "name": "px-forms-design",
-  "version": "0.3.14",
+  "version": "0.3.15",
   "authors": [
     "General Electric",
     "Nathan Smith"
@@ -14,7 +14,7 @@
   ],
   "license": "MIT",
   "homepage": "https://github.com/PredixDev/px-forms-design.git",
-  "private": true,
+  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",
