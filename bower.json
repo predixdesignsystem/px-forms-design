@@ -12,7 +12,6 @@
     "sass",
     "forms"
   ],
-  "license": "MIT",
   "homepage": "https://github.com/PredixDev/px-forms-design.git",
   "private": false,
   "ignore": [
