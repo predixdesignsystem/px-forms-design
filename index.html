@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>px-toggle-design Demo</title>
+  <title>px-forms-design Demo</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <!-- Boilerplate: Import Libraries -->
@@ -13,21 +13,20 @@
   <link rel="import" href="../px-sass-doc/px-sass-doc.html" />
 
   <!-- 0: Import Module Styles -->
-  <link rel="stylesheet" type="text/css" href="css/px-toggle-design-demo.css" />
+  <link rel="stylesheet" type="text/css" href="css/px-forms-design-demo.css" />
 </head>
 <body>
 <template id="just-for-demo" is="dom-bind">
 
 <!-- 1: Describe Module -->
 <px-sass-doc
-  module-name="px-toggle-design"
+  module-name="px-forms-design"
   description="Toggle is a simple on/off switch. It's created with CSS applied to a checkbox and label. Use it to create simple UI elements that enable and disable things."
   layer="objects"
   sassdoc-path="sassdoc.json"
   dependencies='[
     "https://github.com/PredixDev/px-colors-design",
-    "https://github.com/PredixDev/px-defaults-design",
-    "https://github.com/PredixDev/px-helpers-design"
+    "https://github.com/PredixDev/px-defaults-design"
   ]'
   selected-options="{{selectedOptions}}">
 
@@ -36,6 +35,7 @@
   option-name="Size"
   choose-with="dropdown"
   choices='[
+    "tiny",
     "small",
     "regular (default)",
     "large",
@@ -46,8 +46,10 @@
 
 <!-- 3: Make HTML Demo -->
 <section data-slot="demoHTML" id="demoContainer">
-<input id="exampleToggle" class$="{{inputClasses}}" type="checkbox" />
-<label for="exampleToggle" class$="{{labelClasses}}"></label>
+  <div class="form-field">
+    <label for="input1">Default</label>
+    <input id="input1" class="text-input input--tiny" type="text" placeholder="Type something&hellip;">
+  </div>
 </section>
 
 <!-- 4: Set Import Slot -->
@@ -59,18 +61,7 @@
 <section data-slot="usage">
 Use the following HTML to set up your project:
 ```
-<!-- Default toggle -->
-<input id="toggle2" class="toggle__input" type="checkbox">
-<label for="toggle2" class="toggle__label"></label>
-<!-- Small toggle -->
-<input id="toggle3" class="toggle__input toggle__input--small" type="checkbox">
-<label for="toggle3" class="toggle__label toggle__label--small"></label>
-<!-- Large toggle -->
-<input id="toggle4" class="toggle__input toggle__input--large" type="checkbox">
-<label for="toggle4" class="toggle__label toggle__label--large"></label>
-<!-- Huge toggle -->
-<input id="toggle5" class="toggle__input toggle__input--huge" type="checkbox">
-<label for="toggle5" class="toggle__label toggle__label--huge"></label>
+<!-- Demo code here -->
 ```
 </section>
 
@@ -83,7 +74,6 @@ Use the following HTML to set up your project:
 
   document.addEventListener('px-sass-doc-options-updated', function(evt) {
     template.inputClasses = template._inputClasses();
-    template.labelClasses = template._labelClasses();
     template.importCode = template._importCode();
   });
 
@@ -97,24 +87,16 @@ Use the following HTML to set up your project:
     return ("toggle__input " + strings.join(" ")).trim();
   };
 
-  template._labelClasses = function() {
-    var opts = template.selectedOptions || {}, strings = [];
-
-    if (opts.Size === "small")    strings.push("toggle__label--small");
-    if (opts.Size === "large")    strings.push("toggle__label--large");
-    if (opts.Size === "huge")     strings.push("toggle__label--huge");
-
-    return ("toggle__label " + strings.join(" ")).trim();
-  };
-
   template._importCode = function() {
     var opts = template.selectedOptions || {}, strings = [];
 
-    if (opts.Size === "small")    strings.push("inuit-enable-toggle--small : true;");
-    if (opts.Size === "large")    strings.push("inuit-enable-toggle--large : true;");
-    if (opts.Size === "huge")     strings.push("inuit-enable-toggle--huge : true;");
+    if (opts.Size === "tiny")    strings.push("inuit-enable-input--tiny : true;");
+    if (opts.Size === "small")   strings.push("inuit-enable-input--small : true;");
+    if (opts.Size === "regular") strings.push("inuit-enable-input--regular : true;");
+    if (opts.Size === "large")   strings.push("inuit-enable-input--large : true;");
+    if (opts.Size === "huge")    strings.push("inuit-enable-input--huge : true;");
 
-    return (strings.join("\n") + "\n@import 'px-toggle-design/_objects.toggle.scss';").trim();
+    return (strings.join("\n") + "\n@import 'px-forms-design/_base.forms.scss';").trim();
   };
 </script>
 </body>

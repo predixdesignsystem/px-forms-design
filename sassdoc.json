@@ -1,5 +1,213 @@
 [
     {
+        "description": "Generates the CSS for one line form fields\n\n",
+        "commentRange": {
+            "start": 195,
+            "end": 198
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-inline-fields",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 199,
+                "end": 199
+            }
+        },
+        "group": [
+            "px-forms-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_base.forms.scss",
+            "name": "_base.forms.scss"
+        }
+    },
+    {
+        "description": "Generates the CSS for bare text-inputs\n\n",
+        "commentRange": {
+            "start": 201,
+            "end": 204
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-text-input--bare",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 205,
+                "end": 205
+            }
+        },
+        "group": [
+            "px-forms-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_base.forms.scss",
+            "name": "_base.forms.scss"
+        }
+    },
+    {
+        "description": "Generates the CSS for field validation\n\n",
+        "commentRange": {
+            "start": 207,
+            "end": 210
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-validation-states",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 211,
+                "end": 211
+            }
+        },
+        "group": [
+            "px-forms-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_base.forms.scss",
+            "name": "_base.forms.scss"
+        }
+    },
+    {
+        "description": "Generates the CSS for tiny inputs\n\n",
+        "commentRange": {
+            "start": 213,
+            "end": 216
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-input--tiny",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 217,
+                "end": 217
+            }
+        },
+        "group": [
+            "px-forms-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_base.forms.scss",
+            "name": "_base.forms.scss"
+        }
+    },
+    {
+        "description": "Generates the CSS for small inputs\n\n",
+        "commentRange": {
+            "start": 219,
+            "end": 222
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-input--small",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 223,
+                "end": 223
+            }
+        },
+        "group": [
+            "px-forms-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_base.forms.scss",
+            "name": "_base.forms.scss"
+        }
+    },
+    {
+        "description": "Generates the CSS for regular inputs\n\n",
+        "commentRange": {
+            "start": 225,
+            "end": 228
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-input--regular",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 229,
+                "end": 229
+            }
+        },
+        "group": [
+            "px-forms-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_base.forms.scss",
+            "name": "_base.forms.scss"
+        }
+    },
+    {
+        "description": "Generates the CSS for large inputs\n\n",
+        "commentRange": {
+            "start": 231,
+            "end": 234
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-input--large",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 235,
+                "end": 235
+            }
+        },
+        "group": [
+            "px-forms-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_base.forms.scss",
+            "name": "_base.forms.scss"
+        }
+    },
+    {
+        "description": "Generates the CSS for huge inputs\n\n",
+        "commentRange": {
+            "start": 237,
+            "end": 240
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-input--huge",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 241,
+                "end": 241
+            }
+        },
+        "group": [
+            "px-forms-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_base.forms.scss",
+            "name": "_base.forms.scss"
+        }
+    },
+    {
         "description": "Sets a prepended namespace for all generated classes.\n\n",
         "commentRange": {
             "start": 9,
@@ -799,214 +1007,6 @@
             "px-forms-design:variables:style"
         ],
         "type": "Color [default]",
-        "access": "public",
-        "file": {
-            "path": "_base.forms.scss",
-            "name": "_base.forms.scss"
-        }
-    },
-    {
-        "description": "Generates the CSS for one line form fields\n\n",
-        "commentRange": {
-            "start": 195,
-            "end": 198
-        },
-        "context": {
-            "type": "variable",
-            "name": "inuit-enable-inline-fields",
-            "value": "false",
-            "scope": "default",
-            "line": {
-                "start": 199,
-                "end": 199
-            }
-        },
-        "group": [
-            "px-toggle-design:variables:flag"
-        ],
-        "type": "Boolean [default]",
-        "access": "public",
-        "file": {
-            "path": "_base.forms.scss",
-            "name": "_base.forms.scss"
-        }
-    },
-    {
-        "description": "Generates the CSS for bare text-inputs\n\n",
-        "commentRange": {
-            "start": 201,
-            "end": 204
-        },
-        "context": {
-            "type": "variable",
-            "name": "inuit-enable-text-input--bare",
-            "value": "false",
-            "scope": "default",
-            "line": {
-                "start": 205,
-                "end": 205
-            }
-        },
-        "group": [
-            "px-toggle-design:variables:flag"
-        ],
-        "type": "Boolean [default]",
-        "access": "public",
-        "file": {
-            "path": "_base.forms.scss",
-            "name": "_base.forms.scss"
-        }
-    },
-    {
-        "description": "Generates the CSS for field validation\n\n",
-        "commentRange": {
-            "start": 207,
-            "end": 210
-        },
-        "context": {
-            "type": "variable",
-            "name": "inuit-enable-validation-states",
-            "value": "false",
-            "scope": "default",
-            "line": {
-                "start": 211,
-                "end": 211
-            }
-        },
-        "group": [
-            "px-toggle-design:variables:flag"
-        ],
-        "type": "Boolean [default]",
-        "access": "public",
-        "file": {
-            "path": "_base.forms.scss",
-            "name": "_base.forms.scss"
-        }
-    },
-    {
-        "description": "Generates the CSS for tiny inputs\n\n",
-        "commentRange": {
-            "start": 213,
-            "end": 216
-        },
-        "context": {
-            "type": "variable",
-            "name": "inuit-enable-input--tiny",
-            "value": "false",
-            "scope": "default",
-            "line": {
-                "start": 217,
-                "end": 217
-            }
-        },
-        "group": [
-            "px-toggle-design:variables:flag"
-        ],
-        "type": "Boolean [default]",
-        "access": "public",
-        "file": {
-            "path": "_base.forms.scss",
-            "name": "_base.forms.scss"
-        }
-    },
-    {
-        "description": "Generates the CSS for small inputs\n\n",
-        "commentRange": {
-            "start": 219,
-            "end": 222
-        },
-        "context": {
-            "type": "variable",
-            "name": "inuit-enable-input--small",
-            "value": "false",
-            "scope": "default",
-            "line": {
-                "start": 223,
-                "end": 223
-            }
-        },
-        "group": [
-            "px-toggle-design:variables:flag"
-        ],
-        "type": "Boolean [default]",
-        "access": "public",
-        "file": {
-            "path": "_base.forms.scss",
-            "name": "_base.forms.scss"
-        }
-    },
-    {
-        "description": "Generates the CSS for regular inputs\n\n",
-        "commentRange": {
-            "start": 225,
-            "end": 228
-        },
-        "context": {
-            "type": "variable",
-            "name": "inuit-enable-input--regular",
-            "value": "false",
-            "scope": "default",
-            "line": {
-                "start": 229,
-                "end": 229
-            }
-        },
-        "group": [
-            "px-toggle-design:variables:flag"
-        ],
-        "type": "Boolean [default]",
-        "access": "public",
-        "file": {
-            "path": "_base.forms.scss",
-            "name": "_base.forms.scss"
-        }
-    },
-    {
-        "description": "Generates the CSS for large inputs\n\n",
-        "commentRange": {
-            "start": 231,
-            "end": 234
-        },
-        "context": {
-            "type": "variable",
-            "name": "inuit-enable-input--large",
-            "value": "false",
-            "scope": "default",
-            "line": {
-                "start": 235,
-                "end": 235
-            }
-        },
-        "group": [
-            "px-toggle-design:variables:flag"
-        ],
-        "type": "Boolean [default]",
-        "access": "public",
-        "file": {
-            "path": "_base.forms.scss",
-            "name": "_base.forms.scss"
-        }
-    },
-    {
-        "description": "Generates the CSS for huge inputs\n\n",
-        "commentRange": {
-            "start": 237,
-            "end": 240
-        },
-        "context": {
-            "type": "variable",
-            "name": "inuit-enable-input--huge",
-            "value": "false",
-            "scope": "default",
-            "line": {
-                "start": 241,
-                "end": 241
-            }
-        },
-        "group": [
-            "px-toggle-design:variables:flag"
-        ],
-        "type": "Boolean [default]",
         "access": "public",
         "file": {
             "path": "_base.forms.scss",

@@ -27,6 +27,6 @@
   },
   "devDependencies": {
     "px-starter-kit-design": "~0.6.0",
-    "px-sass-doc": "^0.1.7"
+    "px-sass-doc": "^0.2.0"
   }
 }

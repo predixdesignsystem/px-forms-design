@@ -28,9 +28,19 @@ PAGE. IT SHOULD NOT PROVIDE RULES FOR THE MODULE.
 @import "px-helpers-design/_generic.helpers.scss";
 
 // Base
-@import "px-flexbox-design/_base.flexbox.scss";
-@import "px-viewport-design/_base.viewport.scss";
-@import "px-typography-design/_base.typography.scss";
+// @import "px-flexbox-design/_base.flexbox.scss";
+// @import "px-viewport-design/_base.viewport.scss";
+// @import "px-typography-design/_base.typography.scss";
+
+$inuit-enable-inline-fields     : true;
+$inuit-enable-text-input--bare  : true;
+$inuit-enable-validation-states : true;
+$inuit-enable-input--tiny       : true;
+$inuit-enable-input--small      : true;
+$inuit-enable-input--regular    : true;
+$inuit-enable-input--large      : true;
+$inuit-enable-input--huge       : true;
+@import "../_base.forms.scss";
 
 // Objects
 

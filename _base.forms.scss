@@ -194,49 +194,49 @@ $inuit-forms-validation-success             : $green !default;
 
 /// Generates the CSS for one line form fields
 ///
-/// @group px-toggle-design:variables:flag
+/// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-inline-fields                 : false !default;
 
 /// Generates the CSS for bare text-inputs
 ///
-/// @group px-toggle-design:variables:flag
+/// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-text-input--bare              : false !default;
 
 /// Generates the CSS for field validation
 ///
-/// @group px-toggle-design:variables:flag
+/// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-validation-states             : false !default;
 
 /// Generates the CSS for tiny inputs
 ///
-/// @group px-toggle-design:variables:flag
+/// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-input--tiny                   : false !default;
 
 /// Generates the CSS for small inputs
 ///
-/// @group px-toggle-design:variables:flag
+/// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-input--small                  : false !default;
 
 /// Generates the CSS for regular inputs
 ///
-/// @group px-toggle-design:variables:flag
+/// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-input--regular                : false !default;
 
 /// Generates the CSS for large inputs
 ///
-/// @group px-toggle-design:variables:flag
+/// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-input--large                  : false !default;
 
 /// Generates the CSS for huge inputs
 ///
-/// @group px-toggle-design:variables:flag
+/// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-input--huge                   : false !default;
 
