@@ -43,7 +43,8 @@ $inuit-enable-input--huge       : true;
 @import "../_base.forms.scss";
 
 // Objects
-
+$inuit-enable-btn--primary : true;
+@import 'px-buttons-design/_objects.buttons.scss';
 
 // Component - THINGS TO SHOW YOUR DEMO
 

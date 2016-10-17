@@ -28,34 +28,91 @@
     "https://github.com/PredixDev/px-colors-design",
     "https://github.com/PredixDev/px-defaults-design"
   ]'
-  selected-options="{{selectedOptions}}">
+  selected-options="{{selectedOptions}}"
+  tabs='["Default","Inline"]' selected-tab="{{selectedTab}}">
 
-<!-- 2: Set Options -->
+<!-- FOR 'DEFAULT' TAB -->
+<template is="dom-if" if="[[_tabIs('Default',selectedTab)]]" restamp="true">
+
 <px-sass-doc-option
-  option-name="Size"
+  option-name="Length"
   choose-with="dropdown"
   choices='[
+    "default",
     "tiny",
     "small",
-    "regular (default)",
+    "regular",
     "large",
     "huge"
   ]'
-  default-choice="regular (default)">
+  default-choice="default">
+</px-sass-doc-option>
+<px-sass-doc-option
+  option-name="Validation"
+  choose-with="dropdown"
+  choices='[
+    "none",
+    "warning",
+    "error",
+    "success"
+  ]'
+  default-choice="none">
+</px-sass-doc-option>
+<px-sass-doc-option
+  option-name="Bare"
+  choose-with="boolean"
+  default-choice="false">
 </px-sass-doc-option>
 
-<!-- 3: Make HTML Demo -->
 <section data-slot="demoHTML" id="demoContainer">
-  <div class="form-field">
-    <label for="input1">Default</label>
-    <input id="input1" class="text-input input--tiny" type="text" placeholder="Type something&hellip;">
-  </div>
+<div class="form-field">
+  <label for="input1">Input Label</label>
+  <input id="input1" class$="{{inputClasses}}" type="text" placeholder="Type something&hellip;">
+</div>
 </section>
 
-<!-- 4: Set Import Slot -->
 <section data-slot="import">
 {{importCode}}
 </section>
+
+</template>
+
+<!-- FOR 'OTHER' TAB -->
+<template is="dom-if" if="[[_tabIs('Inline',selectedTab)]]" restamp="true">
+
+<px-sass-doc-option
+  option-name="Validation"
+  choose-with="dropdown"
+  choices='[
+    "none",
+    "warning",
+    "error",
+    "success"
+  ]'
+  default-choice="none">
+</px-sass-doc-option>
+<px-sass-doc-option
+  option-name="Bare"
+  choose-with="boolean"
+  default-choice="false">
+</px-sass-doc-option>
+
+<section data-slot="demoHTML" id="demoContainer">
+<label class="label--inline" for="inline1">From</label>
+<input class="text-input input--small form-field--inline" id="inline1" type="text">
+<label class="label--inline" for="inline2">to</label>
+<input class="text-input input--small" type="text">
+<input id="inline3" type="checkbox">
+<label class="label--inline" for="inline3">Inline checkbox</label>
+<input class="form-field--inline btn btn--primary" type="submit" value="Submit">
+</section>
+
+<section data-slot="import">
+{{importCode}}
+</section>
+
+</template>
+
 
 <!-- 5: Set Usage HTML -->
 <section data-slot="usage">
@@ -68,33 +125,47 @@ Use the following HTML to set up your project:
 </px-sass-doc>
 </template>
 
+
 <!-- 6: Handle selectedOptions, update demo -->
 <script>
   var template = document.querySelector('template[is=dom-bind]');
 
+  template._tabIs = function(tabName) {
+      var selected = template.selectedTab || "";
+      return selected === tabName;
+    }
+
   document.addEventListener('px-sass-doc-options-updated', function(evt) {
-    template.inputClasses = template._inputClasses();
+    template.inputClasses = template._calacInputClasses();
     template.importCode = template._importCode();
   });
 
-  template._inputClasses = function() {
+  template._calacInputClasses = function() {
     var opts = template.selectedOptions || {}, strings = [];
 
-    if (opts.Size === "small")    strings.push("toggle__input--small");
-    if (opts.Size === "large")    strings.push("toggle__input--large");
-    if (opts.Size === "huge")     strings.push("toggle__input--huge");
+    if (opts.Length === "tiny")    strings.push("input--tiny");
+    if (opts.Length === "small")    strings.push("input--small");
+    if (opts.Length === "regular")    strings.push("input--regular");
+    if (opts.Length === "large")    strings.push("input--large");
+    if (opts.Length === "huge")     strings.push("input--huge");
 
-    return ("toggle__input " + strings.join(" ")).trim();
+    if (opts.Validation === "warning")     strings.push("validation-warning");
+    if (opts.Validation === "error")     strings.push("validation-error");
+    if (opts.Validation === "success")     strings.push("validation-success");
+
+    if (opts.Bare === true)     strings.push("text-input--bare");
+
+    return ("text-input " + strings.join(" ")).trim();
   };
 
   template._importCode = function() {
     var opts = template.selectedOptions || {}, strings = [];
 
-    if (opts.Size === "tiny")    strings.push("inuit-enable-input--tiny : true;");
-    if (opts.Size === "small")   strings.push("inuit-enable-input--small : true;");
-    if (opts.Size === "regular") strings.push("inuit-enable-input--regular : true;");
-    if (opts.Size === "large")   strings.push("inuit-enable-input--large : true;");
-    if (opts.Size === "huge")    strings.push("inuit-enable-input--huge : true;");
+    if (opts.Length === "tiny")    strings.push("inuit-enable-input--tiny : true;");
+    if (opts.Length === "small")   strings.push("inuit-enable-input--small : true;");
+    if (opts.Length === "regular") strings.push("inuit-enable-input--regular : true;");
+    if (opts.Length === "large")   strings.push("inuit-enable-input--large : true;");
+    if (opts.Length === "huge")    strings.push("inuit-enable-input--huge : true;");
 
     return (strings.join("\n") + "\n@import 'px-forms-design/_base.forms.scss';").trim();
   };
