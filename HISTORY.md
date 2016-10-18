@@ -1,3 +1,7 @@
+v0.3.18
+==============================
+* added auto gh-pages
+
 v0.3.17
 ==============================
 * added new demo functionality
