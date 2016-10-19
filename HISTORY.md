@@ -1,6 +1,11 @@
+v0.3.21
+==============================
+* Updated dependencies
+* Updated boilerplate files
+
 v0.3.20
 ==============================
-* fixed drop downs in demo 
+* fixed drop downs in demo
 
 v0.3.19
 ==============================
