@@ -35,7 +35,7 @@
 <template is="dom-if" if="[[_tabIs('Input Fields',selectedTab)]]" restamp="true">
 
 <px-sass-doc-option
-  option-name="Length"
+  option-name="Input Length"
   choose-with="dropdown"
   choices='[
     "default",
@@ -48,7 +48,7 @@
   default-choice="default">
 </px-sass-doc-option>
 <px-sass-doc-option
-  option-name="Validation"
+  option-name="Validation States"
   choose-with="dropdown"
   choices='[
     "none",
@@ -72,7 +72,7 @@
 </section>
 
 <section data-slot="import">
-{{importCode}}
+{{inputImportCode}}
 </section>
 
 </template>
@@ -117,7 +117,7 @@
 </section>
 
 <section data-slot="import">
-{{importCode}}
+{{inlineImportCode}}
 </section>
 
 </template>
@@ -148,7 +148,7 @@
 </section>
 
 <section data-slot="import">
-{{importCode}}
+@import 'px-forms-design/_base.forms.scss';
 </section>
 
 </template>
@@ -196,29 +196,25 @@ Use the following HTML to set up your project:
 <script>
   var template = document.querySelector('template[is=dom-bind]');
 
-  template._tabIs = function(tabName) {
-      var selected = template.selectedTab || "";
-      return selected === tabName;
-    }
-
   document.addEventListener('px-sass-doc-options-updated', function(evt) {
     template.inputClasses = template._calacInputClasses();
     template.inlineClasses = template._calacInlineClasses();
-    template.importCode = template._importCode();
+    template.inputImportCode = template._inputImportCode();
+    template.inlineImportCode = template._inlineImportCode();
   });
 
   template._calacInputClasses = function() {
     var opts = template.selectedOptions || {}, strings = [];
 
-    if (opts.Length === "tiny")     strings.push("input--tiny");
-    if (opts.Length === "small")    strings.push("input--small");
-    if (opts.Length === "regular")  strings.push("input--regular");
-    if (opts.Length === "large")    strings.push("input--large");
-    if (opts.Length === "huge")     strings.push("input--huge");
+    if (opts["Input Length"] === "tiny")     strings.push("input--tiny");
+    if (opts["Input Length"] === "small")    strings.push("input--small");
+    if (opts["Input Length"] === "regular")  strings.push("input--regular");
+    if (opts["Input Length"] === "large")    strings.push("input--large");
+    if (opts["Input Length"] === "huge")     strings.push("input--huge");
 
-    if (opts.Validation === "warning")   strings.push("validation-warning");
-    if (opts.Validation === "error")     strings.push("validation-error");
-    if (opts.Validation === "success")   strings.push("validation-success");
+    if (opts["Validation States"] === "warning")   strings.push("validation-warning");
+    if (opts["Validation States"] === "error")     strings.push("validation-error");
+    if (opts["Validation States"] === "success")   strings.push("validation-success");
 
     if (opts.Bare === true)     strings.push("text-input--bare");
 
@@ -241,23 +237,43 @@ Use the following HTML to set up your project:
     return ("text-input " + strings.join(" ")).trim();
   };
 
-  template._importCode = function() {
+  template._inputImportCode = function() {
     var opts = template.selectedOptions || {}, strings = [];
 
-    if (opts.Length === "tiny")    strings.push("$inuit-enable-input--tiny : true;");
-    if (opts.Length === "small")   strings.push("$inuit-enable-input--small : true;");
-    if (opts.Length === "regular") strings.push("$inuit-enable-input--regular : true;");
-    if (opts.Length === "large")   strings.push("$inuit-enable-input--large : true;");
-    if (opts.Length === "huge")    strings.push("$inuit-enable-input--huge : true;");
+    if (opts["Input Length"] === "tiny")    strings.push("$inuit-enable-input--tiny : true;");
+    if (opts["Input Length"] === "small")   strings.push("$inuit-enable-input--small : true;");
+    if (opts["Input Length"] === "regular") strings.push("$inuit-enable-input--regular : true;");
+    if (opts["Input Length"] === "large")   strings.push("$inuit-enable-input--large : true;");
+    if (opts["Input Length"] === "huge")    strings.push("$inuit-enable-input--huge : true;");
 
-    if (opts.Validation === "warning")    strings.push("$inuit-enable-validation-states : true;");
-    if (opts.Validation === "error")    strings.push("$inuit-enable-validation-states : true;");
-    if (opts.Validation === "success")    strings.push("$inuit-enable-validation-states : true;");
+    if (opts["Validation States"] === "warning")    strings.push("$inuit-enable-validation-states : true;");
+    if (opts["Validation States"] === "error")    strings.push("$inuit-enable-validation-states : true;");
+    if (opts["Validation States"] === "success")    strings.push("$inuit-enable-validation-states : true;");
 
     if (opts.Bare === true)     strings.push("$inuit-enable-text-input--bare  : true;");
 
     return (strings.join("\n") + "\n@import 'px-forms-design/_base.forms.scss';").trim();
   };
+  template._inlineImportCode = function() {
+    var opts = template.selectedOptions || {}, strings = [];
+
+    if (opts["Length"] === "tiny")    strings.push("$inuit-enable-input--tiny : true;");
+    if (opts["Length"] === "small")   strings.push("$inuit-enable-input--small : true;");
+    if (opts["Length"] === "regular") strings.push("$inuit-enable-input--regular : true;");
+    if (opts["Length"] === "large")   strings.push("$inuit-enable-input--large : true;");
+    if (opts["Length"] === "huge")    strings.push("$inuit-enable-input--huge : true;");
+
+    if (opts["Validation"] === "warning")    strings.push("$inuit-enable-validation-states : true;");
+    if (opts["Validation"] === "error")    strings.push("$inuit-enable-validation-states : true;");
+    if (opts["Validation"] === "success")    strings.push("$inuit-enable-validation-states : true;");
+
+    return (strings.join("\n") + "\n@import 'px-forms-design/_base.forms.scss';").trim();
+  };
+
+  template._tabIs = function(tabName) {
+    var selected = template.selectedTab || "";
+    return selected === tabName;
+  }
 </script>
 </body>
 </html>

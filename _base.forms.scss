@@ -526,10 +526,10 @@ textarea {
 
   .#{$inuit-forms-namespace}form-field--inline,
   %#{$inuit-forms-namespace}form-field--inline {
-    &:last-child {
+    .text-input {
       margin-bottom: $inuit-base-spacing-unit--large;
     }
-    .text-input {
+    &:last-child {
       margin-bottom: $inuit-base-spacing-unit--large;
     }
   }

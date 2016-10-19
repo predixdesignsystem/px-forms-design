@@ -1,8 +1,12 @@
-v0.3.18
+v0.3.20
+==============================
+* fixed drop downs in demo 
+
+v0.3.19
 ==============================
 * added auto gh-pages
 
-v0.3.17
+v0.3.18
 ==============================
 * added new demo functionality
 
