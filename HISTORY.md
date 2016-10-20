@@ -1,3 +1,7 @@
+v0.3.22
+==============================
+* updated 'use it in your project' section in demo
+
 v0.3.21
 ==============================
 * Updated dependencies
