@@ -1,6 +1,6 @@
 {
     "name": "px-forms-design",
-    "version": "0.3.24",
+    "version": "0.3.25",
     "authors": [
         "General Electric",
         "Nathan Smith"
@@ -27,7 +27,7 @@
     },
     "devDependencies": {
         "px-starter-kit-design": "~0.6.0",
-        "px-sass-doc": "^0.2.9",
+        "px-sass-doc": "^0.2.10",
         "px-buttons-design": "^0.4.32",
         "px-list-bare-design": "^0.2.15"
     }

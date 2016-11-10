@@ -1,4 +1,9 @@
 
+v0.3.25
+==================
+* bumping all version of px-sass-doc to get px-clipboard update
+
+
 v0.3.24
 ==================
 * patch test
