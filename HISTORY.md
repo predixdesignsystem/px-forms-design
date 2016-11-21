@@ -1,3 +1,8 @@
+v0.3.28
+==================
+* added select to demo page
+* fixed select chevron (removed style variable)
+
 v0.3.27
 ==================
 * added style variables for theming

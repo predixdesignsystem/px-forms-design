@@ -112,7 +112,7 @@ $inuit-forms-select-color                   : var(--px-select-text-color, $gray9
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default]
-$inuit-forms-select-color-svg                   : var(--px-select-chevron-color, "#{$gray9}") !default;
+$inuit-forms-select-color-svg                   : #{$gray9} !default;
 
 /// Sets the forms Select dropdown dark shadow
 ///
@@ -136,7 +136,7 @@ $inuit-forms-select-color--disabled         : var(--px-select-text-color--disabl
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default]
-$inuit-forms-select-color-svg--disabled         : var(--px-select-chevron-color--disabled, "#{$gray4}") !default;
+$inuit-forms-select-color-svg--disabled         :  #{$gray4} !default;
 
 /// Sets the forms Select dropdown disabled background color
 ///

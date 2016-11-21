@@ -48,7 +48,9 @@ $inuit-enable-btn--primary : true;
 @import "px-list-bare-design/_objects.list-bare.scss";
 
 // Component - THINGS TO SHOW YOUR DEMO
-
+select[multiple] {
+  height:68px;
+}
 
 // Trumps
 @import "inuit-clearfix/_trumps.clearfix.scss";

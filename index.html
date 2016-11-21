@@ -29,7 +29,7 @@
     "https://github.com/PredixDev/px-defaults-design"
   ]'
   selected-options="{{selectedOptions}}"
-  tabs='["Input Fields","Inline Fields","Basic Form"]' selected-tab="{{selectedTab}}">
+  tabs='["Input Fields","Select","Inline Fields","Basic Form"]' selected-tab="{{selectedTab}}">
 
 <!-- FOR 'Input Fields' TAB -->
 <template is="dom-if" if="[[_tabIs('Input Fields',selectedTab)]]" restamp="true">
@@ -59,7 +59,25 @@
   default-choice="none">
 </px-sass-doc-option>
 <px-sass-doc-option
+  option-name="Type"
+  choose-with="dropdown"
+  choices='[
+    "text",
+    "email",
+    "tel",
+    "search",
+    "number",
+    "password"
+  ]'
+  default-choice="text">
+</px-sass-doc-option>
+<px-sass-doc-option
   option-name="Bare"
+  choose-with="boolean"
+  default-choice="false">
+</px-sass-doc-option>
+<px-sass-doc-option
+  option-name="Disabled"
   choose-with="boolean"
   default-choice="false">
 </px-sass-doc-option>
@@ -67,13 +85,39 @@
 <section data-slot="demoHTML" id="demoContainer">
 
 <label for="input1">Input Label</label>
-<input class$="{{inputClasses}}" id="input1" type="text" placeholder="Type something&hellip;">
+<input class$="{{inputClasses}}" id="input1" type$="{{selectedOptions.Type}}" disabled$="{{selectedOptions.Disabled}}" placeholder="Type something...">
 
 </section>
 
 <section data-slot="import">
 {{inputImportCode}}
 </section>
+
+</template>
+
+<!-- FOR 'Select' TAB -->
+<template is="dom-if" if="[[_tabIs('Select',selectedTab)]]" restamp="true">
+
+<px-sass-doc-option
+  option-name="Multi-select"
+  choose-with="boolean"
+  default-choice="false">
+</px-sass-doc-option>
+
+<px-sass-doc-option
+  option-name="Disabled"
+  choose-with="boolean"
+  default-choice="false">
+</px-sass-doc-option>
+
+<section data-slot="demoHTML" id="demoContainer">
+<select multiple$="{{selectedOptions.Multi-select}}" disabled$="{{selectedOptions.Disabled}}">
+  <option>First</option>
+  <option>Second</option>
+  <option>Third</option>
+</select>
+</section>
+
 
 </template>
 
@@ -156,19 +200,67 @@
 
 <!-- 5: Set Usage HTML -->
 <section data-slot="usage">
-Use the following HTML to set up your project:
+Input Field:
 ```
-<!-- Input Field Code -->
 <label for="input1">Input Label</label>
-<input class="text-input" id="input1" type="text" placeholder="Type something…">
+<input class="text-input" id="input1" type="text" placeholder="Type something...">
+```
 
+Checkbox:
+```
+<input id="checkbox1" type="checkbox" disabled>
+<label class=label--inline for="checkbox1">Checkbox</label>
+```
 
-<!-- Inline Field Code -->
+Radio Button:
+```
+<input id="radio1" name="radios" type="radio" disabled>
+<label class=label--inline for="radio1">Option 1</label>
+<input id="radio2" name="radios" type="radio" disabled>
+<label class=label--inline for="radio2">Option 2</label>
+```
+
+Select (Dropdown):
+```
+<select disabled>
+  <optgroup label="Header 1">
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+    <option>Option 4</option>
+  </optgroup>
+  <optgroup label="Header 2">
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+    <option>Option 4</option>
+  </optgroup>
+</select>
+```
+
+Multi-select:
+```
+<select multiple>
+  <option>Option 1</option>
+  <option>Option 2</option>
+  <option>Option 3</option>
+  <option>Option 4</option>
+</select>
+```
+
+Text Area:
+```
+<textarea placeholder="Type something..."></textarea>
+```
+
+Inline Form:
+```
 <label class="label--inline" for="inline1">Label Text</label>
 <input class="text-input input--small" id="inline1" type="text">
+```
 
-
-<!-- Basic Form Code -->
+Basic Form:
+```
 <form>
   <fieldset class="form-field">
     <legend>Basic form</legend>
@@ -199,13 +291,16 @@ Use the following HTML to set up your project:
   var template = document.querySelector('template[is=dom-bind]');
 
   document.addEventListener('px-sass-doc-options-updated', function(evt) {
-    template.inputClasses = template._calacInputClasses();
-    template.inlineClasses = template._calacInlineClasses();
+    template.inputClasses = template._calcInputClasses();
+    template.inlineClasses = template._calcInlineClasses();
     template.inputImportCode = template._inputImportCode();
     template.inlineImportCode = template._inlineImportCode();
+
+    // Wait, then tell the highlighter to run after dom-if restamps
+    template.async(function(){ template.fire('px-sass-doc-demo-updated', {}) }, 10);
   });
 
-  template._calacInputClasses = function() {
+  template._calcInputClasses = function() {
     var opts = template.selectedOptions || {}, strings = [];
 
     if (opts["Input Length"] === "tiny")     strings.push("input--tiny");
@@ -223,7 +318,7 @@ Use the following HTML to set up your project:
     return ("text-input " + strings.join(" ")).trim();
   };
 
-  template._calacInlineClasses = function() {
+  template._calcInlineClasses = function() {
     var optsInline = template.selectedOptions || {}, strings = [];
 
     if (optsInline.Length === "tiny")     strings.push("input--tiny");
@@ -275,7 +370,12 @@ Use the following HTML to set up your project:
   template._tabIs = function(tabName) {
     var selected = template.selectedTab || "";
     return selected === tabName;
-  }
+  };
+
+  // template._isMulti = function(opts) {
+  //   // var opts = template.selectedOptions || {};
+  //   return opts["Multi-select"];
+  // };
 </script>
 </body>
 </html>
