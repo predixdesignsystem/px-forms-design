@@ -1,3 +1,7 @@
+v0.3.29
+==================
+* remove CSS style variables from 0.4.X release track
+
 v0.3.28
 ==================
 * added select to demo page
