@@ -1,3 +1,7 @@
+v1.1.4
+==================
+* fixed select height per #6
+
 v1.1.3
 ==================
 * changing ghp.sh to account for Alpha releases
