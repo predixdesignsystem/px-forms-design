@@ -1,3 +1,7 @@
+v1.1.7
+==================
+* fixed demo import link
+
 v1.1.6
 ==================
 * updated to new demo using px-demo classes

@@ -15,7 +15,7 @@
 <px-sass-doc
   module-name="px-forms-design"
   description="The Predix UI Forms module is a simple implentations of forms and form fields. Form layouts follow rhythmic spacing with simple numeric patterns. Lines are used as rarely as possible. The distance between elements creates the grouping and the visual hierarchy."
-  layer="objects"
+  layer="base"
   sassdoc-path="sassdoc.json"
   dependencies='[
     "https://github.com/PredixDev/px-colors-design",
@@ -287,10 +287,10 @@ Basic Form:
     is: 'local-element-demo',
 
     attached : function(){
-      var boundHandler = this._handleOptionsUpdated.bind(this); 
+      var boundHandler = this._handleOptionsUpdated.bind(this);
       this.addEventListener('px-sass-doc-options-updated', boundHandler)
     },
-    
+
     detached : function(){
       this.removeEventListener('px-sass-doc-options-updated', boundHandler);
     },
@@ -382,4 +382,3 @@ Basic Form:
 
   });
 </script>
-
