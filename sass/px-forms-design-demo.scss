@@ -36,12 +36,12 @@ $inuit-enable-inline-fields     : true;
 $inuit-enable-text-input--bare  : true;
 $inuit-enable-validation-states : true;
 $inuit-enable-input--tiny       : true;
-$inuit-enable-input--small      : true;
+$inuit-enable-input--small         : true;
 $inuit-enable-input--regular    : true;
 $inuit-enable-input--large      : true;
 $inuit-enable-input--huge       : true;
 @import "../_base.forms.scss";
- 
+
 // Objects
 $inuit-enable-btn--primary : true;
 @import 'px-buttons-design/_objects.buttons.scss';
