@@ -1,3 +1,7 @@
+v1.2.0
+==================
+* added input--search class 
+
 v1.1.7
 ==================
 * fixed demo import link

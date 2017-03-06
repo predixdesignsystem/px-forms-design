@@ -55,14 +55,14 @@
   option-name="Type"
   choose-with="dropdown"
   choices='[
-    "typeahead",
+    "text",
     "email",
     "tel",
     "search",
     "number",
     "password"
   ]'
-  default-choice="typeahead">
+  default-choice="text">
 </px-sass-doc-option>
 <px-sass-doc-option
   option-name="Bare"
@@ -71,6 +71,11 @@
 </px-sass-doc-option>
 <px-sass-doc-option
   option-name="Disabled"
+  choose-with="boolean"
+  default-choice="false">
+</px-sass-doc-option>
+<px-sass-doc-option
+  option-name="Search icon"
   choose-with="boolean"
   default-choice="false">
 </px-sass-doc-option>
@@ -159,7 +164,7 @@
 
 </template>
 
-<!-- FOR 'Simple Form' TAB -->
+<!-- FOR 'Basic Form' TAB -->
 <template is="dom-if" if="[[_tabIs('Basic Form',selectedTab)]]" restamp="true">
 
 <section data-slot="demoHTML" id="demoContainer">
@@ -319,7 +324,8 @@ Basic Form:
       if (opts["Validation States"] === "error")     strings.push("validation-error");
       if (opts["Validation States"] === "success")   strings.push("validation-success");
 
-      if (opts.Bare === true)     strings.push("text-input--bare");
+      if (opts.Bare === true)              strings.push("text-input--bare");
+      if (opts["Search icon"] === true)     strings.push("input--search");
 
       return ("text-input " + strings.join(" ")).trim();
     },
@@ -349,11 +355,12 @@ Basic Form:
       if (opts["Input Length"] === "large")   strings.push("$inuit-enable-input--large : true;");
       if (opts["Input Length"] === "huge")    strings.push("$inuit-enable-input--huge : true;");
 
-      if (opts["Validation States"] === "warning")    strings.push("$inuit-enable-validation-states : true;");
+      if (opts["Validation States"] === "warning")  strings.push("$inuit-enable-validation-states : true;");
       if (opts["Validation States"] === "error")    strings.push("$inuit-enable-validation-states : true;");
-      if (opts["Validation States"] === "success")    strings.push("$inuit-enable-validation-states : true;");
+      if (opts["Validation States"] === "success")  strings.push("$inuit-enable-validation-states : true;");
 
-      if (opts.Bare === true)     strings.push("$inuit-enable-text-input--bare  : true;");
+      if (opts.Bare === true)              strings.push("$inuit-enable-text-input--bare : true;");
+      if (opts["Search icon"] === true)     strings.push("$inuit-enable-input--search : true;");
 
       return (strings.join("\n") + "\n@import 'px-forms-design/_base.forms.scss';").trim();
     },
