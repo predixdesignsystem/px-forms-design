@@ -1,10 +1,14 @@
+v1.2.2
+==================
+* added examples to demo (#8)
+
 v1.2.1
 ==================
-* added input--search disabled class 
+* added input--search disabled class
 
 v1.2.0
 ==================
-* added input--search class 
+* added input--search class
 
 v1.1.7
 ==================
