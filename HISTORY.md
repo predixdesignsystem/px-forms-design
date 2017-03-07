@@ -1,3 +1,7 @@
+v1.2.1
+==================
+* added input--search disabled class 
+
 v1.2.0
 ==================
 * added input--search class 
