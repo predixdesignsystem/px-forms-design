@@ -1,3 +1,7 @@
+v1.2.3
+==================
+* added style for placeholder disabled (#7)
+
 v1.2.2
 ==================
 * added examples to demo (#8)

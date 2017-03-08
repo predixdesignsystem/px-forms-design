@@ -333,6 +333,12 @@ textarea {
   &:-moz-placeholder {
     color: $inuit-forms-color--placeholder;
   }
+  &:disabled::-webkit-input-placeholder {
+    color: $inuit-forms-color--disabled;
+  }
+  &:disabled:-moz-placeholder {
+    color: $inuit-forms-color--disabled;
+  }
 }
 
 select {
