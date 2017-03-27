@@ -24,17 +24,11 @@ $inuit-forms-color                          : var(--px-input-text-color, $black)
 /// @type Color [default] -
 $inuit-forms-color--placeholder             : var(--px-input-text-color--placeholder, $gray5) !default;
 
-/// Sets the forms Background color
+/// Sets the forms hover Background color
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default] - Background color
-$inuit-forms-background                     : var(--px-input-background-color, $gray2) !default;
-
-/// Sets the forms Inner border string
-///
-/// @group px-forms-design:variables:style
-/// @type Color | String [default]
-$inuit-forms-border--inner                  : inset 0 0 0 1px var(--px-input-border-color--inner, $gray3) !default;
+$inuit-forms-background--hover              : var(--px-input-background-color, $gray2) !default;
 
 /// Sets the forms Outer border string
 ///
@@ -42,17 +36,17 @@ $inuit-forms-border--inner                  : inset 0 0 0 1px var(--px-input-bor
 /// @type Color | String [default]
 $inuit-forms-border--outer                  : 1px solid var(--px-input-border-color--outer, $gray5) !default;
 
-/// Sets the forms Focused inner border string
+/// Sets the forms focused Background color
 ///
 /// @group px-forms-design:variables:style
-/// @type Color | String [default] - Focused inner border string
-$inuit-forms-border--inner--focused         : inset 0 0 0 1px var(--px-input-border-color--inner--focused, $gray4) !default;
+/// @type Color [default] - Background color
+$inuit-forms-background--focused            : var(--px-input-background-color, #eefbff) !default;
 
 /// Sets the forms Focused outer border color
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default]
-$inuit-forms-border--outer--focused         : var(--px-input-border-color--outer--focused, $select-blue-default) !default;
+$inuit-forms-border--outer--focused         : var(--px-input-border-color--outer--focused, #007ACC) !default;
 
 /// Sets the forms Disable font color
 ///
@@ -112,7 +106,7 @@ $inuit-forms-select-color                   : var(--px-select-text-color, $gray9
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default]
-$inuit-forms-select-color-svg                   : #{$gray9} !default;
+$inuit-forms-select-color-svg               : #{$gray9} !default;
 
 /// Sets the forms Select dropdown dark shadow
 ///
@@ -136,7 +130,7 @@ $inuit-forms-select-color--disabled         : var(--px-select-text-color--disabl
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default]
-$inuit-forms-select-color-svg--disabled         :  #{$gray4} !default;
+$inuit-forms-select-color-svg--disabled     :  #{$gray4} !default;
 
 /// Sets the forms Select dropdown disabled background color
 ///
@@ -180,11 +174,23 @@ $inuit-forms-select-multiple-background     : var(--px-multiselect-background-co
 /// @type Color [default]
 $inuit-forms-validation-warning             : var(--px-validation-warning-text-color, $alert-orange) !default;
 
+/// Sets the forms Validation warning background color
+///
+/// @group px-forms-design:variables:style
+/// @type Color [default]
+$inuit-forms-validation-warning-background  : var(--px-validation-warning-background-color, #FFF2E6) !default;
+
 /// Sets the forms Validation error color
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default]
 $inuit-forms-validation-error               : var(--px-validation-error-text-color, $alert-red) !default;
+
+/// Sets the forms Validation error background color
+///
+/// @group px-forms-design:variables:style
+/// @type Color [default]
+$inuit-forms-validation-error-background    : var(--px-validation-error-background-color, #FFECEC) !default;
 
 /// Sets the forms Validation success color
 ///
@@ -192,17 +198,17 @@ $inuit-forms-validation-error               : var(--px-validation-error-text-col
 /// @type Color [default]
 $inuit-forms-validation-success             : var(--px-validation-success-text-color, $green) !default;
 
+/// Sets the forms Validation success background color
+///
+/// @group px-forms-design:variables:style
+/// @type Color [default]
+$inuit-forms-validation-success-background  : var(--px-validation-success-background-color, #ECFFEE) !default;
+
 /// Generates the CSS for one line form fields
 ///
 /// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-inline-fields                 : false !default;
-
-/// Generates the CSS for bare text-inputs
-///
-/// @group px-forms-design:variables:flag
-/// @type Boolean [default]
-$inuit-enable-text-input--bare              : false !default;
 
 /// Generates the CSS for field validation
 ///
@@ -272,6 +278,7 @@ label {
   display: block;
   margin-bottom: $inuit-base-spacing-unit--tiny;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .#{$inuit-forms-namespace}label--inline,
@@ -291,27 +298,13 @@ label {
 %#{$inuit-forms-namespace}text-input,
 textarea, select {
   margin: 0;
-  border: $inuit-forms-border--outer;
+  border-radius: 0px;
   font: inherit;
   outline: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
-  &:disabled {
-    cursor: not-allowed;
-  }
-}
-
-.#{$inuit-forms-namespace}text-input,
-%#{$inuit-forms-namespace}text-input,
-textarea {
-  width: 100%;
   padding: 0 $inuit-base-spacing-unit--small;
-  box-shadow: $inuit-forms-border--inner;
-  background-color: $inuit-forms-background;
   color: $inuit-forms-color;
-  &[readonly], &[disabled] {
-    box-shadow: none;
-  }
   &[readonly] {
     border: $inuit-forms-border--readonly;
     background-color: $inuit-forms-background--readonly;
@@ -319,13 +312,15 @@ textarea {
   }
   &:disabled {
     border: $inuit-forms-border--disabled;
-    box-shadow: none;
     background-color: $inuit-forms-background--disabled;
     color: $inuit-forms-color--disabled;
+    cursor: not-allowed;
+  }
+  &:hover {
+    background-color: $inuit-forms-background--hover;
   }
   &:focus {
     border-color: $inuit-forms-border--outer--focused;
-    box-shadow: $inuit-forms-border--inner--focused;
   }
   &::-webkit-input-placeholder {
     color: $inuit-forms-color--placeholder;
@@ -341,37 +336,62 @@ textarea {
   }
 }
 
+.#{$inuit-forms-namespace}text-input,
+%#{$inuit-forms-namespace}text-input {
+  border: none;
+  border-bottom: $inuit-forms-border--outer;
+}
+
+textarea {
+  border: $inuit-forms-border--readonly;
+  width: 100%;
+  padding: 0 $inuit-base-spacing-unit--small;
+  color: $inuit-forms-color;
+  overflow: auto;
+  min-height: calc(#{$inuit-base-line-height * 6} + #{$inuit-base-spacing-unit--tiny * 2});
+  padding: $inuit-base-spacing-unit--tiny $inuit-base-spacing-unit--small;
+  resize: vertical;
+  &:hover {
+    border: 1px solid $inuit-forms-border--outer;
+  }
+  &:focus {
+    background-color: $inuit-forms-background--hover;
+    border: 1px solid $inuit-forms-border--outer--focused;
+  }
+}
+
 select {
-  border-radius: 3px;
+  width: auto;
   padding: 0 3em 0 1em;
   box-shadow: $inuit-forms-select-shadow--light;
   line-height: calc(2em - 2px);
   height: calc(2em);
   cursor: pointer;
+  border: none;
   background-color: $inuit-forms-select-background;
   background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20viewBox%3D%220%200%20658%201024%22%3E%3Cpath%20fill%3D%22%23#{str-slice($inuit-forms-select-color-svg,2)}%22%20d%3D%22M614.286%20420.571q0%207.429-5.714%2013.143l-266.286%20266.286q-5.714%205.714-13.143%205.714t-13.143-5.714l-266.286-266.286q-5.714-5.714-5.714-13.143t5.714-13.143l28.571-28.571q5.714-5.714%2013.143-5.714t13.143%205.714l224.571%20224.571%20224.571-224.571q5.714-5.714%2013.143-5.714t13.143%205.714l28.571%2028.571q5.714%205.714%205.714%2013.143z%22%2F%3E%3C%2Fsvg%3E');
   background-repeat: no-repeat;
   background-position: calc(100% - #{$inuit-base-spacing-unit--small}) 37.5%;
   color: $inuit-forms-select-color;
   &:hover, &:focus {
-    border: 1px solid $inuit-forms-select-border--hover;
+    // border: 1px solid $inuit-forms-select-border--hover;
     box-shadow: $inuit-forms-select-shadow--dark;
     background-color: $inuit-forms-select-background--hover;
   }
   &:active {
-    border: 1px solid $inuit-forms-select-border--pressed;
+    // border: 1px solid $inuit-forms-select-border--pressed;
     box-shadow: $inuit-forms-select-shadow--dark;
     background-color: $inuit-forms-select-background--pressed;
   }
   &:disabled {
-    border: 1px solid $inuit-forms-select-color--disabled;
+    // border: 1px solid $inuit-forms-select-color--disabled;
     box-shadow: none;
     background-color: $inuit-forms-select-background--disabled;
     background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20viewBox%3D%220%200%20658%201024%22%3E%3Cpath%20fill%3D%22%23#{str-slice($inuit-forms-select-color-svg--disabled,2)}%22%20d%3D%22M614.286%20420.571q0%207.429-5.714%2013.143l-266.286%20266.286q-5.714%205.714-13.143%205.714t-13.143-5.714l-266.286-266.286q-5.714-5.714-5.714-13.143t5.714-13.143l28.571-28.571q5.714-5.714%2013.143-5.714t13.143%205.714l224.571%20224.571%20224.571-224.571q5.714-5.714%2013.143-5.714t13.143%205.714l28.571%2028.571q5.714%205.714%205.714%2013.143z%22%2F%3E%3C%2Fsvg%3E');
     color: $inuit-forms-select-color--disabled;
   }
   &[multiple] {
-    border: $inuit-forms-border--outer;
+    // border: $inuit-forms-border--outer;
     padding: $inuit-base-spacing-unit--tiny;
     cursor: pointer;
     background: $inuit-forms-select-multiple-background;
@@ -400,6 +420,10 @@ select::-ms-expand {
 %#{$inuit-forms-namespace}text-input {
   height: 2em;
   line-height: 1;
+  width: 100%;
+  &:focus {
+    background-color: $inuit-forms-background--focused;
+  }
   + {
     [type=checkbox], [type=radio] {
       margin-left: $inuit-base-spacing-unit--large;
@@ -427,13 +451,6 @@ select::-ms-expand {
   + [type=submit], [type=cancel] {
     margin-left: $inuit-base-spacing-unit--large;
   }
-}
-
-textarea {
-  overflow: auto;
-  min-height: calc(#{$inuit-base-line-height * 6} + #{$inuit-base-spacing-unit--tiny * 2});
-  padding: $inuit-base-spacing-unit--tiny $inuit-base-spacing-unit--small;
-  resize: vertical;
 }
 
 [type=checkbox], [type=radio] {
@@ -483,8 +500,6 @@ textarea {
 
 }
 
-
-
 @if ($inuit-enable-input--small == true) {
 
   .#{$inuit-forms-namespace}input--small,
@@ -493,8 +508,6 @@ textarea {
   }
 
 }
-
-
 
 @if ($inuit-enable-input--regular == true) {
 
@@ -505,8 +518,6 @@ textarea {
 
 }
 
-
-
 @if ($inuit-enable-input--large == true) {
 
   .#{$inuit-forms-namespace}input--large,
@@ -516,8 +527,6 @@ textarea {
 
 }
 
-
-
 @if ($inuit-enable-input--huge == true) {
 
   .#{$inuit-forms-namespace}input--huge,
@@ -526,8 +535,6 @@ textarea {
   }
 
 }
-
-
 
 @if ($inuit-enable-inline-fields == true) {
 
@@ -547,28 +554,7 @@ textarea {
 
 }
 
-
-
-@if ($inuit-enable-text-input--bare == true) {
-
-  /**
-   * Text inputs with no styles.
-   */
-
-  .#{$inuit-forms-namespace}text-input--bare,
-  %#{$inuit-forms-namespace}text-input--bare {
-    border: 0!important;
-  }
-
-}
-
-
-
 @if ($inuit-enable-validation-states == true) {
-
-  /**
-   * Styles for validation states
-   */
 
   .#{$inuit-forms-namespace}validation-warning,
   %#{$inuit-forms-namespace}validation-warning {
@@ -589,6 +575,7 @@ textarea {
   %#{$inuit-forms-namespace}text-input {
     &.validation-warning {
       border-color: $inuit-forms-validation-warning;
+      background-color: $inuit-forms-validation-warning-background;
       color: inherit;
     }
   }
@@ -597,6 +584,7 @@ textarea {
   %#{$inuit-forms-namespace}text-input {
     &.validation-error {
       border-color: $inuit-forms-validation-error;
+      background-color: $inuit-forms-validation-error-background;
       color: inherit;
     }
   }
@@ -605,6 +593,7 @@ textarea {
   %#{$inuit-forms-namespace}text-input {
     &.validation-success {
       border-color: $inuit-forms-validation-success;
+      background-color: $inuit-forms-validation-success-background;
       color: inherit;
     }
   }
