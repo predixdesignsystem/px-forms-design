@@ -12,11 +12,17 @@
 /// @type String [default] - Prepend value for all generated classes
 $inuit-forms-namespace                      : $inuit-namespace !default;
 
-/// Sets the forms Font color
+/// Sets the forms default font color
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default]
-$inuit-forms-color                          : var(--px-input-text-color, $black) !default;
+$inuit-forms-color                          : var(--px-input-text-color, $gray15) !default;
+
+/// Sets the forms label font color
+///
+/// @group px-forms-design:variables:style
+/// @type Color [default]
+$inuit-forms-label-color                    : var(--px-input-label-text-color, $gray10) !default;
 
 /// Sets the forms Placeholder font color
 ///
@@ -28,79 +34,37 @@ $inuit-forms-color--placeholder             : var(--px-input-text-color--placeho
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default] - Background color
-$inuit-forms-background--hover              : var(--px-input-background-color, $gray2) !default;
+$inuit-forms-background--hover              : var(--px-input-background-color, $gray3) !default;
 
 /// Sets the forms Outer border string
 ///
 /// @group px-forms-design:variables:style
 /// @type Color | String [default]
-$inuit-forms-border--outer                  : 1px solid var(--px-input-border-color--outer, $gray5) !default;
+$inuit-forms-border--outer                  : 1px solid var(--px-input-border-color--outer, $gray8) !default;
 
 /// Sets the forms focused Background color
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default] - Background color
-$inuit-forms-background--focused            : var(--px-input-background-color, #eefbff) !default;
+$inuit-forms-background--focused            : var(--px-input-background-color, $primary-light) !default;
 
 /// Sets the forms Focused outer border color
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default]
-$inuit-forms-border--outer--focused         : var(--px-input-border-color--outer--focused, #007ACC) !default;
+$inuit-forms-border--outer--focused         : var(--px-input-border-color--outer--focused, $primary-default) !default;
 
 /// Sets the forms Disable font color
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default]
-$inuit-forms-color--disabled                : var(--px-input-text-color--disabled, $gray5) !default;
-
-/// Sets the forms Disabled backgroundn color
-///
-/// @group px-forms-design:variables:style
-/// @type Color [default]
-$inuit-forms-background--disabled           : var(--px-input-background-color--disabled, $gray1) !default;
+$inuit-forms-color--disabled                : var(--px-input-text-color--disabled, $gray4) !default;
 
 /// Sets the forms Disabled border string
 ///
 /// @group px-forms-design:variables:style
 /// @type Color | String [default]
-$inuit-forms-border--disabled               : 1px solid var(--px-input-border-color--disabled, $gray3) !default;
-
-/// Sets the forms Readonly font color
-///
-/// @group px-forms-design:variables:style
-/// @type Color [default]
-$inuit-forms-color--readonly                : var(--px-input-text-color--readonly, $gray5) !default;
-
-/// Sets the forms Readonnly background color
-///
-/// @group px-forms-design:variables:style
-/// @type Color [default]
-$inuit-forms-background--readonly           : var(--px-input-background-color--readonly, $white) !default;
-
-/// Sets the forms Readonly border string
-///
-/// @group px-forms-design:variables:style
-/// @type Color | String [default]
-$inuit-forms-border--readonly               : 1px solid var(--px-input-border-color--readonly, $gray3) !default;
-
-/// Sets the forms Help font color
-///
-/// @group px-forms-design:variables:style
-/// @type Color [default]
-$inuit-forms-color--help                    : var(--px-input-text-color--help, $gray7) !default;
-
-/// Sets the forms Select dropdown background color
-///
-/// @group px-forms-design:variables:style
-/// @type Color [default]
-$inuit-forms-select-background              : var(--px-select-background-color, $gray3) !default;
-
-/// Sets the forms Select dropdown font color
-///
-/// @group px-forms-design:variables:style
-/// @type Color [default]
-$inuit-forms-select-color                   : var(--px-select-text-color, $gray9) !default;
+$inuit-forms-border--disabled               : var(--px-input-border-color--disabled, $gray4) !default;
 
 /// Sets the forms Select dropdown chevron font color
 ///
@@ -108,59 +72,11 @@ $inuit-forms-select-color                   : var(--px-select-text-color, $gray9
 /// @type Color [default]
 $inuit-forms-select-color-svg               : #{$gray9} !default;
 
-/// Sets the forms Select dropdown dark shadow
-///
-/// @group px-forms-design:variables:style
-/// @type Color | String [default]
-$inuit-forms-select-shadow--dark            : 0 1px 0 var(--px-select-shadow-color--dark, rgba($black, .1)) !default;
-
-/// Sets the forms Select dropdown light shadow
-///
-/// @group px-forms-design:variables:style
-/// @type Color | String [default]
-$inuit-forms-select-shadow--light           : 0 1px 0 var(--px-select-shadow-color--light, rgba($black, .1)) !default;
-
-/// Sets the forms Select dropdown disabled font color
-///
-/// @group px-forms-design:variables:style
-/// @type Color [default]
-$inuit-forms-select-color--disabled         : var(--px-select-text-color--disabled, $gray4) !default;
-
 /// Sets the forms Select dropdown disabled chevron font color
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default]
 $inuit-forms-select-color-svg--disabled     :  #{$gray4} !default;
-
-/// Sets the forms Select dropdown disabled background color
-///
-/// @group px-forms-design:variables:style
-/// @type Color [default]
-$inuit-forms-select-background--disabled    : var(--px-select-background-color--disabled, $white) !default;
-
-/// Sets the forms Select dropdown hover background color
-///
-/// @group px-forms-design:variables:style
-/// @type Color [default]
-$inuit-forms-select-background--hover       : var(--px-select-background-color--hover, $gray5) !default;
-
-/// Sets the forms Select dropdown hover border color
-///
-/// @group px-forms-design:variables:style
-/// @type Color [default]
-$inuit-forms-select-border--hover           : var(--px-select-border-color--hover, $gray6) !default;
-
-/// Sets the forms Select dropdown pressed background color
-///
-/// @group px-forms-design:variables:style
-/// @type Color [default]
-$inuit-forms-select-background--pressed     : var(--px-select-background-color--pressed, $gray6) !default;
-
-/// Sets the forms Select dropdown pressed border color
-///
-/// @group px-forms-design:variables:style
-/// @type Color [default]
-$inuit-forms-select-border--pressed         : var(--px-select-border-color--pressed, $gray7) !default;
 
 /// Sets the forms Multiple select background color
 ///
@@ -172,37 +88,37 @@ $inuit-forms-select-multiple-background     : var(--px-multiselect-background-co
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default]
-$inuit-forms-validation-warning             : var(--px-validation-warning-text-color, $alert-orange) !default;
+$inuit-forms-validation-warning             : var(--px-validation-warning-text-color, $status-orange3) !default;
 
 /// Sets the forms Validation warning background color
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default]
-$inuit-forms-validation-warning-background  : var(--px-validation-warning-background-color, #FFF2E6) !default;
+$inuit-forms-validation-warning-background  : var(--px-validation-warning-background-color, $status-orange1) !default;
 
 /// Sets the forms Validation error color
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default]
-$inuit-forms-validation-error               : var(--px-validation-error-text-color, $alert-red) !default;
+$inuit-forms-validation-error               : var(--px-validation-error-text-color, $status-red3) !default;
 
 /// Sets the forms Validation error background color
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default]
-$inuit-forms-validation-error-background    : var(--px-validation-error-background-color, #FFECEC) !default;
+$inuit-forms-validation-error-background    : var(--px-validation-error-background-color, $status-red1) !default;
 
 /// Sets the forms Validation success color
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default]
-$inuit-forms-validation-success             : var(--px-validation-success-text-color, $green) !default;
+$inuit-forms-validation-success             : var(--px-validation-success-text-color, $status-green3) !default;
 
 /// Sets the forms Validation success background color
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default]
-$inuit-forms-validation-success-background  : var(--px-validation-success-background-color, #ECFFEE) !default;
+$inuit-forms-validation-success-background  : var(--px-validation-success-background-color, $status-green1) !default;
 
 /// Generates the CSS for one line form fields
 ///
@@ -276,9 +192,12 @@ legend {
 
 label {
   display: block;
-  margin-bottom: $inuit-base-spacing-unit--tiny;
+  margin-bottom: $inuit-base-spacing-unit--tiny * 0.8;
+  margin-left: $inuit-base-spacing-unit--tiny;
   cursor: pointer;
   text-transform: uppercase;
+  font-size: $inuit-base-font-size * 0.8;
+  color: $inuit-forms-label-color;
 }
 
 .#{$inuit-forms-namespace}label--inline,
@@ -299,20 +218,16 @@ label {
 textarea, select {
   margin: 0;
   border-radius: 0px;
+  border: none;
+  border-bottom: $inuit-forms-border--outer;
   font: inherit;
   outline: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
-  padding: 0 $inuit-base-spacing-unit--small;
+  padding: 0 $inuit-base-spacing-unit--tiny;
   color: $inuit-forms-color;
-  &[readonly] {
-    border: $inuit-forms-border--readonly;
-    background-color: $inuit-forms-background--readonly;
-    color: $inuit-forms-color--readonly;
-  }
-  &:disabled {
-    border: $inuit-forms-border--disabled;
-    background-color: $inuit-forms-background--disabled;
+  &:disabled, &[readonly] {
+    border-color: $inuit-forms-border--disabled;
     color: $inuit-forms-color--disabled;
     cursor: not-allowed;
   }
@@ -336,14 +251,8 @@ textarea, select {
   }
 }
 
-.#{$inuit-forms-namespace}text-input,
-%#{$inuit-forms-namespace}text-input {
-  border: none;
-  border-bottom: $inuit-forms-border--outer;
-}
-
 textarea {
-  border: $inuit-forms-border--readonly;
+  border: $inuit-forms-border--disabled;
   width: 100%;
   padding: 0 $inuit-base-spacing-unit--small;
   color: $inuit-forms-color;
@@ -351,9 +260,7 @@ textarea {
   min-height: calc(#{$inuit-base-line-height * 6} + #{$inuit-base-spacing-unit--tiny * 2});
   padding: $inuit-base-spacing-unit--tiny $inuit-base-spacing-unit--small;
   resize: vertical;
-  &:hover {
-    border: 1px solid $inuit-forms-border--outer;
-  }
+  border: $inuit-forms-border--outer;
   &:focus {
     background-color: $inuit-forms-background--hover;
     border: 1px solid $inuit-forms-border--outer--focused;
@@ -363,37 +270,29 @@ textarea {
 select {
   width: auto;
   padding: 0 3em 0 1em;
-  box-shadow: $inuit-forms-select-shadow--light;
+  box-shadow: none;
   line-height: calc(2em - 2px);
   height: calc(2em);
   cursor: pointer;
-  border: none;
-  background-color: $inuit-forms-select-background;
   background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20viewBox%3D%220%200%20658%201024%22%3E%3Cpath%20fill%3D%22%23#{str-slice($inuit-forms-select-color-svg,2)}%22%20d%3D%22M614.286%20420.571q0%207.429-5.714%2013.143l-266.286%20266.286q-5.714%205.714-13.143%205.714t-13.143-5.714l-266.286-266.286q-5.714-5.714-5.714-13.143t5.714-13.143l28.571-28.571q5.714-5.714%2013.143-5.714t13.143%205.714l224.571%20224.571%20224.571-224.571q5.714-5.714%2013.143-5.714t13.143%205.714l28.571%2028.571q5.714%205.714%205.714%2013.143z%22%2F%3E%3C%2Fsvg%3E');
   background-repeat: no-repeat;
   background-position: calc(100% - #{$inuit-base-spacing-unit--small}) 37.5%;
-  color: $inuit-forms-select-color;
+  color: $inuit-forms-color;
+  background-color: transparent;
   &:hover, &:focus {
-    // border: 1px solid $inuit-forms-select-border--hover;
-    box-shadow: $inuit-forms-select-shadow--dark;
-    background-color: $inuit-forms-select-background--hover;
+    background-color: $inuit-forms-background--hover;
   }
-  &:active {
-    // border: 1px solid $inuit-forms-select-border--pressed;
-    box-shadow: $inuit-forms-select-shadow--dark;
-    background-color: $inuit-forms-select-background--pressed;
+  &:focus {
+    background-color: $inuit-forms-background--focused;
   }
-  &:disabled {
-    // border: 1px solid $inuit-forms-select-color--disabled;
-    box-shadow: none;
-    background-color: $inuit-forms-select-background--disabled;
+  &:disabled, &[readonly] {
     background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20viewBox%3D%220%200%20658%201024%22%3E%3Cpath%20fill%3D%22%23#{str-slice($inuit-forms-select-color-svg--disabled,2)}%22%20d%3D%22M614.286%20420.571q0%207.429-5.714%2013.143l-266.286%20266.286q-5.714%205.714-13.143%205.714t-13.143-5.714l-266.286-266.286q-5.714-5.714-5.714-13.143t5.714-13.143l28.571-28.571q5.714-5.714%2013.143-5.714t13.143%205.714l224.571%20224.571%20224.571-224.571q5.714-5.714%2013.143-5.714t13.143%205.714l28.571%2028.571q5.714%205.714%205.714%2013.143z%22%2F%3E%3C%2Fsvg%3E');
-    color: $inuit-forms-select-color--disabled;
+    color: $inuit-forms-color--disabled;
   }
   &[multiple] {
-    // border: $inuit-forms-border--outer;
     padding: $inuit-base-spacing-unit--tiny;
     cursor: pointer;
+    border: none;
     background: $inuit-forms-select-multiple-background;
   }
 }
@@ -486,9 +385,10 @@ select::-ms-expand {
 .form-field__help {
   display: inline-block;
   margin-top: $inuit-base-spacing-unit--tiny;
-  font-size: 1rem;
+  margin-left: $inuit-base-spacing-unit--tiny;
+  font-size: $inuit-base-font-size * 0.8;
   line-height: inherit;
-  color: $inuit-forms-color--help;
+  color: $inuit-forms-color--placeholder;
 }
 
 @if ($inuit-enable-input--tiny == true) {
