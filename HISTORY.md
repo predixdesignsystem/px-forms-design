@@ -1,3 +1,7 @@
+v2.0.0
+==================
+* design refresh release
+
 v1.2.3
 ==================
 * added style for placeholder disabled (#7)
