@@ -1,3 +1,7 @@
+v2.0.1
+==================
+* small design updates
+
 v2.0.0
 ==================
 * design refresh release

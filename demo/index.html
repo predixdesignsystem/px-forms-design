@@ -135,7 +135,10 @@
 
 <section data-slot="demoHTML" id="demoContainer">
 <input id="checkbox1" type="checkbox" disabled$="{{selectedOptions.Disabled}}" checked$="{{selectedOptions.Checked}}">
-<label class="label--inline" for="checkbox1">Checkbox</label>
+<label class="label--inline" for="checkbox1">Option 1</label>
+<br/>
+<input id="checkbox1" class="u-mt" type="checkbox" disabled$="{{selectedOptions.Disabled}}" checked$="{{selectedOptions.Checked}}">
+<label class="label--inline" for="checkbox1">Option 2</label>
 </section>
 
 </template>
@@ -152,10 +155,9 @@
 <section data-slot="demoHTML" id="demoContainer">
 <input id=radio1 name=radio-group type=radio disabled$="{{selectedOptions.Disabled}}">
 <label class=label--inline for=radio1>Option 1</label>
-<input id=radio2 class=u-ml name=radio-group type=radio disabled$="{{selectedOptions.Disabled}}">
+<br/>
+<input id=radio2 class=u-mt name=radio-group type=radio disabled$="{{selectedOptions.Disabled}}">
 <label class=label--inline for=radio2>Option 2</label>
-<input id=radio3 class=u-ml name=radio-group type=radio disabled$="{{selectedOptions.Disabled}}">
-<label class=label--inline for=radio3>Option 3</label>
 </section>
 
 </template>
@@ -233,8 +235,8 @@
         <label class="label--inline" for="basic-form-checkbox">No Lastname</label>
       </li>
     </ol>
-    <input class="btn btn--primary" type="submit" value="Submit">
     <input class="btn" type="reset" value="Cancel">
+    <input class="btn btn--primary" type="submit" value="Submit">
   </fieldset>
 </form>
 </section>
@@ -323,8 +325,8 @@
         <label class="label--inline" for="basic-form-checkbox">No Lastname</label>
       </li>
     </ol>
-    <input class="btn btn--primary" type="submit" value="Submit">
     <input class="btn" type="reset" value="Cancel">
+    <input class="btn btn--primary" type="submit" value="Submit">
   </fieldset>
 </form>
 ```
