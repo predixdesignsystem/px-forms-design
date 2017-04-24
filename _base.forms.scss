@@ -34,7 +34,7 @@ $inuit-forms-color--placeholder             : var(--px-input-text-color--placeho
 ///
 /// @group px-forms-design:variables:style
 /// @type Color [default]
-$inuit-forms-color--help                    : var(--px-input-text-color--help, $gray5) !default;
+$inuit-forms-color--help                    : var(--px-input-text-color--help, $gray10) !default;
 
 /// Sets the forms Background color
 ///
@@ -275,11 +275,13 @@ label {
   padding: 0 $inuit-base-spacing-unit--tiny;
   color: $inuit-forms-color;
   background-color: $inuit-forms-background;
+  transition: background .4s, border-color .4s, color .4s;
   &:disabled, &[readonly] {
     border-color: $inuit-forms-border--disabled;
     color: $inuit-forms-color--disabled;
     cursor: not-allowed;
     background-color: $inuit-forms-background--disabled;
+    pointer-events: none;
   }
   &:hover {
     background-color: $inuit-forms-background--hover;

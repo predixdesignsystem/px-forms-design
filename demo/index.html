@@ -22,7 +22,7 @@
     "https://github.com/PredixDev/px-defaults-design"
   ]'
   selected-options="{{selectedOptions}}"
-  tabs='["Input","Select","Checkbox","Radio button","Text area","Inline fields","Basic form"]' selected-tab="{{selectedTab}}">
+  tabs='["Input","Text area","Inline fields","Basic form","Select","Radio button","Checkbox"]' selected-tab="{{selectedTab}}">
 
 <!-- FOR 'Input' TAB -->
 <template is="dom-if" if="[[_tabIs('Input',selectedTab)]]" restamp="true">
@@ -70,12 +70,12 @@
   default-choice="false">
 </px-sass-doc-option>
 <px-sass-doc-option
-  option-name="Search icon"
+  option-name="Readonly"
   choose-with="boolean"
   default-choice="false">
 </px-sass-doc-option>
 <px-sass-doc-option
-  option-name="Readonly"
+  option-name="Search icon"
   choose-with="boolean"
   default-choice="false">
 </px-sass-doc-option>
@@ -114,6 +114,91 @@
   <option>Second</option>
   <option>Third</option>
 </select>
+</section>
+
+</template>
+
+<!-- FOR 'Text area' TAB -->
+<template is="dom-if" if="[[_tabIs('Text area',selectedTab)]]" restamp="true">
+
+<section data-slot="demoHTML" id="demoContainer">
+<textarea placeholder="Enter text here..."></textarea>
+</section>
+
+</template>
+
+<!-- FOR 'Inline Fields' TAB -->
+<template is="dom-if" if="[[_tabIs('Inline fields',selectedTab)]]" restamp="true">
+<px-sass-doc-option
+  option-name="Length"
+  choose-with="dropdown"
+  choices='[
+    "default",
+    "tiny",
+    "small",
+    "regular",
+    "large",
+    "huge"
+  ]'
+  default-choice="tiny">
+</px-sass-doc-option>
+<px-sass-doc-option
+  option-name="Validation"
+  choose-with="dropdown"
+  choices='[
+    "none",
+    "warning",
+    "error",
+    "success"
+  ]'
+  default-choice="none">
+</px-sass-doc-option>
+
+<section data-slot="demoHTML" id="demoContainer">
+
+<p class="label--inline" for="inline1">From</p>
+<input class$="{{inlineClasses}}" id="inline1" type="text">
+<p class="label--inline" for="inline2">to</p>
+<input class$="{{inlineClasses}}" type="text">
+<input id="inline3" type="checkbox">
+<p class="label--inline" for="inline3">Inline checkbox</p>
+<input class="form-field--inline btn btn--primary" type="submit" value="Submit">
+
+</section>
+
+<section data-slot="import">
+{{inlineImportCode}}
+</section>
+
+</template>
+
+<!-- FOR 'Basic Form' TAB -->
+<template is="dom-if" if="[[_tabIs('Basic form',selectedTab)]]" restamp="true">
+
+<section data-slot="demoHTML" id="demoContainer">
+
+<form>
+  <fieldset class="form-field" style="max-width:400px;">
+    <legend>Basic form</legend>
+    <ol class="list-bare">
+      <li class="form-field">
+        <label for="basic-form-name">Name</label>
+        <input class="text-input" id="basic-form-name" type="text" placeholder="First name">
+        <span class="form-field__help">Hint Text</span>
+      </li>
+      <li class="form-field">
+        <input id="basic-form-checkbox" type="checkbox">
+        <span class="label--inline" for="basic-form-checkbox">No Lastname</span>
+      </li>
+    </ol>
+    <input class="btn" type="reset" value="Cancel">
+    <input class="btn btn--primary" type="submit" value="Submit">
+  </fieldset>
+</form>
+</section>
+
+<section data-slot="import">
+@import 'px-forms-design/_base.forms.scss';
 </section>
 
 </template>
@@ -161,92 +246,6 @@
 </section>
 
 </template>
-
-<!-- FOR 'Text area' TAB -->
-<template is="dom-if" if="[[_tabIs('Text area',selectedTab)]]" restamp="true">
-
-<section data-slot="demoHTML" id="demoContainer">
-<textarea placeholder="Enter text here..."></textarea>
-</section>
-
-</template>
-
-<!-- FOR 'Inline Fields' TAB -->
-<template is="dom-if" if="[[_tabIs('Inline fields',selectedTab)]]" restamp="true">
-<px-sass-doc-option
-  option-name="Length"
-  choose-with="dropdown"
-  choices='[
-    "default",
-    "tiny",
-    "small",
-    "regular",
-    "large",
-    "huge"
-  ]'
-  default-choice="tiny">
-</px-sass-doc-option>
-<px-sass-doc-option
-  option-name="Validation"
-  choose-with="dropdown"
-  choices='[
-    "none",
-    "warning",
-    "error",
-    "success"
-  ]'
-  default-choice="none">
-</px-sass-doc-option>
-
-<section data-slot="demoHTML" id="demoContainer">
-
-<label class="label--inline" for="inline1">From</label>
-<input class$="{{inlineClasses}}" id="inline1" type="text">
-<label class="label--inline" for="inline2">to</label>
-<input class$="{{inlineClasses}}" type="text">
-<input id="inline3" type="checkbox">
-<label class="label--inline" for="inline3">Inline checkbox</label>
-<input class="form-field--inline btn btn--primary" type="submit" value="Submit">
-
-</section>
-
-<section data-slot="import">
-{{inlineImportCode}}
-</section>
-
-</template>
-
-<!-- FOR 'Basic Form' TAB -->
-<template is="dom-if" if="[[_tabIs('Basic form',selectedTab)]]" restamp="true">
-
-<section data-slot="demoHTML" id="demoContainer">
-
-<form>
-  <fieldset class="form-field" style="max-width:400px;">
-    <legend>Basic form</legend>
-    <ol class="list-bare">
-      <li class="form-field">
-        <label for="basic-form-name">Name</label>
-        <input class="text-input" id="basic-form-name" type="text" placeholder="First name">
-        <span class="form-field__help">Hint Text</span>
-      </li>
-      <li class="form-field">
-        <input id="basic-form-checkbox" type="checkbox">
-        <label class="label--inline" for="basic-form-checkbox">No Lastname</label>
-      </li>
-    </ol>
-    <input class="btn" type="reset" value="Cancel">
-    <input class="btn btn--primary" type="submit" value="Submit">
-  </fieldset>
-</form>
-</section>
-
-<section data-slot="import">
-@import 'px-forms-design/_base.forms.scss';
-</section>
-
-</template>
-
 
 <!-- 5: Set Usage HTML -->
 <section data-slot="usage">
