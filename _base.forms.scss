@@ -54,6 +54,12 @@ $inuit-forms-background--hover              : var(--px-input-background-color--h
 /// @type Color [default]
 $inuit-forms-border--outer                  : 1px solid var(--px-input-border-color--outer, $gray8) !default;
 
+/// Sets the forms focused text color
+///
+/// @group px-forms-design:variables:style
+/// @type Color [default]
+$inuit-forms-color--focused                 : var(--px-input-text-color--focused, inherit) !default;
+
 /// Sets the forms focused Background color
 ///
 /// @group px-forms-design:variables:style
@@ -83,6 +89,12 @@ $inuit-forms-border--disabled               : var(--px-input-border-color--disab
 /// @group px-forms-design:variables:style
 /// @type Color [default]
 $inuit-forms-background--disabled           : var(--px-input-background-color--disabled, transparent) !default;
+
+/// Sets the textarea focused background color
+///
+/// @group px-forms-design:variables:style
+/// @type Color [default]
+$inuit-textarea-background--focused         : var(--px-input-textarea-background--focused, $gray3) !default;
 
 /// Sets the forms Select dropdown chevron font color
 ///
@@ -309,6 +321,7 @@ label {
   &:focus {
     border-color: $inuit-forms-border--outer--focused;
     background-color: $inuit-forms-background--focused;
+    color: $inuit-forms-color--focused;
   }
   + {
     [type=checkbox], [type=radio] {
@@ -341,7 +354,8 @@ textarea {
   resize: vertical;
   border: $inuit-forms-border--outer;
   &:focus {
-    background-color: $inuit-forms-background--hover;
+    color: $inuit-forms-color--focused;
+    background-color: $inuit-textarea-background--focused;
     border: 1px solid $inuit-forms-border--outer--focused;
   }
 }
@@ -528,7 +542,7 @@ select::-ms-expand {
     &.validation-warning {
       border-color: $inuit-forms-validation-warning;
       background-color: $inuit-forms-validation-warning-background;
-      color: inherit;
+      color: $inuit-forms-color--focused;
     }
   }
 
@@ -537,7 +551,7 @@ select::-ms-expand {
     &.validation-error {
       border-color: $inuit-forms-validation-error;
       background-color: $inuit-forms-validation-error-background;
-      color: inherit;
+      color: $inuit-forms-color--focused;
     }
   }
 
@@ -546,7 +560,7 @@ select::-ms-expand {
     &.validation-success {
       border-color: $inuit-forms-validation-success;
       background-color: $inuit-forms-validation-success-background;
-      color: inherit;
+      color: $inuit-forms-color--focused;
     }
   }
 
