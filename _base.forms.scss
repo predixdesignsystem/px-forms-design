@@ -30,6 +30,12 @@ $inuit-forms-label-color                    : var(--px-input-label-text-color, $
 /// @type Color [default]
 $inuit-forms-color--placeholder             : var(--px-input-text-color--placeholder, $gray5) !default;
 
+/// Sets the forms Placeholder font color on focuse
+///
+/// @group px-forms-design:variables:style
+/// @type Color [default]
+$inuit-forms-color--placeholder--focused    : var(--px-input-text-color--placeholder--focused, inherit) !default;
+
 /// Sets the forms Help font color
 ///
 /// @group px-forms-design:variables:style
@@ -304,6 +310,12 @@ label {
   &:-moz-placeholder {
     color: $inuit-forms-color--placeholder;
   }
+  &:focus::-webkit-input-placeholder {
+    color: $inuit-forms-color--placeholder--focused;
+  }
+  &:focus:-moz-placeholder {
+    color: $inuit-forms-color--placeholder--focused;
+  }
   &:disabled::-webkit-input-placeholder {
     color: $inuit-forms-color--disabled;
   }
@@ -450,7 +462,7 @@ select::-ms-expand {
 
 .form-field__help {
   display: inline-block;
-  margin-top: $inuit-base-spacing-unit--tiny;
+  margin-top: 0;
   margin-left: $inuit-base-spacing-unit--tiny;
   font-size: $inuit-base-font-size * 0.8;
   line-height: inherit;
