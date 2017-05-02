@@ -1,15 +1,7 @@
-v2.0.0-prerelease-2
-==================
-* finalize redesign
-
-v2.0.0-prerelease-1
-==================
-* update dependencies
-
-v2.0.0-prerelease
+v2.0.0
 ==================
 * design refresh release
-* small design updates
+* update dependencies
 
 v1.2.3
 ==================

@@ -186,6 +186,12 @@ $inuit-forms-validation-success             : var(--px-validation-success-text-c
 /// @type Color [default]
 $inuit-forms-validation-success-background  : var(--px-validation-success-background-color, $status-green1) !default;
 
+/// Sets letter-spacing (aka kerning) on text that are all caps
+///
+/// @group px-headings-design:variables:style
+/// @type Number [default]
+$inuit-letter-spacing--caps       : 0.3px !default;
+
 /// Generates the CSS for one line form fields
 ///
 /// @group px-forms-design:variables:flag
@@ -265,6 +271,7 @@ label {
   text-transform: uppercase;
   font-size: $inuit-base-font-size * 0.8;
   color: $inuit-forms-label-color;
+  letter-spacing: var(--px-headings-letter-spacing, $inuit-letter-spacing--caps);
 }
 
 .#{$inuit-forms-namespace}label--inline,
