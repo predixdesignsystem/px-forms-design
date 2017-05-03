@@ -31,14 +31,14 @@
   option-name="Input Length"
   choose-with="dropdown"
   choices='[
-    "auto (default)",
+    "auto",
     "tiny",
     "small",
     "regular",
     "large",
     "huge"
   ]'
-  default-choice="auto (default)">
+  default-choice="regular">
 </px-sass-doc-option>
 <px-sass-doc-option
   option-name="Validation States"
@@ -84,6 +84,7 @@
 
 <label for="input1">Input Label</label>
 <input class$="{{inputClasses}}" id="input1" type$="{{selectedOptions.Type}}" disabled$="{{selectedOptions.Disabled}}" placeholder="Type something..." readonly$="{{selectedOptions.Readonly}}">
+<br/><small class$="{{hintClasses}}">Hint text</small>
 
 </section>
 
@@ -357,6 +358,7 @@
       this.inlineClasses = this._calcInlineClasses();
       this.inputImportCode = this._inputImportCode();
       this.inlineImportCode = this._inlineImportCode();
+      this.hintClasses = this._calcHintClasses();
 
       // Wait, then tell the highlighter to run after dom-if restamps
       this.async(function(){ this.fire('px-sass-doc-demo-updated', {}) }, 10);
@@ -379,6 +381,14 @@
       if (opts["Search icon"] === true)     strings.push("input--search");
 
       return ("text-input " + strings.join(" ")).trim();
+    },
+
+    _calcHintClasses : function() {
+      var opts = this.selectedOptions || {}, strings = [];
+      if (opts["Validation States"] === "warning")   strings.push("validation-warning");
+      if (opts["Validation States"] === "error")     strings.push("validation-error");
+      if (opts["Validation States"] === "success")   strings.push("validation-success");
+      return ("form-field__help " + strings.join(" ")).trim();
     },
 
     _calcInlineClasses : function() {

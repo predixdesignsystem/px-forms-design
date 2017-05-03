@@ -2,6 +2,7 @@ v2.0.0
 ==================
 * design refresh release
 * update dependencies
+* add hint/validation text to input demo
 
 v1.2.3
 ==================
