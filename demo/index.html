@@ -14,7 +14,7 @@
 <!-- 1: Describe Module -->
 <px-sass-doc
   module-name="px-forms-design"
-  description="The Predix UI Forms module is a simple implentations of forms and form fields. Form layouts follow rhythmic spacing with simple numeric patterns. Lines are used as rarely as possible. The distance between elements creates the grouping and the visual hierarchy."
+  description="The Predix UI Forms module is a simple implementation of forms and form fields. Form layouts follow rhythmic spacing with simple numeric patterns. The distance between elements creates the grouping and the visual hierarchy."
   layer="base"
   sassdoc-path="sassdoc.json"
   dependencies='[
@@ -83,7 +83,7 @@
 <section data-slot="demoHTML" id="demoContainer">
 
 <label for="input1">Input Label</label>
-<input class$="{{inputClasses}}" id="input1" type$="{{selectedOptions.Type}}" disabled$="{{selectedOptions.Disabled}}" placeholder="Type something..." readonly$="{{selectedOptions.Readonly}}">
+<input class$="{{inputClasses}}" id="input1" type$="{{selectedOptions.Type}}" disabled$="{{selectedOptions.Disabled}}" placeholder="Type something..." readonly$="{{selectedOptions.Readonly}}" />
 <br/><small class$="{{hintClasses}}">Hint text</small>
 
 </section>
@@ -158,12 +158,12 @@
 <section data-slot="demoHTML" id="demoContainer">
 
 <p class="label--inline" for="inline1">From</p>
-<input class$="{{inlineClasses}}" id="inline1" type="text">
+<input class$="{{inlineClasses}}" id="inline1" type="text" />
 <p class="label--inline" for="inline2">to</p>
-<input class$="{{inlineClasses}}" type="text">
-<input id="inline3" type="checkbox">
+<input class$="{{inlineClasses}}" type="text" />
+<input id="inline3" type="checkbox" />
 <p class="label--inline" for="inline3">Inline checkbox</p>
-<input class="form-field--inline btn btn--primary" type="submit" value="Submit">
+<input class="form-field--inline btn btn--primary" type="submit" value="Submit" />
 
 </section>
 
@@ -184,16 +184,16 @@
     <ol class="list-bare">
       <li class="form-field">
         <label for="basic-form-name">Name</label>
-        <input class="text-input" id="basic-form-name" type="text" placeholder="First name">
+        <input class="text-input" id="basic-form-name" type="text" placeholder="First name" />
         <span class="form-field__help">Hint Text</span>
       </li>
       <li class="form-field">
-        <input id="basic-form-checkbox" type="checkbox">
+        <input id="basic-form-checkbox" type="checkbox" />
         <span class="label--inline" for="basic-form-checkbox">No Lastname</span>
       </li>
     </ol>
-    <input class="btn" type="reset" value="Cancel">
-    <input class="btn btn--primary" type="submit" value="Submit">
+    <input class="btn" type="reset" value="Cancel" />
+    <input class="btn btn--primary" type="submit" value="Submit" />
   </fieldset>
 </form>
 </section>
@@ -220,10 +220,10 @@
 </px-sass-doc-option>
 
 <section data-slot="demoHTML" id="demoContainer">
-<input id="checkbox1" type="checkbox" disabled$="{{selectedOptions.Disabled}}" checked$="{{selectedOptions.Checked}}">
+<input id="checkbox1" type="checkbox" disabled$="{{selectedOptions.Disabled}}" checked$="{{selectedOptions.Checked}}" />
 <p class="label--inline" for="checkbox1">Option 1</p>
 <br/>
-<input id="checkbox1" class="u-mt" type="checkbox" disabled$="{{selectedOptions.Disabled}}" checked$="{{selectedOptions.Checked}}">
+<input id="checkbox1" class="u-mt" type="checkbox" disabled$="{{selectedOptions.Disabled}}" checked$="{{selectedOptions.Checked}}" />
 <p class="label--inline" for="checkbox1">Option 2</p>
 </section>
 
@@ -239,10 +239,10 @@
 </px-sass-doc-option>
 
 <section data-slot="demoHTML" id="demoContainer">
-<input id=radio1 name=radio-group type=radio disabled$="{{selectedOptions.Disabled}}">
+<input id=radio1 name=radio-group type=radio disabled$="{{selectedOptions.Disabled}}" />
 <p class=label--inline for=radio1>Option 1</p>
 <br/>
-<input id=radio2 class=u-mt name=radio-group type=radio disabled$="{{selectedOptions.Disabled}}">
+<input id=radio2 class=u-mt name=radio-group type=radio disabled$="{{selectedOptions.Disabled}}" />
 <p class=label--inline for=radio2>Option 2</p>
 </section>
 
@@ -253,20 +253,20 @@
 <h4>Input Field:</h4>
 ```
 <label for="input1">Input Label</label>
-<input class="text-input" id="input1" type="text" placeholder="Type something...">
+<input class="text-input" id="input1" type="text" placeholder="Type something..." />
 ```
 
 <h4>Checkbox:</h4>
 ```
-<input id="checkbox1" type="checkbox" disabled>
+<input id="checkbox1" type="checkbox" disabled />
 <label class=label--inline for="checkbox1">Checkbox</label>
 ```
 
 <h4>Radio Button:</h4>
 ```
-<input id="radio1" name="radios" type="radio" disabled>
+<input id="radio1" name="radios" type="radio" disabled />
 <p class=label--inline for="radio1">Option 1</p>
-<input id="radio2" name="radios" type="radio" disabled>
+<input id="radio2" name="radios" type="radio" disabled />
 <p class=label--inline for="radio2">Option 2</p>
 ```
 
@@ -306,7 +306,7 @@
 <h4>Inline Form:</h4>
 ```
 <label class="label--inline" for="inline1">Label Text</label>
-<input class="text-input input--small" id="inline1" type="text">
+<input class="text-input input--small" id="inline1" type="text" />
 ```
 
 <h4>Basic Form:</h4>
@@ -317,16 +317,16 @@
     <ol class="list-bare">
       <li class="form-field">
         <label for="basic-form-name">Name</label>
-        <input id="basic-form-name" class="text-input" type="text" placeholder="First name">
+        <input id="basic-form-name" class="text-input" type="text" placeholder="First name" />
         <span class="form-field__help">Hint Text</span>
       </li>
       <li class="form-field">
-        <input id="basic-form-checkbox" type="checkbox">
+        <input id="basic-form-checkbox" type="checkbox" />
         <label class="label--inline" for="basic-form-checkbox">No Lastname</label>
       </li>
     </ol>
-    <input class="btn" type="reset" value="Cancel">
-    <input class="btn btn--primary" type="submit" value="Submit">
+    <input class="btn" type="reset" value="Cancel" />
+    <input class="btn btn--primary" type="submit" value="Submit" />
   </fieldset>
 </form>
 ```
@@ -343,9 +343,9 @@
   Polymer({
     is: 'local-element-demo',
 
-    attached : function(){
+    ready : function(){
       var boundHandler = this._handleOptionsUpdated.bind(this);
-      this.addEventListener('px-sass-doc-options-updated', boundHandler)
+      this.addEventListener('px-sass-doc-options-updated', boundHandler);
     },
 
     detached : function(){
