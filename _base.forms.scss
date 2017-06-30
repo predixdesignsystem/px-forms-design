@@ -6,236 +6,229 @@
 
 @import "px-defaults-design/_settings.defaults.scss";
 @import "px-colors-design/_settings.colors.scss";
+
 /// Sets a prepended namespace for all generated classes.
-///
 /// @group px-forms-design:variables:style
 /// @type String [default] - Prepend value for all generated classes
+/// @todo N/A
 $inuit-forms-namespace                      : $inuit-namespace !default;
 
-/// Sets the forms default font color
-///
+/// Default font color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-input-text-color
 $inuit-forms-color                          : var(--px-input-text-color, $gray15) !default;
 
-/// Sets the forms label font color
-///
+/// Label font color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-input-label-text-color
 $inuit-forms-label-color                    : var(--px-input-label-text-color, $gray10) !default;
 
-/// Sets the forms Placeholder font color
-///
+/// Placeholder font color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
-$inuit-forms-color--placeholder             : var(--px-input-text-color--placeholder, $gray5) !default;
+/// @todo --px-input-text-color--placeholder
+$inuit-forms-color--placeholder             : var(--px-input-text-color--placeholder, rgba($black,0.3)) !default;
 
-/// Sets the forms Placeholder font color on focuse
-///
+/// Placeholder font color on focus
 /// @group px-forms-design:variables:style
 /// @type Color [default]
-$inuit-forms-color--placeholder--focused    : var(--px-input-text-color--placeholder--focused, inherit) !default;
+/// @todo --px-input-text-color--placeholder--focused
+$inuit-forms-color--placeholder--focused    : var(--px-input-text-color--placeholder--focused, rgba($black,0.3)) !default;
 
-/// Sets the forms Help font color
-///
+/// Help font color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-input-text-color--help
 $inuit-forms-color--help                    : var(--px-input-text-color--help, $gray10) !default;
 
-/// Sets the forms Background color
-///
+/// Background color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-input-background-color
 $inuit-forms-background                     : var(--px-input-background-color, transparent) !default;
 
-/// Sets the forms hover Background color
-///
+/// Hover background color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-input-background-color--hover
 $inuit-forms-background--hover              : var(--px-input-background-color--hover, $gray3) !default;
 
-/// Sets the forms Outer border string
-///
+/// Outer border style
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-input-border-color--outer
 $inuit-forms-border--outer                  : 1px solid var(--px-input-border-color--outer, $gray8) !default;
 
-/// Sets the forms focused text color
-///
+/// Focused text color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-input-text-color--focused
 $inuit-forms-color--focused                 : var(--px-input-text-color--focused, inherit) !default;
 
-/// Sets the forms focused Background color
-///
+/// Focused Background color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-input-background-color--focused
 $inuit-forms-background--focused            : var(--px-input-background-color--focused, $primary-light) !default;
 
-/// Sets the forms Focused outer border color
-///
+/// Focused outer border color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-input-border-color--outer--focused
 $inuit-forms-border--outer--focused         : var(--px-input-border-color--outer--focused, $primary-default) !default;
 
-/// Sets the forms Disable font color
-///
+/// Disabled font color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
-$inuit-forms-color--disabled                : var(--px-input-text-color--disabled, $gray4) !default;
+/// @todo --px-input-text-color--disabled
+$inuit-forms-color--disabled                : var(--px-input-text-color--disabled, rgba($black,0.2)) !default;
 
-/// Sets the forms Disabled border color
-///
+/// Disabled border color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
-$inuit-forms-border--disabled               : var(--px-input-border-color--disabled, $gray4) !default;
+/// @todo --px-input-border-color--disabled
+$inuit-forms-border--disabled               : var(--px-input-border-color--disabled, rgba($black,0.2)) !default;
 
-/// Sets the forms Disabled background color
-///
+/// Disabled background color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-input-background-color--disabled
 $inuit-forms-background--disabled           : var(--px-input-background-color--disabled, transparent) !default;
 
-/// Sets the textarea focused background color
-///
+/// Textarea focused background color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-input-textarea-background--focused
 $inuit-textarea-background--focused         : var(--px-input-textarea-background--focused, $gray3) !default;
 
-/// Sets the forms Select dropdown chevron font color
-///
+/// Select dropdown chevron font color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo N/A
 $inuit-forms-select-color-svg               : #{$gray15} !default;
 
-/// Sets the forms Select dropdown disabled chevron font color
-///
+/// Select dropdown disabled chevron font color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo N/A
 $inuit-forms-select-color-svg--disabled     :  #{$gray4} !default;
 
-/// Sets the forms select text color
-///
+/// Select text color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-select-text-color
 $inuit-forms-select-color                  : var(--px-select-text-color, $gray15) !default;
 
-/// Sets the forms select default background color
-///
+/// Select background color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-select-background-color
 $inuit-forms-select-background              : var(--px-select-background-color, $gray3) !default;
 
-/// Sets the forms select hover background color
-///
+/// Select hover background color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-select-background-color--hover
 $inuit-forms-select-background--hover       : var(--px-select-background-color--hover, $gray6) !default;
 
-/// Sets the forms select active background color
-///
+/// Select active background color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-select-background-color--active
 $inuit-forms-select-background--active      : var(--px-select-background-color--active, $gray8) !default;
 
-/// Sets the forms select border color
-///
+/// Select border color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-select-border-color
 $inuit-forms-select-border                  : var(--px-select-border-color, transparent) !default;
 
-/// Sets the forms Multiple select background color
-///
+/// Multiple select background color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-multiselect-background-color
 $inuit-forms-select-multiple-background     : var(--px-multiselect-background-color, $gray1) !default;
 
-/// Sets the forms Validation warning color
-///
+/// Validation warning text color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-validation-warning-text-color
 $inuit-forms-validation-warning             : var(--px-validation-warning-text-color, $status-orange3) !default;
 
-/// Sets the forms Validation warning background color
-///
+/// Validation warning background color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-validation-warning-background-color
 $inuit-forms-validation-warning-background  : var(--px-validation-warning-background-color, $status-orange1) !default;
 
-/// Sets the forms Validation error color
-///
+/// Validation error text color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-validation-error-text-color
 $inuit-forms-validation-error               : var(--px-validation-error-text-color, $status-red3) !default;
 
-/// Sets the forms Validation error background color
-///
+/// Validation error background color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-validation-error-background-color
 $inuit-forms-validation-error-background    : var(--px-validation-error-background-color, $status-red1) !default;
 
-/// Sets the forms Validation success color
-///
+/// Validation success text color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-validation-success-text-color
 $inuit-forms-validation-success             : var(--px-validation-success-text-color, $status-green3) !default;
 
-/// Sets the forms Validation success background color
-///
+/// Validation success background color
 /// @group px-forms-design:variables:style
 /// @type Color [default]
+/// @todo --px-validation-success-background-color
 $inuit-forms-validation-success-background  : var(--px-validation-success-background-color, $status-green1) !default;
 
-/// Sets letter-spacing (aka kerning) on text that are all caps
-///
+/// Letter-spacing (aka kerning) on text that is all caps
 /// @group px-headings-design:variables:style
 /// @type Number [default]
-$inuit-letter-spacing--caps       : 0.3px !default;
+/// @todo N/A
+$inuit-letter-spacing--caps                 : var(--px-headings-letter-spacing, 0.3px) !default;
 
-/// Generates the CSS for one line form fields
-///
+/// Generate the CSS for one line form fields?
 /// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-inline-fields                 : false !default;
 
-/// Generates the CSS for field validation
-///
+/// Generate the CSS for field validation?
 /// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-validation-states             : false !default;
 
-/// Generates the CSS for tiny inputs
-///
+/// Generate the CSS for tiny inputs?
 /// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-input--tiny                   : false !default;
 
-/// Generates the CSS for small inputs
-///
+/// Generate the CSS for small inputs?
 /// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-input--small                  : false !default;
 
-/// Generates the CSS for regular inputs
-///
+/// Generate the CSS for regular inputs?
 /// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-input--regular                : false !default;
 
-/// Generates the CSS for large inputs
-///
+/// Generate the CSS for large inputs?
 /// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-input--large                  : false !default;
 
-/// Generates the CSS for huge inputs
-///
+/// Generate the CSS for huge inputs?
 /// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-input--huge                   : false !default;
 
-/// Generates the CSS for input field with search icon
-///
+/// Generate the CSS for input field with search icon?
 /// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-input--search                 : false !default;
@@ -271,7 +264,7 @@ label {
   text-transform: uppercase;
   font-size: $inuit-base-font-size * 0.8;
   color: $inuit-forms-label-color;
-  letter-spacing: var(--px-headings-letter-spacing, $inuit-letter-spacing--caps);
+  letter-spacing: $inuit-letter-spacing--caps;
 }
 
 .#{$inuit-forms-namespace}label--inline,
