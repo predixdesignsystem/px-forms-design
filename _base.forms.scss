@@ -101,7 +101,7 @@ $inuit-forms-background--disabled           : var(--px-input-background-color--d
 /// @group px-forms-design:variables:style
 /// @type Color [default]
 /// @todo --px-input-textarea-background--focused
-$inuit-textarea-background--focused         : var(--px-input-textarea-background--focused, $gray3) !default;
+$inuit-textarea-background--focused         : var(--px-input-textarea-background--focused, $primary-light) !default;
 
 /// Select dropdown chevron font color
 /// @group px-forms-design:variables:style
