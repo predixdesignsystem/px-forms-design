@@ -74,11 +74,6 @@
   choose-with="boolean"
   default-choice="false">
 </px-sass-doc-option>
-<px-sass-doc-option
-  option-name="Search icon"
-  choose-with="boolean"
-  default-choice="false">
-</px-sass-doc-option>
 
 <section data-slot="demoHTML" id="demoContainer">
 
@@ -376,7 +371,6 @@
       if (opts["Validation States"] === "success")   strings.push("validation-success");
 
       if (opts.Bare === true)              strings.push("text-input--bare");
-      if (opts["Search icon"] === true)     strings.push("input--search");
 
       return ("text-input " + strings.join(" ")).trim();
     },
@@ -419,7 +413,6 @@
       if (opts["Validation States"] === "success")  strings.push("$inuit-enable-validation-states : true;");
 
       if (opts.Bare === true)              strings.push("$inuit-enable-text-input--bare : true;");
-      if (opts["Search icon"] === true)     strings.push("$inuit-enable-input--search : true;");
 
       return (strings.join("\n") + "\n@import 'px-forms-design/_base.forms.scss';").trim();
     },
