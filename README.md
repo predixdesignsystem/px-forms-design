@@ -1,10 +1,10 @@
-# Forms
+# px-forms-design
 
-The Predix UI Forms module defines styles for form elements such as `<input>`, `<label>`, `<select>` and so on. It is based on Formalize (http://formalize.me) by Nathan Smith (http://sonspring.com/)
+The Predix UI Forms module defines styles for form elements such as `<input>`, `<label>`, `<select>` and so on. It is based on Formalize (http://formalize.me) by Nathan Smith (http://sonspring.com/).
 
 ## Dependencies
 
-Predix UI's Forms module depends on two other Px modules:
+The `px-forms-design` module depends on two other Px modules:
 
 * [px-colors-design](https://github.com/PredixDev/px-colors-design)
 * [px-defaults-design](https://github.com/PredixDev/px-defaults-design)
@@ -21,7 +21,7 @@ Once installed, `@import` into your project's Sass file in its Base layer:
 
 ## Usage
 
-This flag is available and, if needed, should be set to `true` prior to importing the module:
+The following flags are available and, if needed, should be set to `true` prior to importing the module:
 
     $inuit-enable-inline-fields
     $inuit-enable-text-input--bare
@@ -79,4 +79,4 @@ Basic usage of forms.base requires `<input>` fields with the following `type` at
 * `.form-field--inline`: display form fields alongside each other, not stacked.
 * `.input--[tiny|small|regular|large|huge]`: define fixed widths for form fields.
 
-view the full API [here](http://predixdev.github.io/px-forms-design/)
+View the full API [here](http://predixdev.github.io/px-forms-design/).
