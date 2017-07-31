@@ -1,3 +1,7 @@
+v2.0.1
+==================
+* Updated moz placeholder pseudoclass to the latest spec
+
 v2.0.0
 ==================
 * design refresh release

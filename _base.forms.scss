@@ -291,19 +291,31 @@ label {
   &::-webkit-input-placeholder {
     color: $inuit-forms-color--placeholder;
   }
-  &:-moz-placeholder {
+  // For FF 19-51
+  &::-moz-placeholder {
+    color: $inuit-forms-color--placeholder;
+  }
+  &::placeholder {
     color: $inuit-forms-color--placeholder;
   }
   &:focus::-webkit-input-placeholder {
     color: $inuit-forms-color--placeholder--focused;
   }
-  &:focus:-moz-placeholder {
+  // For FF 19-51
+  &:focus::-moz-placeholder {
+    color: $inuit-forms-color--placeholder--focused;
+  }
+  &:focus::placeholder {
     color: $inuit-forms-color--placeholder--focused;
   }
   &:disabled::-webkit-input-placeholder {
     color: $inuit-forms-color--disabled;
   }
-  &:disabled:-moz-placeholder {
+  // For FF 19-51
+  &:disabled::-moz-placeholder {
+    color: $inuit-forms-color--disabled;
+  }
+  &:disabled::placeholder {
     color: $inuit-forms-color--disabled;
   }
 }
@@ -332,7 +344,11 @@ label {
   &::-webkit-input-placeholder {
     padding-top: 1px;
   }
-  &:-moz-placeholder {
+  // For FF 19-51
+  &::-moz-placeholder {
+    padding-top: 1px;
+  }
+  &::placeholder {
     padding-top: 1px;
   }
 }
