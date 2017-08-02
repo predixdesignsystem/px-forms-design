@@ -1,3 +1,7 @@
+v2.0.3
+==================
+* removed 5px margin-left from label
+
 v2.0.2
 ==================
 * hide clear button on inputs in IE
