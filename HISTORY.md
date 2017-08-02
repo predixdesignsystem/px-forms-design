@@ -1,3 +1,7 @@
+v2.0.2
+==================
+* hide clear button on inputs in IE
+
 v2.0.1
 ==================
 * Updated moz placeholder pseudoclass to the latest spec

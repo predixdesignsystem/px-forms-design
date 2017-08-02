@@ -351,6 +351,9 @@ label {
   &::placeholder {
     padding-top: 1px;
   }
+  &::-ms-clear {
+    display: none;
+  }
 }
 
 textarea {

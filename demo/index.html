@@ -336,7 +336,7 @@
   Polymer({
     is: 'local-element-demo',
 
-    ready : function(){
+    attached : function(){
       var boundHandler = this._handleOptionsUpdated.bind(this);
       this.addEventListener('px-sass-doc-options-updated', boundHandler);
     },
