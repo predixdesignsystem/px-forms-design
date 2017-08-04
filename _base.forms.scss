@@ -324,6 +324,7 @@ label {
   height: 2em;
   width: 100%;
   border: none;
+  border-radius: 0;
   border-bottom: $inuit-forms-border--outer;
   padding: 0 $inuit-base-spacing-unit--tiny;
   color: $inuit-forms-color;
@@ -363,6 +364,7 @@ textarea {
   padding: $inuit-base-spacing-unit--tiny $inuit-base-spacing-unit--small;
   resize: vertical;
   border: $inuit-forms-border--outer;
+  border-radius: 0;
   &:focus {
     color: $inuit-forms-color--focused;
     background-color: $inuit-textarea-background--focused;
@@ -382,6 +384,7 @@ select {
   color: $inuit-forms-select-color;
   background-color: $inuit-forms-select-background;
   border: $inuit-forms-select-border;
+  border-radius: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   border-radius: 0px;

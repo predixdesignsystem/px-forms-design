@@ -1,3 +1,7 @@
+v2.0.4
+==================
+* explicitly turn off border radius
+
 v2.0.3
 ==================
 * removed 5px margin-left from label
