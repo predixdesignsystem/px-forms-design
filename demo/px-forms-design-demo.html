@@ -151,12 +151,12 @@
 
 <section data-slot="demoHTML" id="demoContainer">
 
-<p class="label--inline" for="inline1">From</p>
+<label class="label--inline" for="inline1">From</label>
 <input class$="{{inlineClasses}}" id="inline1" type="text" />
-<p class="label--inline" for="inline2">to</p>
+<label class="label--inline" for="inline2">to</label>
 <input class$="{{inlineClasses}}" type="text" />
 <input id="inline3" type="checkbox" />
-<p class="label--inline" for="inline3">Inline checkbox</p>
+<label class="label--inline" for="inline3">Inline checkbox</label>
 <input class="form-field--inline btn btn--primary" type="submit" value="Submit" />
 
 </section>
@@ -214,10 +214,10 @@
 
 <section data-slot="demoHTML" id="demoContainer">
 <input id="checkbox1" type="checkbox" disabled$="{{selectedOptions.Disabled}}" checked$="{{selectedOptions.Checked}}" />
-<p class="label--inline" for="checkbox1">Option 1</p>
+<label class="label--inline" for="checkbox1">Option 1</label>
 <br/>
-<input id="checkbox1" class="u-mt" type="checkbox" disabled$="{{selectedOptions.Disabled}}" checked$="{{selectedOptions.Checked}}" />
-<p class="label--inline" for="checkbox1">Option 2</p>
+<input id="checkbox2" class="u-mt" type="checkbox" disabled$="{{selectedOptions.Disabled}}" checked$="{{selectedOptions.Checked}}" />
+<label class="label--inline" for="checkbox2">Option 2</label>
 </section>
 
 </template>
@@ -233,10 +233,10 @@
 
 <section data-slot="demoHTML" id="demoContainer">
 <input id=radio1 name=radio-group type=radio disabled$="{{selectedOptions.Disabled}}" />
-<p class=label--inline for=radio1>Option 1</p>
+<label class=label--inline for=radio1>Option 1</label>
 <br/>
 <input id=radio2 class=u-mt name=radio-group type=radio disabled$="{{selectedOptions.Disabled}}" />
-<p class=label--inline for=radio2>Option 2</p>
+<label class=label--inline for=radio2>Option 2</label>
 </section>
 
 </template>

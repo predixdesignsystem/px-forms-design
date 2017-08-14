@@ -263,7 +263,6 @@ label {
 %#{$inuit-forms-namespace}label--inline {
   display: inline-block;
   margin-bottom: 0;
-  text-transform: none;
   + {
     .#{$inuit-forms-namespace}text-input,
     %#{$inuit-forms-namespace}text-input {
