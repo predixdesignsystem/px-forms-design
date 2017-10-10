@@ -193,6 +193,11 @@ $inuit-forms-validation-success-background  : var(--px-validation-success-backgr
 /// @todo N/A
 $inuit-letter-spacing--caps                 : var(--px-headings-letter-spacing, 0.3px) !default;
 
+/// Use `width` instead of `max-width`?
+/// @group px-forms-design:variables:style
+/// @type Boolean [default]
+$inuit-input-use-width-instead-of-max-width : false !default;
+
 /// Generate the CSS for one line form fields?
 /// @group px-forms-design:variables:flag
 /// @type Boolean [default]
@@ -476,7 +481,11 @@ select::-ms-expand {
 
   .#{$inuit-forms-namespace}input--tiny,
   %#{$inuit-forms-namespace}input--tiny {
-    max-width: calculateRem(106px);
+    @if ($inuit-input-use-width-instead-of-max-width == true) {
+      width: calculateRem(106px);
+    } @else {
+      max-width: calculateRem(106px);
+    }
   }
 
 }
@@ -485,7 +494,11 @@ select::-ms-expand {
 
   .#{$inuit-forms-namespace}input--small,
   %#{$inuit-forms-namespace}input--small {
-    max-width: calculateRem(212px);
+    @if ($inuit-input-use-width-instead-of-max-width == true) {
+      width: calculateRem(212px);
+    } @else {
+      max-width: calculateRem(212px);
+    }
   }
 
 }
@@ -494,7 +507,11 @@ select::-ms-expand {
 
   .#{$inuit-forms-namespace}input--regular,
   %#{$inuit-forms-namespace}input--regular {
-    max-width: calculateRem(318px);
+    @if ($inuit-input-use-width-instead-of-max-width == true) {
+      width: calculateRem(318px);
+    } @else {
+      max-width: calculateRem(318px);
+    }
   }
 
 }
@@ -503,7 +520,11 @@ select::-ms-expand {
 
   .#{$inuit-forms-namespace}input--large,
   %#{$inuit-forms-namespace}input--large {
-    max-width: calculateRem(424px);
+    @if ($inuit-input-use-width-instead-of-max-width == true) {
+      width: calculateRem(424px);
+    } @else {
+      max-width: calculateRem(424px);
+    }
   }
 
 }
@@ -512,7 +533,11 @@ select::-ms-expand {
 
   .#{$inuit-forms-namespace}input--huge,
   %#{$inuit-forms-namespace}input--huge {
-    max-width: calculateRem(530px);
+    @if ($inuit-input-use-width-instead-of-max-width == true) {
+      width: calculateRem(530px);
+    } @else {
+      max-width: calculateRem(530px);
+    }
   }
 
 }
