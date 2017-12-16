@@ -25,9 +25,9 @@
   tabs='["Input","Text area","Inline fields","Basic form","Select","Radio button","Checkbox"]' selected-tab="{{selectedTab}}">
 
 <!-- FOR 'Input' TAB -->
-<template is="dom-if" if="[[_tabIs('Input',selectedTab)]]" restamp="true">
+<template is="dom-if" if="[[_tabIs('Input',selectedTab)]]" restamp>
 
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Input Length"
   choose-with="dropdown"
   choices='[
@@ -40,7 +40,7 @@
   ]'
   default-choice="regular">
 </px-sass-doc-option>
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Validation States"
   choose-with="dropdown"
   choices='[
@@ -51,7 +51,7 @@
   ]'
   default-choice="none">
 </px-sass-doc-option>
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Type"
   choose-with="dropdown"
   choices='[
@@ -64,46 +64,46 @@
   ]'
   default-choice="text">
 </px-sass-doc-option>
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Disabled"
   choose-with="boolean"
   default-choice="false">
 </px-sass-doc-option>
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Readonly"
   choose-with="boolean"
   default-choice="false">
 </px-sass-doc-option>
 
-<section data-slot="demoHTML" id="demoContainer">
+<section slot="demo-html" id="demoContainer">
 
 <label for="input1">Input Label</label>
 <input class$="{{inputClasses}}" id="input1" type$="{{selectedOptions.Type}}" disabled$="{{selectedOptions.Disabled}}" placeholder="Type something..." readonly$="{{selectedOptions.Readonly}}" />
 
 </section>
 
-<section data-slot="import">
+<section slot="import">
 {{inputImportCode}}
 </section>
 
 </template>
 
 <!-- FOR 'Select' TAB -->
-<template is="dom-if" if="[[_tabIs('Select',selectedTab)]]" restamp="true">
+<template is="dom-if" if="[[_tabIs('Select',selectedTab)]]" restamp>
 
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Multi-select"
   choose-with="boolean"
   default-choice="false">
 </px-sass-doc-option>
 
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Disabled"
   choose-with="boolean"
   default-choice="false">
 </px-sass-doc-option>
 
-<section data-slot="demoHTML" id="demoContainer">
+<section slot="demo-html" id="demoContainer">
 <select multiple$="{{selectedOptions.Multi-select}}" disabled$="{{selectedOptions.Disabled}}">
   <option>First</option>
   <option>Second</option>
@@ -114,17 +114,17 @@
 </template>
 
 <!-- FOR 'Text area' TAB -->
-<template is="dom-if" if="[[_tabIs('Text area',selectedTab)]]" restamp="true">
+<template is="dom-if" if="[[_tabIs('Text area',selectedTab)]]" restamp>
 
-<section data-slot="demoHTML" id="demoContainer">
+<section slot="demo-html" id="demoContainer">
 <textarea placeholder="Enter text here..."></textarea>
 </section>
 
 </template>
 
 <!-- FOR 'Inline Fields' TAB -->
-<template is="dom-if" if="[[_tabIs('Inline fields',selectedTab)]]" restamp="true">
-<px-sass-doc-option
+<template is="dom-if" if="[[_tabIs('Inline fields',selectedTab)]]" restamp>
+<px-sass-doc-option slot="options"
   option-name="Length"
   choose-with="dropdown"
   choices='[
@@ -137,7 +137,7 @@
   ]'
   default-choice="tiny">
 </px-sass-doc-option>
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Validation"
   choose-with="dropdown"
   choices='[
@@ -149,7 +149,7 @@
   default-choice="none">
 </px-sass-doc-option>
 
-<section data-slot="demoHTML" id="demoContainer">
+<section slot="demo-html" id="demoContainer">
 
 <label class="label--inline" for="inline1">From</label>
 <input class$="{{inlineClasses}}" id="inline1" type="text" />
@@ -161,16 +161,16 @@
 
 </section>
 
-<section data-slot="import">
+<section slot="import">
 {{inlineImportCode}}
 </section>
 
 </template>
 
 <!-- FOR 'Basic Form' TAB -->
-<template is="dom-if" if="[[_tabIs('Basic form',selectedTab)]]" restamp="true">
+<template is="dom-if" if="[[_tabIs('Basic form',selectedTab)]]" restamp>
 
-<section data-slot="demoHTML" id="demoContainer">
+<section slot="demo-html" id="demoContainer">
 
 <form>
   <fieldset class="form-field" style="max-width:400px;">
@@ -191,28 +191,28 @@
 </form>
 </section>
 
-<section data-slot="import">
+<section slot="import">
 @import 'px-forms-design/_base.forms.scss';
 </section>
 
 </template>
 
 <!-- FOR 'Checkbox' TAB -->
-<template is="dom-if" if="[[_tabIs('Checkbox',selectedTab)]]" restamp="true">
+<template is="dom-if" if="[[_tabIs('Checkbox',selectedTab)]]" restamp>
 
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Disabled"
   choose-with="boolean"
   default-choice="false">
 </px-sass-doc-option>
 
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Checked"
   choose-with="boolean"
   default-choice="false">
 </px-sass-doc-option>
 
-<section data-slot="demoHTML" id="demoContainer">
+<section slot="demo-html" id="demoContainer">
 <input id="checkbox1" type="checkbox" disabled$="{{selectedOptions.Disabled}}" checked$="{{selectedOptions.Checked}}" />
 <label class="label--inline" for="checkbox1">Option 1</label>
 <br/>
@@ -223,15 +223,15 @@
 </template>
 
 <!-- FOR 'Radio button' TAB -->
-<template is="dom-if" if="[[_tabIs('Radio button',selectedTab)]]" restamp="true">
+<template is="dom-if" if="[[_tabIs('Radio button',selectedTab)]]" restamp>
 
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Disabled"
   choose-with="boolean"
   default-choice="false">
 </px-sass-doc-option>
 
-<section data-slot="demoHTML" id="demoContainer">
+<section slot="demo-html" id="demoContainer">
 <input id=radio1 name=radio-group type=radio disabled$="{{selectedOptions.Disabled}}" />
 <label class=label--inline for=radio1>Option 1</label>
 <br/>
@@ -242,7 +242,7 @@
 </template>
 
 <!-- 5: Set Usage HTML -->
-<section data-slot="usage">
+<section slot="usage">
 <h4>Input Field:</h4>
 ```
 <label for="input1">Input Label</label>
