@@ -77,7 +77,7 @@
 
 <section slot="demo-html" id="demoContainer">
 
-<label for="input1">Input Label</label>
+<label for="input1" class$="{{labelClasses}}">Input Label</label>
 <input class$="{{inputClasses}}" id="input1" type$="{{selectedOptions.Type}}" disabled$="{{selectedOptions.Disabled}}" placeholder="Type something..." readonly$="{{selectedOptions.Readonly}}" />
 
 </section>
@@ -352,6 +352,7 @@
       this.inputImportCode = this._inputImportCode();
       this.inlineImportCode = this._inlineImportCode();
       this.hintClasses = this._calcHintClasses();
+      this.labelClasses = this._calcLabelClasses();
 
       // Wait, then tell the highlighter to run after dom-if restamps
       this.async(function(){ this.fire('px-sass-doc-demo-updated', {}) }, 10);
@@ -373,6 +374,11 @@
       if (opts.Bare === true)              strings.push("text-input--bare");
 
       return ("text-input " + strings.join(" ")).trim();
+    },
+
+    _calcLabelClasses : function() {
+      var opts = this.selectedOptions || {}, strings = [];
+      return opts.Disabled ? "disabled" : "";
     },
 
     _calcHintClasses : function() {
