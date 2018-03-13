@@ -1,6 +1,6 @@
 [
     {
-        "description": "Generate the CSS for one line form fields\n",
+        "description": "Generate the CSS for one line form fields?\n",
         "commentRange": {
             "start": 196,
             "end": 198
@@ -26,7 +26,7 @@
         }
     },
     {
-        "description": "Generate the CSS for field validation\n",
+        "description": "Generate the CSS for field validation?\n",
         "commentRange": {
             "start": 201,
             "end": 203
@@ -52,7 +52,7 @@
         }
     },
     {
-        "description": "Generate the CSS for field validation :valid & :invalid pseudo classes\n",
+        "description": "Generate the CSS for field validation :valid & :invalid pseudo classes?\n",
         "commentRange": {
             "start": 206,
             "end": 208
@@ -78,7 +78,7 @@
         }
     },
     {
-        "description": "Generate the CSS for tiny inputs\n",
+        "description": "Generate the CSS for tiny inputs?\n",
         "commentRange": {
             "start": 212,
             "end": 214
@@ -104,7 +104,7 @@
         }
     },
     {
-        "description": "Generate the CSS for small inputs\n",
+        "description": "Generate the CSS for small inputs?\n",
         "commentRange": {
             "start": 217,
             "end": 219
@@ -130,7 +130,7 @@
         }
     },
     {
-        "description": "Generate the CSS for regular inputs\n",
+        "description": "Generate the CSS for regular inputs?\n",
         "commentRange": {
             "start": 222,
             "end": 224
@@ -156,7 +156,7 @@
         }
     },
     {
-        "description": "Generate the CSS for large inputs\n",
+        "description": "Generate the CSS for large inputs?\n",
         "commentRange": {
             "start": 227,
             "end": 229
@@ -182,7 +182,7 @@
         }
     },
     {
-        "description": "Generate the CSS for huge inputs\n",
+        "description": "Generate the CSS for huge inputs?\n",
         "commentRange": {
             "start": 232,
             "end": 234

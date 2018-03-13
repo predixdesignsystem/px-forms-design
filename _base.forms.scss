@@ -193,43 +193,43 @@ $inuit-forms-validation-success-background  : var(--px-validation-success-backgr
 /// @todo N/A
 $inuit-letter-spacing--caps                 : var(--px-headings-letter-spacing, 0.3px) !default;
 
-/// Generate the CSS for one line form fields
+/// Generate the CSS for one line form fields?
 /// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-inline-fields                 : false !default;
 
-/// Generate the CSS for field validation
+/// Generate the CSS for field validation?
 /// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-validation-states             : false !default;
 
-/// Generate the CSS for field validation :valid & :invalid pseudo classes
+/// Generate the CSS for field validation :valid & :invalid pseudo classes?
 /// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-validation-pseudo-classes     : false !default;
 $validation-pseudo-class : '';
 
-/// Generate the CSS for tiny inputs
+/// Generate the CSS for tiny inputs?
 /// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-input--tiny                   : false !default;
 
-/// Generate the CSS for small inputs
+/// Generate the CSS for small inputs?
 /// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-input--small                  : false !default;
 
-/// Generate the CSS for regular inputs
+/// Generate the CSS for regular inputs?
 /// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-input--regular                : false !default;
 
-/// Generate the CSS for large inputs
+/// Generate the CSS for large inputs?
 /// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-input--large                  : false !default;
 
-/// Generate the CSS for huge inputs
+/// Generate the CSS for huge inputs?
 /// @group px-forms-design:variables:flag
 /// @type Boolean [default]
 $inuit-enable-input--huge                   : false !default;
