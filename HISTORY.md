@@ -1,3 +1,7 @@
+v2.1.0
+==================
+* add sass variable to control addition of :valid & :invalid pseudo classes on form validation. $inuit-enable-validation-pseudo-classes. Defaults to false to not alter existing forms implementations.
+
 v2.0.8
 ==================
 * add `disabled` class for labels to impact cursor (#12)

@@ -203,6 +203,12 @@ $inuit-enable-inline-fields                 : false !default;
 /// @type Boolean [default]
 $inuit-enable-validation-states             : false !default;
 
+/// Generate the CSS for field validation :valid & :invalid pseudo classes?
+/// @group px-forms-design:variables:flag
+/// @type Boolean [default]
+$inuit-enable-validation-pseudo-classes     : false !default;
+$validation-pseudo-class : '';
+
 /// Generate the CSS for tiny inputs?
 /// @group px-forms-design:variables:flag
 /// @type Boolean [default]
@@ -564,18 +570,27 @@ select::-ms-expand {
     }
   }
 
+
+  @if $inuit-enable-validation-pseudo-classes == true {
+    $validation-pseudo-class: '&:invalid';
+  }
+
   .#{$inuit-forms-namespace}text-input,
   %#{$inuit-forms-namespace}text-input {
-    &.validation-error {
+    &.validation-error, #{$validation-pseudo-class} {
       border-color: $inuit-forms-validation-error;
       background-color: $inuit-forms-validation-error-background;
       color: $inuit-forms-color--focused;
     }
   }
 
+  @if $inuit-enable-validation-pseudo-classes == true {
+    $validation-pseudo-class: '&:valid';
+  }
+
   .#{$inuit-forms-namespace}text-input,
   %#{$inuit-forms-namespace}text-input {
-    &.validation-success {
+    &.validation-success, #{$validation-pseudo-class} {
       border-color: $inuit-forms-validation-success;
       background-color: $inuit-forms-validation-success-background;
       color: $inuit-forms-color--focused;
