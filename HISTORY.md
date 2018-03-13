@@ -1,6 +1,10 @@
+v2.1.1
+==================
+* rebuild sassdoc and correct comments
+
 v2.1.0
 ==================
-* add sass variable to control addition of :valid & :invalid pseudo classes on form validation. $inuit-enable-validation-pseudo-classes. Defaults to false to not alter existing forms implementations.
+* add sass variable to control addition of :valid & :invalid pseudo classes on form validation. $inuit-enable-validation-pseudo-classes. Defaults to false to not alter existing forms implementations
 
 v2.0.8
 ==================

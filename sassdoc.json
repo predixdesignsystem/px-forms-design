@@ -1,6 +1,6 @@
 [
     {
-        "description": "Generate the CSS for one line form fields?\n",
+        "description": "Generate the CSS for one line form fields\n",
         "commentRange": {
             "start": 196,
             "end": 198
@@ -26,7 +26,7 @@
         }
     },
     {
-        "description": "Generate the CSS for field validation?\n",
+        "description": "Generate the CSS for field validation\n",
         "commentRange": {
             "start": 201,
             "end": 203
@@ -52,14 +52,14 @@
         }
     },
     {
-        "description": "Generate the CSS for tiny inputs?\n",
+        "description": "Generate the CSS for field validation :valid & :invalid pseudo classes\n",
         "commentRange": {
             "start": 206,
             "end": 208
         },
         "context": {
             "type": "variable",
-            "name": "inuit-enable-input--tiny",
+            "name": "inuit-enable-validation-pseudo-classes",
             "value": "false",
             "scope": "default",
             "line": {
@@ -78,10 +78,36 @@
         }
     },
     {
-        "description": "Generate the CSS for small inputs?\n",
+        "description": "Generate the CSS for tiny inputs\n",
         "commentRange": {
-            "start": 211,
-            "end": 213
+            "start": 212,
+            "end": 214
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-input--tiny",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 215,
+                "end": 215
+            }
+        },
+        "group": [
+            "px-forms-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_base.forms.scss",
+            "name": "_base.forms.scss"
+        }
+    },
+    {
+        "description": "Generate the CSS for small inputs\n",
+        "commentRange": {
+            "start": 217,
+            "end": 219
         },
         "context": {
             "type": "variable",
@@ -89,8 +115,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 214,
-                "end": 214
+                "start": 220,
+                "end": 220
             }
         },
         "group": [
@@ -104,10 +130,10 @@
         }
     },
     {
-        "description": "Generate the CSS for regular inputs?\n",
+        "description": "Generate the CSS for regular inputs\n",
         "commentRange": {
-            "start": 216,
-            "end": 218
+            "start": 222,
+            "end": 224
         },
         "context": {
             "type": "variable",
@@ -115,8 +141,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 219,
-                "end": 219
+                "start": 225,
+                "end": 225
             }
         },
         "group": [
@@ -130,10 +156,10 @@
         }
     },
     {
-        "description": "Generate the CSS for large inputs?\n",
+        "description": "Generate the CSS for large inputs\n",
         "commentRange": {
-            "start": 221,
-            "end": 223
+            "start": 227,
+            "end": 229
         },
         "context": {
             "type": "variable",
@@ -141,8 +167,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 224,
-                "end": 224
+                "start": 230,
+                "end": 230
             }
         },
         "group": [
@@ -156,10 +182,10 @@
         }
     },
     {
-        "description": "Generate the CSS for huge inputs?\n",
+        "description": "Generate the CSS for huge inputs\n",
         "commentRange": {
-            "start": 226,
-            "end": 228
+            "start": 232,
+            "end": 234
         },
         "context": {
             "type": "variable",
@@ -167,34 +193,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 229,
-                "end": 229
-            }
-        },
-        "group": [
-            "px-forms-design:variables:flag"
-        ],
-        "type": "Boolean [default]",
-        "access": "public",
-        "file": {
-            "path": "_base.forms.scss",
-            "name": "_base.forms.scss"
-        }
-    },
-    {
-        "description": "Generate the CSS for input field with search icon?\n",
-        "commentRange": {
-            "start": 231,
-            "end": 233
-        },
-        "context": {
-            "type": "variable",
-            "name": "inuit-enable-input--search",
-            "value": "false",
-            "scope": "default",
-            "line": {
-                "start": 234,
-                "end": 234
+                "start": 235,
+                "end": 235
             }
         },
         "group": [
@@ -651,7 +651,7 @@
         "context": {
             "type": "variable",
             "name": "inuit-textarea-background--focused",
-            "value": "var(--px-input-textarea-background--focused, $gray3)",
+            "value": "var(--px-input-textarea-background--focused, $primary-light)",
             "scope": "default",
             "line": {
                 "start": 104,
