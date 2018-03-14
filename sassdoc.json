@@ -52,14 +52,14 @@
         }
     },
     {
-        "description": "Generate the CSS for field validation :valid & :invalid pseudo classes?\n",
+        "description": "Generate the CSS for field validation :valid pseudo classes?\n",
         "commentRange": {
             "start": 206,
             "end": 208
         },
         "context": {
             "type": "variable",
-            "name": "inuit-enable-validation-pseudo-classes",
+            "name": "inuit-enable-success-validation-pseudo-classes",
             "value": "false",
             "scope": "default",
             "line": {
@@ -78,14 +78,14 @@
         }
     },
     {
-        "description": "Generate the CSS for tiny inputs?\n",
+        "description": "Generate the CSS for field validation :invalid pseudo classes?\n",
         "commentRange": {
             "start": 212,
             "end": 214
         },
         "context": {
             "type": "variable",
-            "name": "inuit-enable-input--tiny",
+            "name": "inuit-enable-error-validation-pseudo-classes",
             "value": "false",
             "scope": "default",
             "line": {
@@ -104,10 +104,36 @@
         }
     },
     {
+        "description": "Generate the CSS for tiny inputs?\n",
+        "commentRange": {
+            "start": 218,
+            "end": 220
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-input--tiny",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 221,
+                "end": 221
+            }
+        },
+        "group": [
+            "px-forms-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_base.forms.scss",
+            "name": "_base.forms.scss"
+        }
+    },
+    {
         "description": "Generate the CSS for small inputs?\n",
         "commentRange": {
-            "start": 217,
-            "end": 219
+            "start": 223,
+            "end": 225
         },
         "context": {
             "type": "variable",
@@ -115,8 +141,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 220,
-                "end": 220
+                "start": 226,
+                "end": 226
             }
         },
         "group": [
@@ -132,8 +158,8 @@
     {
         "description": "Generate the CSS for regular inputs?\n",
         "commentRange": {
-            "start": 222,
-            "end": 224
+            "start": 228,
+            "end": 230
         },
         "context": {
             "type": "variable",
@@ -141,8 +167,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 225,
-                "end": 225
+                "start": 231,
+                "end": 231
             }
         },
         "group": [
@@ -158,8 +184,8 @@
     {
         "description": "Generate the CSS for large inputs?\n",
         "commentRange": {
-            "start": 227,
-            "end": 229
+            "start": 233,
+            "end": 235
         },
         "context": {
             "type": "variable",
@@ -167,8 +193,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 230,
-                "end": 230
+                "start": 236,
+                "end": 236
             }
         },
         "group": [
@@ -184,8 +210,8 @@
     {
         "description": "Generate the CSS for huge inputs?\n",
         "commentRange": {
-            "start": 232,
-            "end": 234
+            "start": 238,
+            "end": 240
         },
         "context": {
             "type": "variable",
@@ -193,8 +219,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 235,
-                "end": 235
+                "start": 241,
+                "end": 241
             }
         },
         "group": [

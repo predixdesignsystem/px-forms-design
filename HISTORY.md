@@ -1,3 +1,7 @@
+v2.1.2
+==================
+* Break out valid/invalid pseudo class generation
+
 v2.1.1
 ==================
 * rebuild sassdoc and correct comments
