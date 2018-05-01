@@ -2,90 +2,12 @@
     {
         "description": "Generate the CSS for one line form fields?\n",
         "commentRange": {
-            "start": 196,
-            "end": 198
-        },
-        "context": {
-            "type": "variable",
-            "name": "inuit-enable-inline-fields",
-            "value": "false",
-            "scope": "default",
-            "line": {
-                "start": 199,
-                "end": 199
-            }
-        },
-        "group": [
-            "px-forms-design:variables:flag"
-        ],
-        "type": "Boolean [default]",
-        "access": "public",
-        "file": {
-            "path": "_base.forms.scss",
-            "name": "_base.forms.scss"
-        }
-    },
-    {
-        "description": "Generate the CSS for field validation?\n",
-        "commentRange": {
-            "start": 201,
-            "end": 203
-        },
-        "context": {
-            "type": "variable",
-            "name": "inuit-enable-validation-states",
-            "value": "false",
-            "scope": "default",
-            "line": {
-                "start": 204,
-                "end": 204
-            }
-        },
-        "group": [
-            "px-forms-design:variables:flag"
-        ],
-        "type": "Boolean [default]",
-        "access": "public",
-        "file": {
-            "path": "_base.forms.scss",
-            "name": "_base.forms.scss"
-        }
-    },
-    {
-        "description": "Generate the CSS for field validation :valid pseudo classes?\n",
-        "commentRange": {
-            "start": 206,
-            "end": 208
-        },
-        "context": {
-            "type": "variable",
-            "name": "inuit-enable-success-validation-pseudo-classes",
-            "value": "false",
-            "scope": "default",
-            "line": {
-                "start": 209,
-                "end": 209
-            }
-        },
-        "group": [
-            "px-forms-design:variables:flag"
-        ],
-        "type": "Boolean [default]",
-        "access": "public",
-        "file": {
-            "path": "_base.forms.scss",
-            "name": "_base.forms.scss"
-        }
-    },
-    {
-        "description": "Generate the CSS for field validation :invalid pseudo classes?\n",
-        "commentRange": {
             "start": 212,
             "end": 214
         },
         "context": {
             "type": "variable",
-            "name": "inuit-enable-error-validation-pseudo-classes",
+            "name": "inuit-enable-inline-fields",
             "value": "false",
             "scope": "default",
             "line": {
@@ -104,19 +26,19 @@
         }
     },
     {
-        "description": "Generate the CSS for tiny inputs?\n",
+        "description": "Generate the CSS for field validation?\n",
         "commentRange": {
-            "start": 218,
-            "end": 220
+            "start": 217,
+            "end": 219
         },
         "context": {
             "type": "variable",
-            "name": "inuit-enable-input--tiny",
+            "name": "inuit-enable-validation-states",
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 221,
-                "end": 221
+                "start": 220,
+                "end": 220
             }
         },
         "group": [
@@ -130,19 +52,19 @@
         }
     },
     {
-        "description": "Generate the CSS for small inputs?\n",
+        "description": "Generate the CSS for field validation :valid pseudo classes?\n",
         "commentRange": {
-            "start": 223,
-            "end": 225
+            "start": 222,
+            "end": 224
         },
         "context": {
             "type": "variable",
-            "name": "inuit-enable-input--small",
+            "name": "inuit-enable-success-validation-pseudo-classes",
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 226,
-                "end": 226
+                "start": 225,
+                "end": 225
             }
         },
         "group": [
@@ -156,14 +78,14 @@
         }
     },
     {
-        "description": "Generate the CSS for regular inputs?\n",
+        "description": "Generate the CSS for field validation :invalid pseudo classes?\n",
         "commentRange": {
             "start": 228,
             "end": 230
         },
         "context": {
             "type": "variable",
-            "name": "inuit-enable-input--regular",
+            "name": "inuit-enable-error-validation-pseudo-classes",
             "value": "false",
             "scope": "default",
             "line": {
@@ -182,10 +104,88 @@
         }
     },
     {
+        "description": "Generate the CSS for tiny inputs?\n",
+        "commentRange": {
+            "start": 234,
+            "end": 236
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-input--tiny",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 237,
+                "end": 237
+            }
+        },
+        "group": [
+            "px-forms-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_base.forms.scss",
+            "name": "_base.forms.scss"
+        }
+    },
+    {
+        "description": "Generate the CSS for small inputs?\n",
+        "commentRange": {
+            "start": 239,
+            "end": 241
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-input--small",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 242,
+                "end": 242
+            }
+        },
+        "group": [
+            "px-forms-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_base.forms.scss",
+            "name": "_base.forms.scss"
+        }
+    },
+    {
+        "description": "Generate the CSS for regular inputs?\n",
+        "commentRange": {
+            "start": 244,
+            "end": 246
+        },
+        "context": {
+            "type": "variable",
+            "name": "inuit-enable-input--regular",
+            "value": "false",
+            "scope": "default",
+            "line": {
+                "start": 247,
+                "end": 247
+            }
+        },
+        "group": [
+            "px-forms-design:variables:flag"
+        ],
+        "type": "Boolean [default]",
+        "access": "public",
+        "file": {
+            "path": "_base.forms.scss",
+            "name": "_base.forms.scss"
+        }
+    },
+    {
         "description": "Generate the CSS for large inputs?\n",
         "commentRange": {
-            "start": 233,
-            "end": 235
+            "start": 249,
+            "end": 251
         },
         "context": {
             "type": "variable",
@@ -193,8 +193,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 236,
-                "end": 236
+                "start": 252,
+                "end": 252
             }
         },
         "group": [
@@ -210,8 +210,8 @@
     {
         "description": "Generate the CSS for huge inputs?\n",
         "commentRange": {
-            "start": 238,
-            "end": 240
+            "start": 254,
+            "end": 256
         },
         "context": {
             "type": "variable",
@@ -219,8 +219,8 @@
             "value": "false",
             "scope": "default",
             "line": {
-                "start": 241,
-                "end": 241
+                "start": 257,
+                "end": 257
             }
         },
         "group": [
@@ -236,8 +236,8 @@
     {
         "description": "Sets a prepended namespace for all generated classes.\n",
         "commentRange": {
-            "start": 10,
-            "end": 13
+            "start": 26,
+            "end": 29
         },
         "context": {
             "type": "variable",
@@ -245,8 +245,8 @@
             "value": "$inuit-namespace",
             "scope": "default",
             "line": {
-                "start": 14,
-                "end": 14
+                "start": 30,
+                "end": 30
             }
         },
         "group": [
@@ -265,8 +265,8 @@
     {
         "description": "Default font color\n",
         "commentRange": {
-            "start": 16,
-            "end": 19
+            "start": 32,
+            "end": 35
         },
         "context": {
             "type": "variable",
@@ -274,8 +274,8 @@
             "value": "var(--px-input-text-color, $gray15)",
             "scope": "default",
             "line": {
-                "start": 20,
-                "end": 20
+                "start": 36,
+                "end": 36
             }
         },
         "group": [
@@ -294,8 +294,8 @@
     {
         "description": "Label font color\n",
         "commentRange": {
-            "start": 22,
-            "end": 25
+            "start": 38,
+            "end": 41
         },
         "context": {
             "type": "variable",
@@ -303,8 +303,8 @@
             "value": "var(--px-input-label-text-color, $gray10)",
             "scope": "default",
             "line": {
-                "start": 26,
-                "end": 26
+                "start": 42,
+                "end": 42
             }
         },
         "group": [
@@ -323,8 +323,8 @@
     {
         "description": "Placeholder font color\n",
         "commentRange": {
-            "start": 28,
-            "end": 31
+            "start": 44,
+            "end": 47
         },
         "context": {
             "type": "variable",
@@ -332,8 +332,8 @@
             "value": "var(--px-input-text-color--placeholder, rgba($black,0.3))",
             "scope": "default",
             "line": {
-                "start": 32,
-                "end": 32
+                "start": 48,
+                "end": 48
             }
         },
         "group": [
@@ -352,8 +352,8 @@
     {
         "description": "Placeholder font color on focus\n",
         "commentRange": {
-            "start": 34,
-            "end": 37
+            "start": 50,
+            "end": 53
         },
         "context": {
             "type": "variable",
@@ -361,8 +361,8 @@
             "value": "var(--px-input-text-color--placeholder--focused, rgba($black,0.3))",
             "scope": "default",
             "line": {
-                "start": 38,
-                "end": 38
+                "start": 54,
+                "end": 54
             }
         },
         "group": [
@@ -381,8 +381,8 @@
     {
         "description": "Help font color\n",
         "commentRange": {
-            "start": 40,
-            "end": 43
+            "start": 56,
+            "end": 59
         },
         "context": {
             "type": "variable",
@@ -390,8 +390,8 @@
             "value": "var(--px-input-text-color--help, $gray10)",
             "scope": "default",
             "line": {
-                "start": 44,
-                "end": 44
+                "start": 60,
+                "end": 60
             }
         },
         "group": [
@@ -410,8 +410,8 @@
     {
         "description": "Background color\n",
         "commentRange": {
-            "start": 46,
-            "end": 49
+            "start": 62,
+            "end": 65
         },
         "context": {
             "type": "variable",
@@ -419,8 +419,8 @@
             "value": "var(--px-input-background-color, transparent)",
             "scope": "default",
             "line": {
-                "start": 50,
-                "end": 50
+                "start": 66,
+                "end": 66
             }
         },
         "group": [
@@ -439,8 +439,8 @@
     {
         "description": "Hover background color\n",
         "commentRange": {
-            "start": 52,
-            "end": 55
+            "start": 68,
+            "end": 71
         },
         "context": {
             "type": "variable",
@@ -448,8 +448,8 @@
             "value": "var(--px-input-background-color--hover, $gray3)",
             "scope": "default",
             "line": {
-                "start": 56,
-                "end": 56
+                "start": 72,
+                "end": 72
             }
         },
         "group": [
@@ -468,8 +468,8 @@
     {
         "description": "Outer border style\n",
         "commentRange": {
-            "start": 58,
-            "end": 61
+            "start": 74,
+            "end": 77
         },
         "context": {
             "type": "variable",
@@ -477,8 +477,8 @@
             "value": "1px solid var(--px-input-border-color--outer, $gray8)",
             "scope": "default",
             "line": {
-                "start": 62,
-                "end": 62
+                "start": 78,
+                "end": 78
             }
         },
         "group": [
@@ -497,8 +497,8 @@
     {
         "description": "Focused text color\n",
         "commentRange": {
-            "start": 64,
-            "end": 67
+            "start": 80,
+            "end": 83
         },
         "context": {
             "type": "variable",
@@ -506,8 +506,8 @@
             "value": "var(--px-input-text-color--focused, inherit)",
             "scope": "default",
             "line": {
-                "start": 68,
-                "end": 68
+                "start": 84,
+                "end": 84
             }
         },
         "group": [
@@ -526,8 +526,8 @@
     {
         "description": "Focused Background color\n",
         "commentRange": {
-            "start": 70,
-            "end": 73
+            "start": 86,
+            "end": 89
         },
         "context": {
             "type": "variable",
@@ -535,8 +535,8 @@
             "value": "var(--px-input-background-color--focused, $primary-light)",
             "scope": "default",
             "line": {
-                "start": 74,
-                "end": 74
+                "start": 90,
+                "end": 90
             }
         },
         "group": [
@@ -555,8 +555,8 @@
     {
         "description": "Focused outer border color\n",
         "commentRange": {
-            "start": 76,
-            "end": 79
+            "start": 92,
+            "end": 95
         },
         "context": {
             "type": "variable",
@@ -564,8 +564,8 @@
             "value": "var(--px-input-border-color--outer--focused, $primary-default)",
             "scope": "default",
             "line": {
-                "start": 80,
-                "end": 80
+                "start": 96,
+                "end": 96
             }
         },
         "group": [
@@ -584,8 +584,8 @@
     {
         "description": "Disabled font color\n",
         "commentRange": {
-            "start": 82,
-            "end": 85
+            "start": 98,
+            "end": 101
         },
         "context": {
             "type": "variable",
@@ -593,8 +593,8 @@
             "value": "var(--px-input-text-color--disabled, rgba($black,0.2))",
             "scope": "default",
             "line": {
-                "start": 86,
-                "end": 86
+                "start": 102,
+                "end": 102
             }
         },
         "group": [
@@ -613,8 +613,8 @@
     {
         "description": "Disabled border color\n",
         "commentRange": {
-            "start": 88,
-            "end": 91
+            "start": 104,
+            "end": 107
         },
         "context": {
             "type": "variable",
@@ -622,8 +622,8 @@
             "value": "var(--px-input-border-color--disabled, rgba($black,0.2))",
             "scope": "default",
             "line": {
-                "start": 92,
-                "end": 92
+                "start": 108,
+                "end": 108
             }
         },
         "group": [
@@ -642,8 +642,8 @@
     {
         "description": "Disabled background color\n",
         "commentRange": {
-            "start": 94,
-            "end": 97
+            "start": 110,
+            "end": 113
         },
         "context": {
             "type": "variable",
@@ -651,8 +651,8 @@
             "value": "var(--px-input-background-color--disabled, transparent)",
             "scope": "default",
             "line": {
-                "start": 98,
-                "end": 98
+                "start": 114,
+                "end": 114
             }
         },
         "group": [
@@ -671,8 +671,8 @@
     {
         "description": "Textarea focused background color\n",
         "commentRange": {
-            "start": 100,
-            "end": 103
+            "start": 116,
+            "end": 119
         },
         "context": {
             "type": "variable",
@@ -680,8 +680,8 @@
             "value": "var(--px-input-textarea-background--focused, $primary-light)",
             "scope": "default",
             "line": {
-                "start": 104,
-                "end": 104
+                "start": 120,
+                "end": 120
             }
         },
         "group": [
@@ -700,8 +700,8 @@
     {
         "description": "Select dropdown chevron font color\n",
         "commentRange": {
-            "start": 106,
-            "end": 109
+            "start": 122,
+            "end": 125
         },
         "context": {
             "type": "variable",
@@ -709,8 +709,8 @@
             "value": "#{$gray15}",
             "scope": "default",
             "line": {
-                "start": 110,
-                "end": 110
+                "start": 126,
+                "end": 126
             }
         },
         "group": [
@@ -729,8 +729,8 @@
     {
         "description": "Select dropdown disabled chevron font color\n",
         "commentRange": {
-            "start": 112,
-            "end": 115
+            "start": 128,
+            "end": 131
         },
         "context": {
             "type": "variable",
@@ -738,8 +738,8 @@
             "value": "#{$gray4}",
             "scope": "default",
             "line": {
-                "start": 116,
-                "end": 116
+                "start": 132,
+                "end": 132
             }
         },
         "group": [
@@ -758,8 +758,8 @@
     {
         "description": "Select text color\n",
         "commentRange": {
-            "start": 118,
-            "end": 121
+            "start": 134,
+            "end": 137
         },
         "context": {
             "type": "variable",
@@ -767,8 +767,8 @@
             "value": "var(--px-select-text-color, $gray15)",
             "scope": "default",
             "line": {
-                "start": 122,
-                "end": 122
+                "start": 138,
+                "end": 138
             }
         },
         "group": [
@@ -787,8 +787,8 @@
     {
         "description": "Select background color\n",
         "commentRange": {
-            "start": 124,
-            "end": 127
+            "start": 140,
+            "end": 143
         },
         "context": {
             "type": "variable",
@@ -796,8 +796,8 @@
             "value": "var(--px-select-background-color, $gray3)",
             "scope": "default",
             "line": {
-                "start": 128,
-                "end": 128
+                "start": 144,
+                "end": 144
             }
         },
         "group": [
@@ -816,8 +816,8 @@
     {
         "description": "Select hover background color\n",
         "commentRange": {
-            "start": 130,
-            "end": 133
+            "start": 146,
+            "end": 149
         },
         "context": {
             "type": "variable",
@@ -825,8 +825,8 @@
             "value": "var(--px-select-background-color--hover, $gray6)",
             "scope": "default",
             "line": {
-                "start": 134,
-                "end": 134
+                "start": 150,
+                "end": 150
             }
         },
         "group": [
@@ -845,8 +845,8 @@
     {
         "description": "Select active background color\n",
         "commentRange": {
-            "start": 136,
-            "end": 139
+            "start": 152,
+            "end": 155
         },
         "context": {
             "type": "variable",
@@ -854,8 +854,8 @@
             "value": "var(--px-select-background-color--active, $gray8)",
             "scope": "default",
             "line": {
-                "start": 140,
-                "end": 140
+                "start": 156,
+                "end": 156
             }
         },
         "group": [
@@ -874,8 +874,8 @@
     {
         "description": "Select border color\n",
         "commentRange": {
-            "start": 142,
-            "end": 145
+            "start": 158,
+            "end": 161
         },
         "context": {
             "type": "variable",
@@ -883,8 +883,8 @@
             "value": "var(--px-select-border-color, transparent)",
             "scope": "default",
             "line": {
-                "start": 146,
-                "end": 146
+                "start": 162,
+                "end": 162
             }
         },
         "group": [
@@ -903,8 +903,8 @@
     {
         "description": "Multiple select background color\n",
         "commentRange": {
-            "start": 148,
-            "end": 151
+            "start": 164,
+            "end": 167
         },
         "context": {
             "type": "variable",
@@ -912,8 +912,8 @@
             "value": "var(--px-multiselect-background-color, $gray1)",
             "scope": "default",
             "line": {
-                "start": 152,
-                "end": 152
+                "start": 168,
+                "end": 168
             }
         },
         "group": [
@@ -932,8 +932,8 @@
     {
         "description": "Validation warning text color\n",
         "commentRange": {
-            "start": 154,
-            "end": 157
+            "start": 170,
+            "end": 173
         },
         "context": {
             "type": "variable",
@@ -941,8 +941,8 @@
             "value": "var(--px-validation-warning-text-color, $status-orange3)",
             "scope": "default",
             "line": {
-                "start": 158,
-                "end": 158
+                "start": 174,
+                "end": 174
             }
         },
         "group": [
@@ -961,8 +961,8 @@
     {
         "description": "Validation warning background color\n",
         "commentRange": {
-            "start": 160,
-            "end": 163
+            "start": 176,
+            "end": 179
         },
         "context": {
             "type": "variable",
@@ -970,8 +970,8 @@
             "value": "var(--px-validation-warning-background-color, $status-orange1)",
             "scope": "default",
             "line": {
-                "start": 164,
-                "end": 164
+                "start": 180,
+                "end": 180
             }
         },
         "group": [
@@ -990,8 +990,8 @@
     {
         "description": "Validation error text color\n",
         "commentRange": {
-            "start": 166,
-            "end": 169
+            "start": 182,
+            "end": 185
         },
         "context": {
             "type": "variable",
@@ -999,8 +999,8 @@
             "value": "var(--px-validation-error-text-color, $status-red3)",
             "scope": "default",
             "line": {
-                "start": 170,
-                "end": 170
+                "start": 186,
+                "end": 186
             }
         },
         "group": [
@@ -1019,8 +1019,8 @@
     {
         "description": "Validation error background color\n",
         "commentRange": {
-            "start": 172,
-            "end": 175
+            "start": 188,
+            "end": 191
         },
         "context": {
             "type": "variable",
@@ -1028,8 +1028,8 @@
             "value": "var(--px-validation-error-background-color, $status-red1)",
             "scope": "default",
             "line": {
-                "start": 176,
-                "end": 176
+                "start": 192,
+                "end": 192
             }
         },
         "group": [
@@ -1048,8 +1048,8 @@
     {
         "description": "Validation success text color\n",
         "commentRange": {
-            "start": 178,
-            "end": 181
+            "start": 194,
+            "end": 197
         },
         "context": {
             "type": "variable",
@@ -1057,8 +1057,8 @@
             "value": "var(--px-validation-success-text-color, $status-green3)",
             "scope": "default",
             "line": {
-                "start": 182,
-                "end": 182
+                "start": 198,
+                "end": 198
             }
         },
         "group": [
@@ -1077,8 +1077,8 @@
     {
         "description": "Validation success background color\n",
         "commentRange": {
-            "start": 184,
-            "end": 187
+            "start": 200,
+            "end": 203
         },
         "context": {
             "type": "variable",
@@ -1086,8 +1086,8 @@
             "value": "var(--px-validation-success-background-color, $status-green1)",
             "scope": "default",
             "line": {
-                "start": 188,
-                "end": 188
+                "start": 204,
+                "end": 204
             }
         },
         "group": [
@@ -1106,8 +1106,8 @@
     {
         "description": "Letter-spacing (aka kerning) on text that is all caps\n",
         "commentRange": {
-            "start": 190,
-            "end": 193
+            "start": 206,
+            "end": 209
         },
         "context": {
             "type": "variable",
@@ -1115,8 +1115,8 @@
             "value": "var(--px-headings-letter-spacing, 0.3px)",
             "scope": "default",
             "line": {
-                "start": 194,
-                "end": 194
+                "start": 210,
+                "end": 210
             }
         },
         "group": [
